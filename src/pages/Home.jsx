@@ -1,9 +1,9 @@
 import React from 'react'
 import Navbar from '../components/home/Navbar'
-import Hero from '../components/home/hero'
+import Hero from '../components/home/Hero'
 import Services from '../components/home/Services'
 import Work from '../components/home/Work'
-import Contact from '../components/home/contact'
+import Contact from '../components/home/Contact'
 
 function home() {
   return (
