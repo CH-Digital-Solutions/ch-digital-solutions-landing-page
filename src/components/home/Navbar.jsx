@@ -4,7 +4,7 @@ export default function Navbar() {
   return (
     <>
       <div className="flex justify-center z-50">
-        <div className="bg-white/5 z-50 fixed top-0 backdrop-blur-lg md:top-8 md:w-210 md:h-16 md:rounded-[500px] 
+        <div className="bg-white/10 z-50 fixed top-0 backdrop-blur-sm md:top-8 md:w-210 md:h-16 md:rounded-[500px] 
    border border-white/8 flex flex-row items-center">
 
           {/* Left ka logo navbar me  */}

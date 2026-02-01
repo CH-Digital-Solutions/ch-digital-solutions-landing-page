@@ -8,11 +8,13 @@ import Contact from '../components/home/contact'
 function home() {
   return (
     <>
+    <div className='bg-black'>
       <Navbar />
       <Hero />
       <Services />
       <Work />
       <Contact />
+      </div>
     </>
   )
 }
