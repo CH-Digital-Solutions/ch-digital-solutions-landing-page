@@ -5,7 +5,7 @@ import Services from '../components/home/Services'
 import Work from '../components/home/Work'
 import Contact from '../components/home/Contact'
 
-function home() {
+function Home() {
   return (
     <>
     <div className='bg-black'>
@@ -19,4 +19,4 @@ function home() {
   )
 }
 
-export default home
+export default Home

@@ -1,7 +1,7 @@
 import React from 'react'
 import { ArrowRight } from 'lucide-react'
 
-function hero() {
+function Hero() {
   return (
     <div className='w-full h-screen bg-black'>
       {/* sabse pehle apna main title  */}
@@ -27,4 +27,4 @@ function hero() {
   )
 }
 
-export default hero
+export default Hero
