@@ -15,10 +15,14 @@ function Hero() {
         {/* ab button ka time hai  */}
 
         <div className="flex items-center justify-between h-15 absolute top-150 w-115 transition-all">
+          <a href='#contact'>
           <div className="bg-white h-13 group  w-60 rounded-lg text-base font-semibold text-black inter flex items-center pl-4 hover:bg-white/90 cursor-pointer">Discuss your Use Case
             <ArrowRight className="ml-2 group-hover:ml-3 transition-all text-black size-5" />
           </div>
+          </a>
+          <a href='#work'>
           <div className="bg-black h-13 border ml-3 border-white/30 font-medium hover:border-white/60 w-50 rounded-lg text-base text-white inter flex items-center pl-8 cursor-pointer">Explore Our Work</div>
+          </a>
         </div>
 
       </div>

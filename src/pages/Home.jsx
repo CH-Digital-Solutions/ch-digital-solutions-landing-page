@@ -11,9 +11,9 @@ function Home() {
     <div className='bg-black'>
       <Navbar />
       <Hero />
-      <Services />
-      <Work />
-      <Contact />
+      <section id='services' ><Services/></section>
+      <section id='work'><Work /></section>
+      <section id='contact'><Contact /></section>
       </div>
     </>
   )

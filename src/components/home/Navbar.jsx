@@ -16,15 +16,16 @@ export default function Navbar() {
 
           {/* ab saari categories */}
           <div className=" w-170 h-10 ml-10 flex flex-row justify-between outfit items-center">
-            <div className="hidden md:flex flex-row justify-evenly items-center w-full h-full text-white/60 font-light ml-20 text-sm">
+            <div className="hidden md:flex flex-row justify-evenly items-center w-full h-full text-white/60 font-light ml-30 text-sm">
               <a href="#home" className="hover:text-white/90 transition-colors">Home</a>
-              <a href="#about" className="hover:text-white/90 transition-colors ">About</a>
               <a href="#services" className="hover:text-white/90 transition-colors">Services</a>
-              <a href="#contact" className="hover:text-white/90 transition-colors">Reviews</a>
+              <a href="#work" className="hover:text-white/90 transition-colors">Our Work</a>
             </div>
-            <div className="bg-white md:h-9.5 md:w-45 md:flex md:justify-center md:items-center md:rounded-full text-black font-semibold inter hover:bg-gray-200 text-sm cursor-pointer mr-3 mb-px">
+            <a href="#contact">
+            <div className="bg-white md:h-9.5 md:w-30 md:flex md:justify-center md:items-center md:rounded-full text-black font-semibold inter hover:bg-gray-200 text-sm cursor-pointer mr-3 mb-px">
               Contact us
             </div>
+            </a>
 
           </div>
         </div>
