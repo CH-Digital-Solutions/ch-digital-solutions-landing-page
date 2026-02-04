@@ -13,7 +13,7 @@ function Contact() {
     offset: ["start end", "end start"]
   })
 
-  const y = useTransform(scrollYProgress, [0, 1], [400, -200])
+  const y = useTransform(scrollYProgress, [0, 1], [300, -200])
 
   // ========== REPLACE THESE WITH YOUR IDs ==========
   const SERVICE_ID = 'service_86kewxi';
@@ -44,7 +44,7 @@ function Contact() {
   return (
     <div className='bg-black w-full overflow-hidden'>
       <motion.div
-        className='bg-white/12 rounded-t-[30px] md:rounded-t-[55px] w-full min-h-screen md:min-h-0 md:h-170 py-8 md:py-0'
+        className='bg-white/12 rounded-t-[30px] md:rounded-t-[55px] w-full min-h-screen md:min-h-0 md:h-160 py-8 md:py-0'
         ref={ref}
         style={{ y }}
       >
@@ -54,12 +54,12 @@ function Contact() {
           <div className="w-full lg:w-1/2 flex flex-col items-center lg:items-start pt-6 md:pt-10">
             <h2 className="text-2xl sm:text-3xl font-bold jakarta mb-6 lg:hidden">Get in Touch</h2>
             
-            <div className='flex flex-row gap-10 md:gap-20 sm:gap-10 md:ml-10'>
+            <div className='flex flex-row gap-10 md:gap-20 sm:gap-10 md:ml-25'>
               <div className='flex flex-col items-center w-40 md:w-50'>
                 <div className="bg-black/30 hover:bg-black/40 cursor-pointer w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 flex justify-center items-center rounded-2xl md:rounded-3xl transition-all">
                   <Phone className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 text-white/80" />
                 </div>
-                <div className='text-xs sm:text-sm inter text-white/55 mt-4 text-center'>9313108560 | 9558700388</div>
+                <div className='text-xs sm:text-sm inter text-white/55 mt-4 text-center'>9022863917 | 9313108560</div>
               </div>
               <div className='flex flex-col items-center'>
                 <div className="bg-black/30 hover:bg-black/40 cursor-pointer w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 flex justify-center items-center rounded-2xl md:rounded-3xl transition-all">
