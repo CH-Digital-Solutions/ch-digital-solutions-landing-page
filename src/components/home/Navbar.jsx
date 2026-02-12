@@ -12,9 +12,12 @@ export default function Navbar() {
           border border-white/8 flex flex-row items-center justify-between h-16">
 
           {/* Left ka logo navbar me  */}
-          <div className="flex items-center">
-            <img src="../../../ch_logo_d.png" className="w-10 md:w-12 m" alt="Logo" />
-            <span className="text-[22px] md:text-[30px] pl-2 md:pl-4 font-semibold outfit text-white">CH Labs</span>
+          <div className="flex items-center gap-3">
+            <img src="../../../ch_logo_d.png" className="w-10 md:w-12" alt="Logo" />
+            <div className='flex flex-col leading-none'>
+              <div className="text-[22px] md:text-[20px] font-medium outfit text-white">CH Digital</div>
+              <div className='text-xs md:text-sm font-extralight pl-0.5 text-white'>Solutions</div>
+            </div>
           </div>
 
           {/* Desktop Navigation */}
