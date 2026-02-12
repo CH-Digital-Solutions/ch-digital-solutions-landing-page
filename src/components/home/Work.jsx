@@ -8,13 +8,6 @@ function Work() {
       desc: "BloomTale is a modern e-commerce website designed with a beautiful and intuitive user interface, featuring smooth transitions and seamless navigation to deliver a premium and enjoyable shopping experience for users.",
       coverpic: "../../../workCover/BloomTale.png",
       link: "https://bloomtale.cloud/"
-    },
-    {
-      id: 2,
-      name: 'FrzPortfolio',
-      desc: "FrzPortfolio is a sleek and minimalist portfolio website showcasing creative work with elegant animations and a modern design aesthetic, providing visitors with an engaging and memorable browsing experience that highlights professional skills.",
-      coverpic: "../../../workCover/frzlogo.png",
-      link: "https://portfolio-frz.vercel.app/"
     }
   ]
 
