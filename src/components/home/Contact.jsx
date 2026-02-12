@@ -65,7 +65,7 @@ function Contact() {
                 <div className="bg-black/30 hover:bg-black/40 cursor-pointer w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 flex justify-center items-center rounded-2xl md:rounded-3xl transition-all">
                   <Mail className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 text-white/80" />  
                 </div>
-                <div className='text-xs sm:text-sm inter text-white/55 mt-4 text-center'>chlabs2025@gmail.com</div>
+                <div className='text-xs sm:text-sm inter text-white/55 mt-4 text-center'>chdigitalsolutions2025@gmail.com</div>
               </div>
             </div>
             
