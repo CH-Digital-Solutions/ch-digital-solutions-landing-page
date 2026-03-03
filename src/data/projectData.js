@@ -38,24 +38,35 @@ export const projects = [
         name: 'STMS',
         category: 'Management System',
         shortDesc: 'A dedicated management system built for Tamarind to streamline operations, track data efficiently, and enhance day-to-day productivity.',
-        coverImage: '/workCover/STMS.png',
+        coverImage: '/workCover/STMS/STMS.png',
         projectDetailImage: '/Coverpage/STMS Mockups.png',
         link: 'http://localhost:5173/',
+        hideLink: true,
         techStack: ['React.js', 'Tailwind CSS', 'Node.js', 'MongoDB', 'Express.js'],
         clientName: 'Super Imli Traders',
         duration: '6 weeks',
-        teamSize: '3 developers',
+        teamSize: '4 developers',
         screenshots: [
-            '/workCover/STMS-overview.png',
+            '/workCover/STMS/Stms_dashboard.png',
+            '/workCover/STMS/stms-local.png',
+            '/workCover/STMS/stms-addRaw.png',
+            '/workCover/STMS/stms-assignImli.png',
+            '/workCover/STMS/stms-returnImli.png',
+            '/workCover/STMS/stms-localprofile.png',
+            '/workCover/STMS/stms-payment.png',
+            '/workCover/STMS/stms-setting.png',
+
+
+
         ],
-        intro: 'STMS is a powerful management system built specifically for Tamarind, designed to centralize and streamline their day-to-day operations with an intuitive and modern digital platform.',
-        problem: 'Tamarind was managing their operations through scattered manual processes and disconnected tools, causing inefficiencies, data inconsistencies, and a lack of real-time visibility into key business metrics.',
+        intro: 'STMS-Super Imli Traders Management System is a powerful management system built specifically for Tamarind, designed to centralize and streamline their day-to-day operations with an intuitive and modern digital platform.',
+        problem: 'Super Imli Traders was managing their operations through scattered manual processes using paper and pen, causing inefficiencies, data inconsistencies, and a lack of real-time visibility into key business metrics.',
         solution: 'We developed a fully responsive management system tailored to Tamarind\'s needs, bringing all operations under one roof. The platform offers real-time tracking, role-based access control, and a clean modern UI that empowers the Tamarind team to manage everything efficiently from a single dashboard.',
         testimonial: {
             quote: 'The STMS platform built by CH Digital Solutions has completely transformed how we manage our operations at Tamarind. It\'s intuitive, fast, and has saved us countless hours every week.',
-            author: 'Tamarind Team',
-            role: 'Client, Tamarind',
-            logo: '/workCover/STMS.png'
+            author: 'STMS Team',
+            role: 'Founder, STMS',
+            logo: '/workCover/STMS/STMS.png'
         }
     }
 ]

@@ -132,10 +132,12 @@ function ProjectDetail() {
                         </div>
 
                         {/* View Live Button */}
-                        <a href={project.link} target="_blank" rel="noopener noreferrer" className="flex sm:inline-flex items-center justify-center gap-2 mt-6 md:mt-8 bg-white text-black h-12 sm:h-12 px-7 rounded-xl text-sm inter font-semibold hover:bg-white/90 transition-all">
-                            <ExternalLink className="w-4 h-4" />
-                            View Live Demo
-                        </a>
+                        {!project.hideLink && (
+                            <a href={project.link} target="_blank" rel="noopener noreferrer" className="flex sm:inline-flex items-center justify-center gap-2 mt-6 md:mt-8 bg-white text-black h-12 sm:h-12 px-7 rounded-xl text-sm inter font-semibold hover:bg-white/90 transition-all">
+                                <ExternalLink className="w-4 h-4" />
+                                View Live Demo
+                            </a>
+                        )}
                     </div>
                 </div>
             </div>
