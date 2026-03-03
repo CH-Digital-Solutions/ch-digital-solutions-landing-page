@@ -1,18 +1,11 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
+import { ArrowRight } from 'lucide-react'
+import { projects } from '../../data/projectData'
 
 function Work() {
-  const work = [
-    {
-      id: 1,
-      name: 'BloomTale',
-      desc: "BloomTale is a modern e-commerce website designed with a beautiful and intuitive user interface, featuring smooth transitions and seamless navigation to deliver a premium and enjoyable shopping experience for users.",
-      coverpic: "../../../workCover/BloomTale.png",
-      link: "https://bloomtale.cloud/"
-    }
-  ]
-
   return (
-    <div className='min-h-screen bg-black w-full py-10 md:py-0'>
+    <div className='md:min-h-0 lg:min-h-screen bg-black w-full pt-10 pb-30 md:py-16 lg:py-0'>
       <div className="bg-white/15 w-full h-[0.1px]"></div>
       <div className="text-white w-full flex flex-col items-center jakarta mt-8 md:mt-12 px-4">
         <h2 className="text-3xl sm:text-4xl md:text-4xl lg:text-5xl font-bold text-center">Our Work</h2>
@@ -21,29 +14,43 @@ function Work() {
         </p>
       </div>
 
-      {/* Project Cards */}
-      <div className="flex items-center flex-col mt-8 md:mt-10 px-4 sm:px-8 md:px-16">
+      {/* Project Cards Grid */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6 mt-8 md:mt-12 px-5 sm:px-8 md:px-16 lg:px-20 xl:px-28 max-w-7xl mx-auto">
         {
-          work.map((project) => {
-            return (
-              <div key={project.id} className="bg-white/8 mb-6 flex flex-col md:flex-row md:items-center border border-white/15 rounded-2xl md:rounded-4xl w-full max-w-5xl p-4 md:p-4 gabarito font-extralight hover:border-white/30 transition-all">
-                {/* Project Image */}
-                <div className="w-full md:w-56 lg:w-64 shrink-0">
-                  <img src={project.coverpic} className='rounded-xl md:rounded-2xl w-full h-40 sm:h-48 md:h-44 lg:h-48 object-cover' alt="Project Cover Pic" />
-                </div>
-                {/* Project Info */}
-                <div className="flex flex-col mt-4 md:mt-0 md:ml-5 flex-1">
-                  <div className="text-white gabarito text-2xl sm:text-3xl md:text-3xl lg:text-4xl">{project.name}</div>
-                  <div className="text-white/70 inter leading-5 sm:leading-7 md:leading-6 font-extralight text-sm sm:text-base md:text-sm lg:text-base mt-2">{project.desc}</div>
-                  <a href={project.link} className="mt-4 md:mt-3">
-                    <div className="bg-white hover:bg-white/85 transition-all cursor-pointer w-full sm:w-36 md:w-32 h-10 md:h-10 rounded-xl md:rounded-xl font-medium text-sm flex justify-center items-center text-black">
-                      Visit Website
-                    </div>
-                  </a>
+          projects.map((project) => (
+            <div key={project.id} className="bg-white/[0.06] border border-white/10 rounded-2xl overflow-hidden hover:border-white/25 transition-all group">
+
+              {/* Cover Image */}
+              <div className="relative w-full h-44 sm:h-48 md:h-52 overflow-hidden">
+                <img
+                  src={project.coverImage}
+                  className='w-full h-full object-cover group-hover:scale-105 transition-transform duration-500'
+                  alt={project.name}
+                />
+                {/* Category Badge */}
+                <div className="absolute top-3 right-3 bg-white/15 backdrop-blur-md text-white text-[11px] inter font-medium px-3 py-1 rounded-full border border-white/20">
+                  {project.category}
                 </div>
               </div>
-            )
-          })
+
+              {/* Card Content */}
+              <div className="p-5 sm:p-6">
+                <h3 className="text-white text-lg sm:text-xl font-semibold jakarta">{project.name}</h3>
+                <p className="text-white/50 text-[13px] sm:text-sm inter font-light leading-relaxed mt-2 line-clamp-2">
+                  {project.shortDesc}
+                </p>
+
+
+                {/* View Details Button */}
+                <Link to={`/project/${project.slug}`}>
+                  <div className="mt-5 bg-white w-full h-11 rounded-xl text-sm inter font-semibold text-black flex items-center justify-center gap-2 hover:bg-white/90 transition-all cursor-pointer group/btn">
+                    View Details
+                    <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-0.5 transition-transform" />
+                  </div>
+                </Link>
+              </div>
+            </div>
+          ))
         }
       </div>
     </div>

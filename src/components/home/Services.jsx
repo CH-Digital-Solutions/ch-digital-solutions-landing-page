@@ -38,9 +38,9 @@ function Services() {
     ]
     return (
         <>
-            
+
             <div className='flex justify-center'>
-                <div className='min-h-screen bg-black w-full md:w-full py-10 md:py-0'>
+                <div className='md:min-h-0 lg:min-h-screen bg-black w-full py-10 md:py-16 lg:py-0'>
                     <div className="bg-white/15 w-full h-[0.1px]"></div>
 
 
@@ -53,7 +53,7 @@ function Services() {
 
 
                     {/* 6 BOXES */}
-                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-4 lg:gap-5 px-4  md:w-360 sm:px-8 md:px-25 lg:px-28 xl:px-44 mt-8 md:mt-14 md:ml-8">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-4 lg:gap-5 px-4 w-full max-w-7xl mx-auto sm:px-8 md:px-12 lg:px-28 xl:px-44 mt-8 md:mt-14">
                         {
                             ser_content.map((service, index) => {
                                 const Icon = service.icon;
