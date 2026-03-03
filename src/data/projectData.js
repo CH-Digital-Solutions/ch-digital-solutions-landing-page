@@ -31,5 +31,31 @@ export const projects = [
             role: 'Founder, BloomTale',
             logo: '/workCover/BloomTale.png'
         }
+    },
+    {
+        id: 2,
+        slug: 'stms',
+        name: 'STMS',
+        category: 'Management System',
+        shortDesc: 'A dedicated management system built for Tamarind to streamline operations, track data efficiently, and enhance day-to-day productivity.',
+        coverImage: '/workCover/STMS.png',
+        projectDetailImage: '/Coverpage/STMS Mockups.png',
+        link: 'http://localhost:5173/',
+        techStack: ['React.js', 'Tailwind CSS', 'Node.js', 'MongoDB', 'Express.js'],
+        clientName: 'Super Imli Traders',
+        duration: '6 weeks',
+        teamSize: '3 developers',
+        screenshots: [
+            '/workCover/STMS-overview.png',
+        ],
+        intro: 'STMS is a powerful management system built specifically for Tamarind, designed to centralize and streamline their day-to-day operations with an intuitive and modern digital platform.',
+        problem: 'Tamarind was managing their operations through scattered manual processes and disconnected tools, causing inefficiencies, data inconsistencies, and a lack of real-time visibility into key business metrics.',
+        solution: 'We developed a fully responsive management system tailored to Tamarind\'s needs, bringing all operations under one roof. The platform offers real-time tracking, role-based access control, and a clean modern UI that empowers the Tamarind team to manage everything efficiently from a single dashboard.',
+        testimonial: {
+            quote: 'The STMS platform built by CH Digital Solutions has completely transformed how we manage our operations at Tamarind. It\'s intuitive, fast, and has saved us countless hours every week.',
+            author: 'Tamarind Team',
+            role: 'Client, Tamarind',
+            logo: '/workCover/STMS.png'
+        }
     }
 ]
