@@ -3,6 +3,7 @@ import { Phone, Mail } from 'lucide-react'
 import emailjs from '@emailjs/browser'
 
 function Contact() {
+  // laallalalalal
   const formRef = useRef(null);
   const [status, setStatus] = useState(''); // 'sending', 'success', 'error'
 
