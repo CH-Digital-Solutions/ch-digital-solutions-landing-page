@@ -39,7 +39,7 @@ export const projects = [
         category: 'Management System',
         shortDesc: 'A dedicated management system built for Tamarind to streamline operations, track data efficiently, and enhance day-to-day productivity.',
         coverImage: '/workCover/STMS/STMS.png',
-        projectDetailImage: '/Coverpage/STMS Mockups.png',
+        projectDetailImage: '/Coverpage/STMS Mockup.png',
         link: 'http://localhost:5173/',
         hideLink: true,
         techStack: ['React.js', 'Tailwind CSS', 'Node.js', 'MongoDB', 'Express.js'],
