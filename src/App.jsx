@@ -8,6 +8,9 @@ import CustomSoftwareDevelopmentMumbai from "./pages/CustomSoftwareDevelopmentMu
 import MobileAppDevelopmentMumbai from "./pages/MobileAppDevelopmentMumbai";
 import EcommerceWebsiteDevelopmentMumbai from "./pages/EcommerceWebsiteDevelopmentMumbai";
 import ERPSoftwareDevelopmentMumbai from "./pages/ERPSoftwareDevelopmentMumbai";
+import WebsiteDevelopmentCostMumbai from "./pages/blog/WebsiteDevelopmentCostMumbai";
+import HowToBuildEcommerceWebsite from "./pages/blog/HowToBuildEcommerceWebsite";
+import ERPSoftwareForSmallBusiness from "./pages/blog/ERPSoftwareForSmallBusiness";
 
 function ScrollToTop() {
   const { pathname, hash } = useLocation()
@@ -43,6 +46,13 @@ function App() {
         />
         <Route path="/ecommerce-website-development-mumbai" element={<EcommerceWebsiteDevelopmentMumbai />} />
         <Route path="/erp-software-development-mumbai" element={<ERPSoftwareDevelopmentMumbai />} />
+        <Route
+          path="/website-development-cost-mumbai"
+          element={<WebsiteDevelopmentCostMumbai />}
+        />
+        <Route path="/how-to-build-ecommerce-website" element={<HowToBuildEcommerceWebsite />} />
+
+        <Route path="/erp-software-for-small-business" element={<ERPSoftwareForSmallBusiness />} />
       </Routes>
     </BrowserRouter>
   )
