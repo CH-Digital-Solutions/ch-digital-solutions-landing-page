@@ -5,6 +5,7 @@ import Home from './pages/Home'
 import ProjectDetail from './pages/ProjectDetail'
 import WebsiteDevelopmentMumbai from "./pages/WebsiteDevelopmentMumbai"
 import CustomSoftwareDevelopmentMumbai from "./pages/CustomSoftwareDevelopmentMumbai";
+import MobileAppDevelopmentMumbai from "./pages/MobileAppDevelopmentMumbai";
 
 function ScrollToTop() {
   const { pathname, hash } = useLocation()
@@ -33,6 +34,10 @@ function App() {
         <Route
           path="/custom-software-development-mumbai"
           element={<CustomSoftwareDevelopmentMumbai />}
+        />
+        <Route
+          path="/mobile-app-development-mumbai"
+          element={<MobileAppDevelopmentMumbai />}
         />
       </Routes>
     </BrowserRouter>
