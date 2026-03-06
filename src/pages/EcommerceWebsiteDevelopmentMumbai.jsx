@@ -7,9 +7,15 @@ const EcommerceWebsiteDevelopmentMumbai = () => {
 
       <Helmet>
         <title>Ecommerce Website Development Mumbai | CH Digital Solutions</title>
+
         <meta
           name="description"
-          content="We build modern ecommerce websites for clothing brands, retail businesses and startups in Mumbai."
+          content="CH Digital Solutions provides ecommerce website development services in Mumbai for clothing brands, retail businesses and startups."
+        />
+
+        <link
+          rel="canonical"
+          href="https://chdigitalsolutions.in/ecommerce-website-development-mumbai"
         />
       </Helmet>
 
@@ -21,10 +27,90 @@ const EcommerceWebsiteDevelopmentMumbai = () => {
           Ecommerce Website Development Mumbai
         </h1>
 
-        <p className="text-gray-400 max-w-3xl text-lg">
-          CH Digital Solutions builds scalable ecommerce platforms that help
-          brands sell online and manage their operations efficiently.
+        <p className="text-gray-400 text-lg max-w-3xl">
+          CH Digital Solutions builds modern ecommerce websites that help
+          businesses sell products online. Our ecommerce platforms are
+          designed for performance, security and scalability.
         </p>
+
+        {/* Services */}
+
+        <div className="mt-24">
+
+          <h2 className="text-3xl font-semibold mb-6">
+            Ecommerce Development Services
+          </h2>
+
+          <div className="grid md:grid-cols-3 gap-6">
+
+            <div className="bg-white/5 border border-white/10 backdrop-blur-xl rounded-2xl p-6">
+              Shopify Store Development
+            </div>
+
+            <div className="bg-white/5 border border-white/10 backdrop-blur-xl rounded-2xl p-6">
+              Custom Ecommerce Platforms
+            </div>
+
+            <div className="bg-white/5 border border-white/10 backdrop-blur-xl rounded-2xl p-6">
+              Payment Gateway Integration
+            </div>
+
+          </div>
+
+        </div>
+
+        {/* Process */}
+
+        <div className="mt-24">
+
+          <h2 className="text-3xl font-semibold mb-6">
+            Our Ecommerce Development Process
+          </h2>
+
+          <p className="text-gray-400 max-w-3xl">
+            Our process focuses on building scalable online stores.
+            We begin with understanding product requirements,
+            designing the store layout and building secure ecommerce
+            infrastructure.
+          </p>
+
+        </div>
+
+        {/* FAQ */}
+
+        <div className="mt-24">
+
+          <h2 className="text-3xl font-semibold mb-8">
+            Frequently Asked Questions
+          </h2>
+
+          <div className="space-y-6">
+
+            <div>
+              <h3 className="font-semibold text-lg">
+                How much does an ecommerce website cost?
+              </h3>
+
+              <p className="text-gray-400">
+                Ecommerce website cost depends on the number of products,
+                features and integrations required.
+              </p>
+            </div>
+
+            <div>
+              <h3 className="font-semibold text-lg">
+                How long does it take to build an ecommerce website?
+              </h3>
+
+              <p className="text-gray-400">
+                Most ecommerce websites take between 3–8 weeks depending
+                on the project scope.
+              </p>
+            </div>
+
+          </div>
+
+        </div>
 
       </div>
 

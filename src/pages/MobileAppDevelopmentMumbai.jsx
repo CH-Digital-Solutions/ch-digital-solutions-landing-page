@@ -10,7 +10,7 @@ const MobileAppDevelopmentMumbai = () => {
 
         <meta
           name="description"
-          content="CH Digital Solutions provides mobile app development services in Mumbai including Android apps, iOS apps and scalable mobile platforms for startups."
+          content="CH Digital Solutions provides mobile app development services in Mumbai including Android apps, iOS apps and scalable mobile platforms."
         />
 
         <link
@@ -28,12 +28,15 @@ const MobileAppDevelopmentMumbai = () => {
         </h1>
 
         <p className="text-gray-400 text-lg max-w-3xl">
-          We design and develop modern mobile applications for startups and
-          businesses. Our mobile solutions focus on performance, scalability
-          and user experience.
+          CH Digital Solutions builds high performance mobile applications
+          for startups and businesses. Our mobile apps are designed to be
+          scalable, secure and optimized for user experience.
         </p>
 
-        <div className="mt-20">
+        {/* Services */}
+
+        <div className="mt-24">
+
           <h2 className="text-3xl font-semibold mb-6">
             Mobile App Development Services
           </h2>
@@ -53,6 +56,59 @@ const MobileAppDevelopmentMumbai = () => {
             </div>
 
           </div>
+
+        </div>
+
+        {/* Development Process */}
+
+        <div className="mt-24">
+
+          <h2 className="text-3xl font-semibold mb-6">
+            Our Mobile App Development Process
+          </h2>
+
+          <p className="text-gray-400 max-w-3xl">
+            Our development process includes planning, UI/UX design,
+            development, testing and deployment. We focus on building
+            apps that deliver excellent performance and user experience.
+          </p>
+
+        </div>
+
+        {/* FAQ */}
+
+        <div className="mt-24">
+
+          <h2 className="text-3xl font-semibold mb-8">
+            Frequently Asked Questions
+          </h2>
+
+          <div className="space-y-6">
+
+            <div>
+              <h3 className="font-semibold text-lg">
+                How much does mobile app development cost in Mumbai?
+              </h3>
+
+              <p className="text-gray-400">
+                The cost depends on the app features, design complexity
+                and integrations required.
+              </p>
+            </div>
+
+            <div>
+              <h3 className="font-semibold text-lg">
+                How long does it take to build a mobile app?
+              </h3>
+
+              <p className="text-gray-400">
+                Mobile app development usually takes between 6–12 weeks
+                depending on project scope.
+              </p>
+            </div>
+
+          </div>
+
         </div>
 
       </div>
