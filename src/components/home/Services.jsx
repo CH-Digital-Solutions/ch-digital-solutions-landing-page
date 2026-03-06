@@ -70,15 +70,6 @@ function Services() {
                         }
 
                     </div>
-                    <p className="text-gray-400 mt-4">
-                        We also offer dedicated services for businesses looking for a
-                        <a
-                            href="/website-development-company-mumbai"
-                            className="text-white underline ml-1"
-                        >
-                            website development company in Mumbai
-                        </a>.
-                    </p>
                 </div>
             </div>
         </>
