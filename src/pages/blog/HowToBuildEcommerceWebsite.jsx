@@ -93,7 +93,7 @@ const HowToBuildEcommerceWebsite = () => {
           </p>
 
           <a
-            href="#/contact"
+            href="/#contact"
             className="bg-white text-black px-6 py-3 rounded-lg font-semibold"
           >
             Contact Us

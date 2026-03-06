@@ -221,7 +221,7 @@ const ERPSoftwareDevelopmentMumbai = () => {
           </p>
 
           <a
-            href="#/contact"
+            href="/#contact"
             className="px-8 py-3 bg-white text-black rounded-lg font-semibold"
           >
             Contact Us
