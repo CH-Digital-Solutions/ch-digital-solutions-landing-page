@@ -6,6 +6,8 @@ import ProjectDetail from './pages/ProjectDetail'
 import WebsiteDevelopmentMumbai from "./pages/WebsiteDevelopmentMumbai"
 import CustomSoftwareDevelopmentMumbai from "./pages/CustomSoftwareDevelopmentMumbai";
 import MobileAppDevelopmentMumbai from "./pages/MobileAppDevelopmentMumbai";
+import EcommerceWebsiteDevelopmentMumbai from "./pages/EcommerceWebsiteDevelopmentMumbai";
+import ERPSoftwareDevelopmentMumbai from "./pages/ERPSoftwareDevelopmentMumbai";
 
 function ScrollToTop() {
   const { pathname, hash } = useLocation()
@@ -39,6 +41,8 @@ function App() {
           path="/mobile-app-development-mumbai"
           element={<MobileAppDevelopmentMumbai />}
         />
+        <Route path="/ecommerce-website-development-mumbai" element={<EcommerceWebsiteDevelopmentMumbai />} />
+        <Route path="/erp-software-development-mumbai" element={<ERPSoftwareDevelopmentMumbai />} />
       </Routes>
     </BrowserRouter>
   )
