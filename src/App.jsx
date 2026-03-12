@@ -3,18 +3,15 @@ import { useEffect } from 'react'
 import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom'
 import Home from './pages/Home'
 import ProjectDetail from './pages/ProjectDetail'
-<<<<<<< Updated upstream
 import WebsiteDevelopmentMumbai from "./pages/WebsiteDevelopmentMumbai"
-import CustomSoftwareDevelopmentMumbai from "./pages/CustomSoftwareDevelopmentMumbai";
-import MobileAppDevelopmentMumbai from "./pages/MobileAppDevelopmentMumbai";
-import EcommerceWebsiteDevelopmentMumbai from "./pages/EcommerceWebsiteDevelopmentMumbai";
-import ERPSoftwareDevelopmentMumbai from "./pages/ERPSoftwareDevelopmentMumbai";
-import WebsiteDevelopmentCostMumbai from "./pages/blog/WebsiteDevelopmentCostMumbai";
-import HowToBuildEcommerceWebsite from "./pages/blog/HowToBuildEcommerceWebsite";
-import ERPSoftwareForSmallBusiness from "./pages/blog/ERPSoftwareForSmallBusiness";
-=======
+import CustomSoftwareDevelopmentMumbai from "./pages/CustomSoftwareDevelopmentMumbai"
+import MobileAppDevelopmentMumbai from "./pages/MobileAppDevelopmentMumbai"
+import EcommerceWebsiteDevelopmentMumbai from "./pages/EcommerceWebsiteDevelopmentMumbai"
+import ERPSoftwareDevelopmentMumbai from "./pages/ERPSoftwareDevelopmentMumbai"
+import WebsiteDevelopmentCostMumbai from "./pages/blog/WebsiteDevelopmentCostMumbai"
+import HowToBuildEcommerceWebsite from "./pages/blog/HowToBuildEcommerceWebsite"
+import ERPSoftwareForSmallBusiness from "./pages/blog/ERPSoftwareForSmallBusiness"
 import ThemeToggle from './components/ThemeToggle'
->>>>>>> Stashed changes
 
 function ScrollToTop() {
   const { pathname, hash } = useLocation()
