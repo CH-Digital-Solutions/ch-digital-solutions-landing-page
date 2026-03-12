@@ -3,7 +3,7 @@ import { Helmet } from "react-helmet-async";
 
 const MobileAppDevelopmentMumbai = () => {
   return (
-    <div className="bg-black text-white min-h-screen">
+    <div className="bg-[var(--bg-primary)] text-[var(--text-primary)] min-h-screen">
 
       <Helmet>
         <title>Mobile App Development Company in Mumbai | CH Digital Solutions</title>
@@ -27,7 +27,7 @@ const MobileAppDevelopmentMumbai = () => {
           Mobile App Development Company in Mumbai
         </h1>
 
-        <p className="text-gray-400 text-lg max-w-3xl">
+        <p className="text-[var(--text-muted)] text-lg max-w-3xl">
           CH Digital Solutions builds high performance mobile applications
           for startups and businesses. Our mobile apps are designed to be
           scalable, secure and optimized for user experience.
@@ -43,15 +43,15 @@ const MobileAppDevelopmentMumbai = () => {
 
           <div className="grid md:grid-cols-3 gap-6">
 
-            <div className="bg-white/5 border border-white/10 backdrop-blur-xl rounded-2xl p-6">
+            <div className="bg-[var(--bg-card)] border border-[var(--border-color)] backdrop-blur-xl rounded-2xl p-6">
               Android App Development
             </div>
 
-            <div className="bg-white/5 border border-white/10 backdrop-blur-xl rounded-2xl p-6">
+            <div className="bg-[var(--bg-card)] border border-[var(--border-color)] backdrop-blur-xl rounded-2xl p-6">
               iOS App Development
             </div>
 
-            <div className="bg-white/5 border border-white/10 backdrop-blur-xl rounded-2xl p-6">
+            <div className="bg-[var(--bg-card)] border border-[var(--border-color)] backdrop-blur-xl rounded-2xl p-6">
               Cross Platform Apps
             </div>
 
@@ -67,7 +67,7 @@ const MobileAppDevelopmentMumbai = () => {
             Our Mobile App Development Process
           </h2>
 
-          <p className="text-gray-400 max-w-3xl">
+          <p className="text-[var(--text-muted)] max-w-3xl">
             Our development process includes planning, UI/UX design,
             development, testing and deployment. We focus on building
             apps that deliver excellent performance and user experience.
@@ -90,7 +90,7 @@ const MobileAppDevelopmentMumbai = () => {
                 How much does mobile app development cost in Mumbai?
               </h3>
 
-              <p className="text-gray-400">
+              <p className="text-[var(--text-muted)]">
                 The cost depends on the app features, design complexity
                 and integrations required.
               </p>
@@ -101,7 +101,7 @@ const MobileAppDevelopmentMumbai = () => {
                 How long does it take to build a mobile app?
               </h3>
 
-              <p className="text-gray-400">
+              <p className="text-[var(--text-muted)]">
                 Mobile app development usually takes between 6–12 weeks
                 depending on project scope.
               </p>

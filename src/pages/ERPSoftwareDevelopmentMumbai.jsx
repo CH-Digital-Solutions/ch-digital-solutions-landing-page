@@ -3,7 +3,7 @@ import { Helmet } from "react-helmet-async";
 
 const ERPSoftwareDevelopmentMumbai = () => {
   return (
-    <div className="bg-black text-white min-h-screen">
+    <div className="bg-[var(--bg-primary)] text-[var(--text-primary)] min-h-screen">
 
       <Helmet>
         <title>ERP Software Development Company in Mumbai | CH Digital Solutions</title>
@@ -29,7 +29,7 @@ const ERPSoftwareDevelopmentMumbai = () => {
           ERP Software Development Company in Mumbai
         </h1>
 
-        <p className="text-gray-400 text-lg max-w-3xl">
+        <p className="text-[var(--text-muted)] text-lg max-w-3xl">
           CH Digital Solutions develops powerful ERP systems that help
           businesses manage operations efficiently. Our ERP solutions are
           designed to integrate multiple business processes including
@@ -37,7 +37,7 @@ const ERPSoftwareDevelopmentMumbai = () => {
           reporting and workflow automation.
         </p>
 
-        <p className="text-gray-400 text-lg max-w-3xl mt-6">
+        <p className="text-[var(--text-muted)] text-lg max-w-3xl mt-6">
           As a software development company based in Mumbai, we build
           scalable ERP platforms that allow organizations to streamline
           their operations and improve productivity. Our systems are
@@ -55,31 +55,31 @@ const ERPSoftwareDevelopmentMumbai = () => {
 
           <div className="grid md:grid-cols-3 gap-6">
 
-            <div className="bg-white/5 border border-white/10 backdrop-blur-xl rounded-2xl p-6">
+            <div className="bg-[var(--bg-card)] border border-[var(--border-color)] backdrop-blur-xl rounded-2xl p-6">
               <h3 className="font-semibold text-lg mb-2">
                 Custom ERP Development
               </h3>
-              <p className="text-gray-400 text-sm">
+              <p className="text-[var(--text-muted)] text-sm">
                 Tailored ERP systems designed specifically for your
                 business processes and operational workflows.
               </p>
             </div>
 
-            <div className="bg-white/5 border border-white/10 backdrop-blur-xl rounded-2xl p-6">
+            <div className="bg-[var(--bg-card)] border border-[var(--border-color)] backdrop-blur-xl rounded-2xl p-6">
               <h3 className="font-semibold text-lg mb-2">
                 Inventory Management Systems
               </h3>
-              <p className="text-gray-400 text-sm">
+              <p className="text-[var(--text-muted)] text-sm">
                 ERP solutions that help businesses track products,
                 stock levels and warehouse operations efficiently.
               </p>
             </div>
 
-            <div className="bg-white/5 border border-white/10 backdrop-blur-xl rounded-2xl p-6">
+            <div className="bg-[var(--bg-card)] border border-[var(--border-color)] backdrop-blur-xl rounded-2xl p-6">
               <h3 className="font-semibold text-lg mb-2">
                 Billing & Accounting Systems
               </h3>
-              <p className="text-gray-400 text-sm">
+              <p className="text-[var(--text-muted)] text-sm">
                 Integrated billing and accounting tools that simplify
                 financial management and reporting.
               </p>
@@ -97,7 +97,7 @@ const ERPSoftwareDevelopmentMumbai = () => {
             Our ERP Development Process
           </h2>
 
-          <p className="text-gray-400 max-w-3xl">
+          <p className="text-[var(--text-muted)] max-w-3xl">
             Our ERP development process begins with understanding
             the specific operational needs of your organization.
             We analyze workflows, design system architecture and
@@ -105,7 +105,7 @@ const ERPSoftwareDevelopmentMumbai = () => {
             business operations.
           </p>
 
-          <p className="text-gray-400 max-w-3xl mt-4">
+          <p className="text-[var(--text-muted)] max-w-3xl mt-4">
             Our development team focuses on building scalable,
             secure and high performance ERP platforms that can
             grow with your business.
@@ -123,15 +123,15 @@ const ERPSoftwareDevelopmentMumbai = () => {
 
           <div className="grid md:grid-cols-3 gap-6">
 
-            <div className="bg-white/5 border border-white/10 rounded-2xl p-6">
+            <div className="bg-[var(--bg-card)] border border-[var(--border-color)] rounded-2xl p-6">
               Schools & Educational Institutes
             </div>
 
-            <div className="bg-white/5 border border-white/10 rounded-2xl p-6">
+            <div className="bg-[var(--bg-card)] border border-[var(--border-color)] rounded-2xl p-6">
               Retail & Distribution Businesses
             </div>
 
-            <div className="bg-white/5 border border-white/10 rounded-2xl p-6">
+            <div className="bg-[var(--bg-card)] border border-[var(--border-color)] rounded-2xl p-6">
               Healthcare & Clinics
             </div>
 
@@ -147,7 +147,7 @@ const ERPSoftwareDevelopmentMumbai = () => {
             Technologies We Use
           </h2>
 
-          <ul className="text-gray-400 space-y-3 max-w-3xl">
+          <ul className="text-[var(--text-muted)] space-y-3 max-w-3xl">
             <li>• React based modern dashboards</li>
             <li>• MERN Stack backend architecture</li>
             <li>• Secure cloud infrastructure</li>
@@ -172,7 +172,7 @@ const ERPSoftwareDevelopmentMumbai = () => {
                 What is ERP software?
               </h3>
 
-              <p className="text-gray-400">
+              <p className="text-[var(--text-muted)]">
                 ERP software is a system that helps businesses manage
                 multiple operations such as inventory, finance,
                 employees and workflows within a single platform.
@@ -184,7 +184,7 @@ const ERPSoftwareDevelopmentMumbai = () => {
                 How long does ERP development take?
               </h3>
 
-              <p className="text-gray-400">
+              <p className="text-[var(--text-muted)]">
                 ERP development timelines depend on project complexity.
                 Most ERP systems take between 4–12 weeks to develop.
               </p>
@@ -195,7 +195,7 @@ const ERPSoftwareDevelopmentMumbai = () => {
                 Can ERP systems be customized?
               </h3>
 
-              <p className="text-gray-400">
+              <p className="text-[var(--text-muted)]">
                 Yes. Our ERP solutions are fully customizable so that
                 businesses can adapt the system according to their
                 operational needs.
@@ -214,7 +214,7 @@ const ERPSoftwareDevelopmentMumbai = () => {
             Build a Custom ERP System for Your Business
           </h2>
 
-          <p className="text-gray-400 mb-6">
+          <p className="text-[var(--text-muted)] mb-6">
             Contact CH Digital Solutions to develop scalable ERP
             software that simplifies operations and improves
             business efficiency.
@@ -222,7 +222,7 @@ const ERPSoftwareDevelopmentMumbai = () => {
 
           <a
             href="/#contact"
-            className="px-8 py-3 bg-white text-black rounded-lg font-semibold"
+            className="px-8 py-3 bg-[var(--cta-bg)] text-[var(--cta-text)] rounded-lg font-semibold"
           >
             Contact Us
           </a>

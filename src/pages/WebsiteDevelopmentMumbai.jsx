@@ -3,7 +3,7 @@ import GlassCard from "../components/ui/GlassCard";
 
 const WebsiteDevelopmentMumbai = () => {
   return (
-    <div className="bg-black text-white min-h-screen">
+    <div className="bg-[var(--bg-primary)] text-[var(--text-primary)] min-h-screen">
 
       <Navbar />
 
@@ -13,7 +13,7 @@ const WebsiteDevelopmentMumbai = () => {
           Website Development Company in Mumbai
         </h1>
 
-        <p className="text-gray-400 text-lg max-w-3xl mt-6">
+        <p className="text-[var(--text-muted)] text-lg max-w-3xl mt-6">
           CH Digital Solutions is a Mumbai based software company specializing in
           custom website development, business automation systems and scalable digital
           platforms. Our team focuses on building high performance web solutions that
@@ -38,30 +38,30 @@ const WebsiteDevelopmentMumbai = () => {
 
           <div className="grid md:grid-cols-4 gap-6">
 
-            <div className="bg-white/5 border border-white/10 backdrop-blur-xl rounded-2xl p-6">
+            <div className="bg-[var(--bg-card)] border border-[var(--border-color)] backdrop-blur-xl rounded-2xl p-6">
               <h3 className="font-semibold mb-2">Planning</h3>
-              <p className="text-gray-400 text-sm">
+              <p className="text-[var(--text-muted)] text-sm">
                 Understanding business goals and defining project scope.
               </p>
             </div>
 
-            <div className="bg-white/5 border border-white/10 backdrop-blur-xl rounded-2xl p-6">
+            <div className="bg-[var(--bg-card)] border border-[var(--border-color)] backdrop-blur-xl rounded-2xl p-6">
               <h3 className="font-semibold mb-2">Design</h3>
-              <p className="text-gray-400 text-sm">
+              <p className="text-[var(--text-muted)] text-sm">
                 Creating modern UI/UX layouts optimized for conversions.
               </p>
             </div>
 
-            <div className="bg-white/5 border border-white/10 backdrop-blur-xl rounded-2xl p-6">
+            <div className="bg-[var(--bg-card)] border border-[var(--border-color)] backdrop-blur-xl rounded-2xl p-6">
               <h3 className="font-semibold mb-2">Development</h3>
-              <p className="text-gray-400 text-sm">
+              <p className="text-[var(--text-muted)] text-sm">
                 Building scalable web applications using modern frameworks.
               </p>
             </div>
 
-            <div className="bg-white/5 border border-white/10 backdrop-blur-xl rounded-2xl p-6">
+            <div className="bg-[var(--bg-card)] border border-[var(--border-color)] backdrop-blur-xl rounded-2xl p-6">
               <h3 className="font-semibold mb-2">Deployment</h3>
-              <p className="text-gray-400 text-sm">
+              <p className="text-[var(--text-muted)] text-sm">
                 Launching secure and optimized systems for real-world use.
               </p>
             </div>
@@ -76,7 +76,7 @@ const WebsiteDevelopmentMumbai = () => {
             Technologies We Use
           </h2>
 
-          <ul className="text-gray-400 space-y-3 max-w-3xl">
+          <ul className="text-[var(--text-muted)] space-y-3 max-w-3xl">
             <li>• React & Modern Frontend Frameworks</li>
             <li>• MERN Stack (MongoDB, Express, React, Node)</li>
             <li>• Python Backend Systems</li>
@@ -95,7 +95,7 @@ const WebsiteDevelopmentMumbai = () => {
               Startup Focused
             </h3>
 
-            <p className="text-gray-400">
+            <p className="text-[var(--text-muted)]">
               We build scalable digital systems designed for fast growing
               startups and modern businesses.
             </p>
@@ -106,7 +106,7 @@ const WebsiteDevelopmentMumbai = () => {
               Scalable Architecture
             </h3>
 
-            <p className="text-gray-400">
+            <p className="text-[var(--text-muted)]">
               Our systems are designed for performance, scalability and
               long-term maintainability.
             </p>
@@ -114,11 +114,11 @@ const WebsiteDevelopmentMumbai = () => {
 
         </div>
 
-        <p className="text-gray-400 mt-6">
+        <p className="text-[var(--text-muted)] mt-6">
           If you are planning to build a website for your business, you can also explore our
           <a
             href="/website-development-company-mumbai"
-            className="text-white underline ml-1"
+            className="text-[var(--text-primary)] underline ml-1"
           >
             website development services in Mumbai
           </a>.
@@ -136,7 +136,7 @@ const WebsiteDevelopmentMumbai = () => {
               <h3 className="font-semibold text-lg">
                 How much does website development cost in Mumbai?
               </h3>
-              <p className="text-gray-400">
+              <p className="text-[var(--text-muted)]">
                 The cost depends on project complexity, features and integrations.
               </p>
             </div>
@@ -145,7 +145,7 @@ const WebsiteDevelopmentMumbai = () => {
               <h3 className="font-semibold text-lg">
                 How long does it take to build a website?
               </h3>
-              <p className="text-gray-400">
+              <p className="text-[var(--text-muted)]">
                 Most websites take between 2–6 weeks depending on project scope.
               </p>
             </div>
@@ -154,7 +154,7 @@ const WebsiteDevelopmentMumbai = () => {
               <h3 className="font-semibold text-lg">
                 Do you build custom business software?
               </h3>
-              <p className="text-gray-400">
+              <p className="text-[var(--text-muted)]">
                 Yes, we specialize in custom software systems and automation tools.
               </p>
             </div>
@@ -169,14 +169,14 @@ const WebsiteDevelopmentMumbai = () => {
             Start Your Project
           </h2>
 
-          <p className="text-gray-400 mb-6">
+          <p className="text-[var(--text-muted)] mb-6">
             Looking for a reliable development partner? Contact CH Digital Solutions
             to build scalable digital platforms for your business.
           </p>
 
           <a
             href="/#contact"
-            className="px-8 py-3 bg-white text-black rounded-lg font-semibold"
+            className="px-8 py-3 bg-[var(--cta-bg)] text-[var(--cta-text)] rounded-lg font-semibold"
           >
             Contact Us
           </a>

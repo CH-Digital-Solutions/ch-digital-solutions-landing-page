@@ -3,7 +3,7 @@ import { Helmet } from "react-helmet-async";
 
 const WebsiteDevelopmentCostMumbai = () => {
   return (
-    <div className="bg-black text-white min-h-screen">
+    <div className="bg-[var(--bg-primary)] text-[var(--text-primary)] min-h-screen">
 
       <Helmet>
         <title>Website Development Cost in Mumbai | Complete Guide 2025</title>
@@ -29,13 +29,13 @@ const WebsiteDevelopmentCostMumbai = () => {
           Website Development Cost in Mumbai (Complete Guide)
         </h1>
 
-        <p className="text-gray-400 text-lg mb-8">
+        <p className="text-[var(--text-muted)] text-lg mb-8">
           If you are planning to build a website for your business,
           one of the first questions that comes to mind is:
           <strong> how much does website development cost in Mumbai?</strong>
         </p>
 
-        <p className="text-gray-400 text-lg mb-8">
+        <p className="text-[var(--text-muted)] text-lg mb-8">
           The cost of website development depends on multiple factors
           including design complexity, features, integrations and
           development time. In this guide we will explain the pricing
@@ -48,14 +48,14 @@ const WebsiteDevelopmentCostMumbai = () => {
           Average Website Development Cost in Mumbai
         </h2>
 
-        <p className="text-gray-400 mb-6">
+        <p className="text-[var(--text-muted)] mb-6">
           Website development cost in Mumbai can vary depending on
           the type of website you want to build.
         </p>
 
-        <div className="bg-white/5 border border-white/10 backdrop-blur-xl rounded-xl p-6 mb-10">
+        <div className="bg-[var(--bg-card)] border border-[var(--border-color)] backdrop-blur-xl rounded-xl p-6 mb-10">
 
-          <ul className="space-y-3 text-gray-300">
+          <ul className="space-y-3 text-[var(--text-secondary)]">
             <li>Basic business website: ₹10,000 – ₹30,000</li>
             <li>Professional company website: ₹30,000 – ₹80,000</li>
             <li>Ecommerce website: ₹50,000 – ₹2,00,000+</li>
@@ -70,11 +70,11 @@ const WebsiteDevelopmentCostMumbai = () => {
           Factors That Affect Website Development Cost
         </h2>
 
-        <p className="text-gray-400 mb-6">
+        <p className="text-[var(--text-muted)] mb-6">
           Several factors influence the overall cost of building a website.
         </p>
 
-        <ul className="space-y-4 text-gray-300">
+        <ul className="space-y-4 text-[var(--text-secondary)]">
 
           <li>
             <strong>Design complexity:</strong> Custom UI/UX design
@@ -105,12 +105,12 @@ const WebsiteDevelopmentCostMumbai = () => {
           Why Businesses Need Professional Website Development
         </h2>
 
-        <p className="text-gray-400 mb-6">
+        <p className="text-[var(--text-muted)] mb-6">
           A professionally built website helps businesses establish
           credibility, attract customers and grow their digital presence.
         </p>
 
-        <p className="text-gray-400 mb-6">
+        <p className="text-[var(--text-muted)] mb-6">
           Modern websites are not just static pages. They are powerful
           digital platforms that integrate marketing, analytics,
           automation and customer interaction.
@@ -118,20 +118,20 @@ const WebsiteDevelopmentCostMumbai = () => {
 
         {/* CTA */}
 
-        <div className="mt-16 bg-white/5 border border-white/10 rounded-xl p-8 text-center">
+        <div className="mt-16 bg-[var(--bg-card)] border border-[var(--border-color)] rounded-xl p-8 text-center">
 
           <h3 className="text-2xl font-semibold mb-4">
             Need a Website for Your Business?
           </h3>
 
-          <p className="text-gray-400 mb-6">
+          <p className="text-[var(--text-muted)] mb-6">
             CH Digital Solutions builds scalable websites for startups
             and businesses across Mumbai.
           </p>
 
           <a
             href="/#contact"
-            className="bg-white text-black px-6 py-3 rounded-lg font-semibold"
+            className="bg-[var(--cta-bg)] text-[var(--cta-text)] px-6 py-3 rounded-lg font-semibold"
           >
             Contact Us
           </a>

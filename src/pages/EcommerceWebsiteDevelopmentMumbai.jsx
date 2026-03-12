@@ -3,7 +3,7 @@ import { Helmet } from "react-helmet-async";
 
 const EcommerceWebsiteDevelopmentMumbai = () => {
   return (
-    <div className="bg-black text-white min-h-screen">
+    <div className="bg-[var(--bg-primary)] text-[var(--text-primary)] min-h-screen">
 
       <Helmet>
         <title>Ecommerce Website Development Mumbai | CH Digital Solutions</title>
@@ -27,7 +27,7 @@ const EcommerceWebsiteDevelopmentMumbai = () => {
           Ecommerce Website Development Mumbai
         </h1>
 
-        <p className="text-gray-400 text-lg max-w-3xl">
+        <p className="text-[var(--text-muted)] text-lg max-w-3xl">
           CH Digital Solutions builds modern ecommerce websites that help
           businesses sell products online. Our ecommerce platforms are
           designed for performance, security and scalability.
@@ -43,15 +43,15 @@ const EcommerceWebsiteDevelopmentMumbai = () => {
 
           <div className="grid md:grid-cols-3 gap-6">
 
-            <div className="bg-white/5 border border-white/10 backdrop-blur-xl rounded-2xl p-6">
+            <div className="bg-[var(--bg-card)] border border-[var(--border-color)] backdrop-blur-xl rounded-2xl p-6">
               Shopify Store Development
             </div>
 
-            <div className="bg-white/5 border border-white/10 backdrop-blur-xl rounded-2xl p-6">
+            <div className="bg-[var(--bg-card)] border border-[var(--border-color)] backdrop-blur-xl rounded-2xl p-6">
               Custom Ecommerce Platforms
             </div>
 
-            <div className="bg-white/5 border border-white/10 backdrop-blur-xl rounded-2xl p-6">
+            <div className="bg-[var(--bg-card)] border border-[var(--border-color)] backdrop-blur-xl rounded-2xl p-6">
               Payment Gateway Integration
             </div>
 
@@ -67,7 +67,7 @@ const EcommerceWebsiteDevelopmentMumbai = () => {
             Our Ecommerce Development Process
           </h2>
 
-          <p className="text-gray-400 max-w-3xl">
+          <p className="text-[var(--text-muted)] max-w-3xl">
             Our process focuses on building scalable online stores.
             We begin with understanding product requirements,
             designing the store layout and building secure ecommerce
@@ -91,7 +91,7 @@ const EcommerceWebsiteDevelopmentMumbai = () => {
                 How much does an ecommerce website cost?
               </h3>
 
-              <p className="text-gray-400">
+              <p className="text-[var(--text-muted)]">
                 Ecommerce website cost depends on the number of products,
                 features and integrations required.
               </p>
@@ -102,7 +102,7 @@ const EcommerceWebsiteDevelopmentMumbai = () => {
                 How long does it take to build an ecommerce website?
               </h3>
 
-              <p className="text-gray-400">
+              <p className="text-[var(--text-muted)]">
                 Most ecommerce websites take between 3–8 weeks depending
                 on the project scope.
               </p>

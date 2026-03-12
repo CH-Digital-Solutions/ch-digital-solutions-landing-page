@@ -3,7 +3,7 @@ import { Helmet } from "react-helmet-async";
 
 const ERPSoftwareForSmallBusiness = () => {
     return (
-        <div className="bg-black text-white min-h-screen">
+        <div className="bg-[var(--bg-primary)] text-[var(--text-primary)] min-h-screen">
 
             <Helmet>
                 <title>ERP Software for Small Business | Complete Guide</title>
@@ -27,7 +27,7 @@ const ERPSoftwareForSmallBusiness = () => {
                     ERP Software for Small Business
                 </h1>
 
-                <p className="text-gray-400 text-lg mb-8">
+                <p className="text-[var(--text-muted)] text-lg mb-8">
                     ERP (Enterprise Resource Planning) software helps businesses
                     manage multiple operations through a single integrated system.
                 </p>
@@ -36,7 +36,7 @@ const ERPSoftwareForSmallBusiness = () => {
                     What is ERP Software?
                 </h2>
 
-                <p className="text-gray-400 mb-6">
+                <p className="text-[var(--text-muted)] mb-6">
                     ERP software integrates various business processes such as
                     inventory management, billing, accounting and reporting
                     into a centralized platform.
@@ -46,7 +46,7 @@ const ERPSoftwareForSmallBusiness = () => {
                     Benefits of ERP Software
                 </h2>
 
-                <ul className="text-gray-300 space-y-4">
+                <ul className="text-[var(--text-secondary)] space-y-4">
 
                     <li>
                         Improved operational efficiency
@@ -70,36 +70,36 @@ const ERPSoftwareForSmallBusiness = () => {
                     Why Small Businesses Need ERP
                 </h2>
 
-                <p className="text-gray-400 mb-6">
+                <p className="text-[var(--text-muted)] mb-6">
                     Small businesses often struggle with fragmented systems.
                     ERP platforms unify operations and provide real time
                     insights that support business growth.
                 </p>
 
-                <p className="text-gray-400 mt-6">
+                <p className="text-[var(--text-muted)] mt-6">
                     If your business needs a scalable ERP platform, check our
                     <a
                         href="/erp-software-development-mumbai"
-                        className="text-white underline ml-1"
+                        className="text-[var(--text-primary)] underline ml-1"
                     >
                         ERP software development services in Mumbai
                     </a>.
                 </p>
 
-                <div className="mt-16 bg-white/5 border border-white/10 rounded-xl p-8 text-center">
+                <div className="mt-16 bg-[var(--bg-card)] border border-[var(--border-color)] rounded-xl p-8 text-center">
 
                     <h3 className="text-2xl font-semibold mb-4">
                         Build a Custom ERP System
                     </h3>
 
-                    <p className="text-gray-400 mb-6">
+                    <p className="text-[var(--text-muted)] mb-6">
                         CH Digital Solutions develops ERP software tailored
                         to business workflows.
                     </p>
 
                     <a
                         href="/#contact"
-                        className="bg-white text-black px-6 py-3 rounded-lg font-semibold"
+                        className="bg-[var(--cta-bg)] text-[var(--cta-text)] px-6 py-3 rounded-lg font-semibold"
                     >
                         Contact Us
                     </a>
