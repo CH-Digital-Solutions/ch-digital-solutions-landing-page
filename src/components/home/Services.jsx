@@ -40,13 +40,13 @@ function Services() {
         <>
 
             <div className='flex justify-center'>
-                <div className='md:min-h-0 lg:min-h-screen bg-black w-full py-10 md:py-16 lg:py-0'>
-                    <div className="bg-white/15 w-full h-[0.1px]"></div>
+                <div className='md:min-h-0 lg:min-h-screen bg-[var(--bg-primary)] w-full py-10 md:py-16 lg:py-0'>
+                    <div className="bg-[var(--divider-color)] w-full h-[0.1px]"></div>
 
 
-                    <div className="text-white w-full flex flex-col items-center jakarta mt-8 md:mt-12 px-4">
+                    <div className="text-[var(--text-primary)] w-full flex flex-col items-center jakarta mt-8 md:mt-12 px-4">
                         <h2 className="text-3xl sm:text-4xl md:text-4xl lg:text-5xl font-bold text-center">Our Services</h2>
-                        <p className="text-white/60 text-sm sm:text-base md:text-base font-light text-center leading-relaxed mt-3 max-w-xs sm:max-w-md md:max-w-2xl">
+                        <p className="text-[var(--text-secondary)] text-sm sm:text-base md:text-base font-light text-center leading-relaxed mt-3 max-w-xs sm:max-w-md md:max-w-2xl">
                             Comprehensive solutions covering every aspect of your digital transformation.
                         </p>
                     </div>
@@ -58,12 +58,12 @@ function Services() {
                             ser_content.map((service, index) => {
                                 const Icon = service.icon;
                                 return (
-                                    <div key={index} className='w-full p-4 md:p-4 lg:p-5 rounded-xl md:rounded-2xl bg-black border border-white/15 hover:border-white/30 transition-all'>
-                                        <div className="w-10 h-10 md:w-9 md:h-9 lg:w-10 lg:h-10 rounded-lg bg-white/10 flex justify-center items-center">
-                                            <Icon className="w-5 h-5 md:w-4 md:h-4 lg:w-5 lg:h-5 text-white/90" />
+                                    <div key={index} className='w-full p-4 md:p-4 lg:p-5 rounded-xl md:rounded-2xl bg-[var(--bg-card)] border border-[var(--border-color)] hover:border-[var(--border-hover)] transition-all' style={{boxShadow: 'var(--shadow-soft)'}}>
+                                        <div className="w-10 h-10 md:w-9 md:h-9 lg:w-10 lg:h-10 rounded-lg bg-[var(--card-icon-bg)] flex justify-center items-center">
+                                            <Icon className="w-5 h-5 md:w-4 md:h-4 lg:w-5 lg:h-5 text-[var(--card-icon-color)]" />
                                         </div>
-                                        <div className="text-white text-lg md:text-base lg:text-lg font-semibold mt-3 md:mt-3">{service.title}</div>
-                                        <div className="text-white/55 text-sm md:text-sm font-light mt-1.5 md:mt-2 leading-relaxed">{service.desc}</div>
+                                        <div className="text-[var(--text-primary)] text-lg md:text-base lg:text-lg font-semibold mt-3 md:mt-3">{service.title}</div>
+                                        <div className="text-[var(--text-muted)] text-sm md:text-sm font-light mt-1.5 md:mt-2 leading-relaxed">{service.desc}</div>
                                     </div>
                                 )
                             })

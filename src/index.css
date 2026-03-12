@@ -1,7 +1,230 @@
 @import "tailwindcss";
 
+/* ===== LIGHT THEME (Default) ===== */
+:root {
+  --bg-primary: #F7F7F5;
+  --bg-secondary: #EFEEEB;
+  --bg-card: #FFFFFF;
+  --border-color: #E3E2DC;
+  --border-hover: #C5C4BE;
+  --text-primary: #1A1A1A;
+  --text-secondary: #4A4A4A;
+  --text-muted: #7A7A7A;
+  --accent-primary: #1A1A1A;
+  --accent-hover: #333333;
+  --accent-light: #F0F0EE;
+  --shadow-soft: 0 2px 12px rgba(0, 0, 0, 0.06);
+  --divider-color: #E3E2DC;
+
+  /* Navbar */
+  --nav-bg: rgba(247, 247, 245, 0.85);
+  --nav-border: rgba(0, 0, 0, 0.06);
+  --nav-link: #4A4A4A;
+  --nav-link-hover: #1A1A1A;
+  --mobile-menu-bg: rgba(247, 247, 245, 0.97);
+
+  /* CTA Buttons */
+  --cta-bg: #1A1A1A;
+  --cta-text: #FFFFFF;
+  --cta-hover: #333333;
+  --cta2-bg: transparent;
+  --cta2-border: #1A1A1A;
+  --cta2-text: #1A1A1A;
+  --cta2-hover-border: #333333;
+
+  /* Cards */
+  --card-icon-bg: #F0F0EE;
+  --card-icon-color: #1A1A1A;
+
+  /* Badges */
+  --badge-bg: #F0F0EE;
+  --badge-text: #1A1A1A;
+  --badge-border: #E3E2DC;
+
+  /* Contact */
+  --contact-section-bg: #EFEEEB;
+  --contact-icon-bg: rgba(0, 0, 0, 0.06);
+  --contact-icon-hover: rgba(0, 0, 0, 0.10);
+  --contact-icon-color: #1A1A1A;
+
+  /* Form */
+  --form-bg: #FFFFFF;
+  --form-border: #E3E2DC;
+  --input-bg: #F7F7F5;
+  --input-border: #E3E2DC;
+  --input-focus-border: #1A1A1A;
+  --input-placeholder: #9A9A9A;
+  --select-option-bg: #FFFFFF;
+
+  /* Footer */
+  --footer-bg: #EFEEEB;
+  --footer-border: #E3E2DC;
+
+  /* Tech Tags */
+  --tag-bg: #F0F0EE;
+  --tag-text: #1A1A1A;
+  --tag-border: #E3E2DC;
+
+  /* Testimonial */
+  --testi-glow: rgba(0, 0, 0, 0.03);
+  --testi-card-border: #E3E2DC;
+  --testi-accent-line: rgba(0, 0, 0, 0.12);
+  --testi-quote-bg: rgba(0, 0, 0, 0.04);
+  --testi-quote-icon: #7A7A7A;
+  --testi-divider-from: rgba(0, 0, 0, 0.10);
+  --testi-author-border: #E3E2DC;
+  --testi-author-bg: #F7F7F5;
+
+  /* Misc */
+  --zoom-overlay: rgba(0, 0, 0, 0.85);
+}
+
+/* ===== DARK THEME ===== */
+[data-theme="dark"] {
+  --bg-primary: #000000;
+  --bg-secondary: #000000;
+  --bg-card: rgba(255, 255, 255, 0.06);
+  --border-color: rgba(255, 255, 255, 0.15);
+  --border-hover: rgba(255, 255, 255, 0.30);
+  --text-primary: #FFFFFF;
+  --text-secondary: rgba(255, 255, 255, 0.60);
+  --text-muted: rgba(255, 255, 255, 0.40);
+  --accent-primary: #FFFFFF;
+  --accent-hover: rgba(255, 255, 255, 0.90);
+  --accent-light: rgba(255, 255, 255, 0.10);
+  --shadow-soft: none;
+  --divider-color: rgba(255, 255, 255, 0.15);
+
+  --nav-bg: rgba(255, 255, 255, 0.10);
+  --nav-border: rgba(255, 255, 255, 0.08);
+  --nav-link: rgba(255, 255, 255, 0.60);
+  --nav-link-hover: rgba(255, 255, 255, 0.90);
+  --mobile-menu-bg: rgba(0, 0, 0, 0.95);
+
+  --cta-bg: #FFFFFF;
+  --cta-text: #000000;
+  --cta-hover: rgba(255, 255, 255, 0.90);
+  --cta2-bg: #000000;
+  --cta2-border: rgba(255, 255, 255, 0.30);
+  --cta2-text: #FFFFFF;
+  --cta2-hover-border: rgba(255, 255, 255, 0.60);
+
+  --card-icon-bg: rgba(255, 255, 255, 0.10);
+  --card-icon-color: rgba(255, 255, 255, 0.90);
+
+  --badge-bg: rgba(255, 255, 255, 0.15);
+  --badge-text: #FFFFFF;
+  --badge-border: rgba(255, 255, 255, 0.20);
+
+  --contact-section-bg: rgba(255, 255, 255, 0.12);
+  --contact-icon-bg: rgba(0, 0, 0, 0.30);
+  --contact-icon-hover: rgba(0, 0, 0, 0.40);
+  --contact-icon-color: rgba(255, 255, 255, 0.80);
+
+  --form-bg: rgba(0, 0, 0, 0.40);
+  --form-border: rgba(255, 255, 255, 0.10);
+  --input-bg: rgba(255, 255, 255, 0.08);
+  --input-border: rgba(255, 255, 255, 0.08);
+  --input-focus-border: rgba(255, 255, 255, 0.25);
+  --input-placeholder: rgba(255, 255, 255, 0.35);
+  --select-option-bg: #171717;
+
+  --footer-bg: rgba(255, 255, 255, 0.03);
+  --footer-border: rgba(255, 255, 255, 0.10);
+
+  --tag-bg: rgba(255, 255, 255, 0.06);
+  --tag-text: rgba(255, 255, 255, 0.50);
+  --tag-border: rgba(255, 255, 255, 0.10);
+
+  --testi-glow: rgba(255, 255, 255, 0.05);
+  --testi-card-border: rgba(255, 255, 255, 0.15);
+  --testi-accent-line: rgba(255, 255, 255, 0.30);
+  --testi-quote-bg: rgba(255, 255, 255, 0.08);
+  --testi-quote-icon: rgba(255, 255, 255, 0.40);
+  --testi-divider-from: rgba(255, 255, 255, 0.30);
+  --testi-author-border: rgba(255, 255, 255, 0.15);
+  --testi-author-bg: rgba(255, 255, 255, 0.05);
+
+  --zoom-overlay: rgba(0, 0, 0, 0.90);
+}
+
 body {
-  background-color: black;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
   margin: 0;
   padding: 0;
+}
+
+/* ===== Theme Toggle Button (Desktop fixed) ===== */
+/* Hidden on mobile — replaced by inline version inside Navbar */
+.theme-toggle-btn {
+  display: none;
+}
+@media (min-width: 768px) {
+  .theme-toggle-btn {
+    display: flex;
+    position: fixed;
+    top: 38px;
+    right: 80px;
+    z-index: 9999;
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    border: 1px solid var(--nav-border);
+    background: var(--nav-bg);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.08);
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-secondary);
+    transition: background 0.2s, box-shadow 0.2s, color 0.2s, border-color 0.2s;
+  }
+  .theme-toggle-btn:hover {
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.12);
+    color: var(--text-primary);
+    border-color: var(--border-hover);
+  }
+}
+
+/* ===== Theme Toggle — Inline (Mobile Navbar) ===== */
+.theme-toggle-inline {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  border: 1px solid var(--nav-border);
+  background: transparent;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-secondary);
+  transition: background 0.18s, color 0.18s, border-color 0.18s;
+  flex-shrink: 0;
+}
+.theme-toggle-inline:hover {
+  background: var(--accent-light);
+  color: var(--text-primary);
+  border-color: var(--border-hover);
+}
+
+/* ===== Helper classes for complex themed styles ===== */
+.testimonial-card-bg {
+  background: linear-gradient(135deg, var(--testi-glow) 0%, transparent 50%, var(--testi-glow) 100%);
+}
+.testimonial-glow-bg {
+  background: linear-gradient(to bottom right, var(--testi-glow), rgba(0,0,0,0.01), var(--testi-glow));
+}
+.quote-icon-bg {
+  background: linear-gradient(135deg, var(--testi-quote-bg) 0%, transparent 100%);
+}
+.author-avatar-bg {
+  background: var(--testi-author-bg);
+}
+.testi-accent-line {
+  background: linear-gradient(to right, transparent, var(--testi-accent-line), transparent);
+}
+.testi-divider-line {
+  background: linear-gradient(to right, var(--testi-divider-from), transparent);
 }

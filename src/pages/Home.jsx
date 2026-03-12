@@ -8,7 +8,7 @@ import Contact from '../components/home/Contact'
 function Home() {
   return (
     <>
-    <div className='bg-black'>
+    <div className='bg-[var(--bg-primary)]'>
       <Navbar />
       <Hero />
       <section id='services' ><Services/></section>
