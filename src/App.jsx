@@ -8,6 +8,8 @@ import CustomSoftwareDevelopmentMumbai from "./pages/CustomSoftwareDevelopmentMu
 import MobileAppDevelopmentMumbai from "./pages/MobileAppDevelopmentMumbai"
 import EcommerceWebsiteDevelopmentMumbai from "./pages/EcommerceWebsiteDevelopmentMumbai"
 import ERPSoftwareDevelopmentMumbai from "./pages/ERPSoftwareDevelopmentMumbai"
+import WhatsAppService from "./pages/WhatsAppService"
+import AICallingService from "./pages/AICallingService"
 import WebsiteDevelopmentCostMumbai from "./pages/blog/WebsiteDevelopmentCostMumbai"
 import HowToBuildEcommerceWebsite from "./pages/blog/HowToBuildEcommerceWebsite"
 import ERPSoftwareForSmallBusiness from "./pages/blog/ERPSoftwareForSmallBusiness"
@@ -48,6 +50,8 @@ function App() {
         />
         <Route path="/ecommerce-website-development-mumbai" element={<EcommerceWebsiteDevelopmentMumbai />} />
         <Route path="/erp-software-development-mumbai" element={<ERPSoftwareDevelopmentMumbai />} />
+        <Route path="/whatsapp-automation" element={<WhatsAppService />} />
+        <Route path="/ai-calling-agent" element={<AICallingService />} />
         <Route
           path="/website-development-cost-mumbai"
           element={<WebsiteDevelopmentCostMumbai />}
