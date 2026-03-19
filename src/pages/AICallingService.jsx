@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react'
-import { Phone, PhoneIncoming, PhoneOff, Bot, Clock, Bell, CheckCircle2, ArrowRight, Zap, BarChart3, Shield } from 'lucide-react'
+import { Phone, PhoneIncoming, PhoneOff, Bot, Clock, Bell, CheckCircle2, ArrowRight, Zap, BarChart3, Shield, MicOff, Grid3X3, Volume2 } from 'lucide-react'
 import Navbar from '../components/home/Navbar'
 import Contact from '../components/home/Contact'
 
@@ -111,13 +111,13 @@ function CallingAgentPreview() {
 
                     <div className="grid grid-cols-3 gap-x-8 gap-y-4 mt-8">
                         {[
-                            { icon: '🔇', label: 'mute' },
-                            { icon: '⌨️', label: 'keypad' },
-                            { icon: '🔊', label: 'speaker' },
+                            { icon: MicOff, label: 'mute' },
+                            { icon: Grid3X3, label: 'keypad' },
+                            { icon: Volume2, label: 'speaker' },
                         ].map((btn, i) => (
                             <div key={i} className="flex flex-col items-center gap-1">
-                                <div className="w-12 h-12 rounded-full flex items-center justify-center text-lg" style={{ background: 'rgba(255,255,255,0.08)' }}>
-                                    {btn.icon}
+                                <div className="w-12 h-12 rounded-full flex items-center justify-center" style={{ background: 'rgba(255,255,255,0.08)' }}>
+                                    <btn.icon className="w-5 h-5 text-white" />
                                 </div>
                                 <span className="text-[8px] text-white/50 capitalize">{btn.label}</span>
                             </div>
@@ -174,9 +174,9 @@ function PhoneMockup({ children }) {
                     <div className="absolute top-0 left-0 right-0 z-10 flex items-center justify-between px-5" style={{ height: '28px', paddingTop: '4px' }}>
                         <span className="text-[9px] font-semibold text-white" style={{ textShadow: '0 0 4px rgba(0,0,0,0.2)' }}>9:41</span>
                         <div className="flex items-center gap-1">
-                            <svg width="13" height="9" viewBox="0 0 13 9" fill="white" opacity="0.9"><rect x="0" y="6" width="2.5" height="3" rx="0.5"/><rect x="3.5" y="4" width="2.5" height="5" rx="0.5"/><rect x="7" y="2" width="2.5" height="7" rx="0.5"/><rect x="10.5" y="0" width="2.5" height="9" rx="0.5"/></svg>
-                            <svg width="12" height="9" viewBox="0 0 12 9" fill="white" opacity="0.9"><path d="M6 8.5a1 1 0 100-2 1 1 0 000 2z"/><path d="M3.5 5.5a3.5 3.5 0 015 0" stroke="white" strokeWidth="1.2" fill="none" strokeLinecap="round"/><path d="M1.5 3.5a6 6 0 019 0" stroke="white" strokeWidth="1.2" fill="none" strokeLinecap="round"/></svg>
-                            <svg width="18" height="9" viewBox="0 0 18 9" fill="none" opacity="0.9"><rect x="0.5" y="0.5" width="15" height="8" rx="1.5" stroke="white" strokeWidth="0.8"/><rect x="2" y="2" width="12" height="5" rx="0.5" fill="white"/><path d="M16.5 3v3a1.5 1.5 0 000-3z" fill="white" opacity="0.5"/></svg>
+                            <svg width="13" height="9" viewBox="0 0 13 9" fill="white" opacity="0.9"><rect x="0" y="6" width="2.5" height="3" rx="0.5" /><rect x="3.5" y="4" width="2.5" height="5" rx="0.5" /><rect x="7" y="2" width="2.5" height="7" rx="0.5" /><rect x="10.5" y="0" width="2.5" height="9" rx="0.5" /></svg>
+                            <svg width="12" height="9" viewBox="0 0 12 9" fill="white" opacity="0.9"><path d="M6 8.5a1 1 0 100-2 1 1 0 000 2z" /><path d="M3.5 5.5a3.5 3.5 0 015 0" stroke="white" strokeWidth="1.2" fill="none" strokeLinecap="round" /><path d="M1.5 3.5a6 6 0 019 0" stroke="white" strokeWidth="1.2" fill="none" strokeLinecap="round" /></svg>
+                            <svg width="18" height="9" viewBox="0 0 18 9" fill="none" opacity="0.9"><rect x="0.5" y="0.5" width="15" height="8" rx="1.5" stroke="white" strokeWidth="0.8" /><rect x="2" y="2" width="12" height="5" rx="0.5" fill="white" /><path d="M16.5 3v3a1.5 1.5 0 000-3z" fill="white" opacity="0.5" /></svg>
                         </div>
                     </div>
                     <div className="absolute top-1.5 left-1/2 -translate-x-1/2 z-20">

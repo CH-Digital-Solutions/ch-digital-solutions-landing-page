@@ -3,7 +3,7 @@ import { Menu, X } from 'lucide-react'
 import { Link } from 'react-router-dom'
 import ThemeToggle from '../ThemeToggle'
 
-const DARK_LOGO  = '/ch_logo_d.png'
+const DARK_LOGO  = '/ch_logo_d.webp'
 const LIGHT_LOGO = '/CH black color logo with transparent background.svg'
 
 function getTheme() {

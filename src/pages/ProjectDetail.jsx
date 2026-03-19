@@ -170,6 +170,7 @@ function ProjectDetail() {
                             >
                                 <img
                                     src={img}
+                                    loading="lazy"
                                     className="w-full h-48 sm:h-48 md:h-52 object-cover group-hover:scale-105 transition-transform duration-500"
                                     alt={`${project.name} screenshot ${i + 1}`}
                                 />

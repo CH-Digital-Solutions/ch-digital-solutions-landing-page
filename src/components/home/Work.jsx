@@ -24,6 +24,7 @@ function Work() {
               <div className="relative w-full h-44 sm:h-48 md:h-52 overflow-hidden">
                 <img
                   src={project.coverImage}
+                  loading="lazy"
                   className='w-full h-full object-cover group-hover:scale-105 transition-transform duration-500'
                   alt={project.name}
                 />

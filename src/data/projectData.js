@@ -5,22 +5,22 @@ export const projects = [
         name: 'BloomTale',
         category: 'E-Commerce',
         shortDesc: 'A modern e-commerce website with beautiful UI, smooth transitions, and seamless navigation for a premium shopping experience.',
-        coverImage: '/workCover/BloomTale.png',
-        projectDetailImage: '/Coverpage/Bloomtale Mockups.png',
+        coverImage: '/workCover/BloomTale.webp',
+        projectDetailImage: '/Coverpage/Bloomtale Mockups.webp',
         link: 'https://bloomtale.cloud/',
         techStack: ['React.js', 'Tailwind CSS', 'Framer Motion', 'Node.js', 'MongoDB', 'Express.js'],
         clientName: 'BloomTale',
         duration: '4 weeks',
         teamSize: '4 developers',
         screenshots: [
-            '/workCover/BloomTale-overview.png',
-            '/workCover/BloomTale-Landing.png',
-            '/workCover/Bloomtale-product.png',
-            '/workCover/BllomTale-Cart.png',
-            '/workCover/Bloomtale-Payment.png',
-            '/workCover/BloomTale-Order.png',
-            '/workCover/BloomTale-Services.png',
-            '/workCover/BloomTale-Form.png',
+            '/workCover/BloomTale-overview.webp',
+            '/workCover/BloomTale-Landing.webp',
+            '/workCover/Bloomtale-product.webp',
+            '/workCover/BllomTale-Cart.webp',
+            '/workCover/Bloomtale-Payment.webp',
+            '/workCover/BloomTale-Order.webp',
+            '/workCover/BloomTale-Services.webp',
+            '/workCover/BloomTale-Form.webp',
         ],
         intro: 'BloomTale is a modern e-commerce platform designed for a boutique flower and gifting business. The goal was to create a visually stunning online store that captures the elegance of the brand while providing customers with a seamless and enjoyable shopping experience from browsing to checkout.',
         problem: 'The client had no online presence and was losing potential customers to competitors with established digital storefronts. Their existing process of taking orders via phone calls and WhatsApp was inefficient, error-prone, and couldn\'t scale. They needed a professional platform that reflected their premium brand identity and streamlined the entire ordering process.',
@@ -29,7 +29,7 @@ export const projects = [
             quote: 'CH Digital Solutions transformed our business. The website they built perfectly captures our brand and our customers love the shopping experience. Orders have increased significantly since launch.',
             author: 'BloomTale Team',
             role: 'Founder, BloomTale',
-            logo: '/workCover/BloomTale.png'
+            logo: '/workCover/BloomTale.webp'
         }
     },
     {
@@ -38,8 +38,8 @@ export const projects = [
         name: 'STMS',
         category: 'Management System',
         shortDesc: 'A dedicated management system built for Tamarind to streamline operations, track data efficiently, and enhance day-to-day productivity.',
-        coverImage: '/workCover/STMS/STMS.png',
-        projectDetailImage: '/Coverpage/STMS Mockup.png',
+        coverImage: '/workCover/STMS/STMS.webp',
+        projectDetailImage: '/Coverpage/STMS Mockup.webp',
         link: 'http://localhost:5173/',
         hideLink: true,
         techStack: ['React.js', 'Tailwind CSS', 'Node.js', 'MongoDB', 'Express.js'],
@@ -47,14 +47,14 @@ export const projects = [
         duration: '6 weeks',
         teamSize: '4 developers',
         screenshots: [
-            '/workCover/STMS/Stms_dashboard.png',
-            '/workCover/STMS/stms-local.png',
-            '/workCover/STMS/stms-addRaw.png',
-            '/workCover/STMS/stms-assignImli.png',
-            '/workCover/STMS/stms-returnImli.png',
-            '/workCover/STMS/stms-localprofile.png',
-            '/workCover/STMS/stms-payment.png',
-            '/workCover/STMS/stms-setting.png',
+            '/workCover/STMS/Stms_dashboard.webp',
+            '/workCover/STMS/stms-local.webp',
+            '/workCover/STMS/stms-addRaw.webp',
+            '/workCover/STMS/stms-assignImli.webp',
+            '/workCover/STMS/stms-returnImli.webp',
+            '/workCover/STMS/stms-localprofile.webp',
+            '/workCover/STMS/stms-payment.webp',
+            '/workCover/STMS/stms-setting.webp',
 
 
 
@@ -66,7 +66,7 @@ export const projects = [
             quote: 'The STMS platform built by CH Digital Solutions has completely transformed how we manage our operations at Tamarind. It\'s intuitive, fast, and has saved us countless hours every week.',
             author: 'STMS Team',
             role: 'Founder, STMS',
-            logo: '/workCover/STMS/STMS.png'
+            logo: '/workCover/STMS/STMS.webp'
         }
     }
 ]
