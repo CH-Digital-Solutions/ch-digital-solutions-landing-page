@@ -276,7 +276,7 @@ function CallingAgentPreview({ isVisible = true }) {
 /* ═══════════════════════════════════════════ */
 function PhoneMockup({ children }) {
     return (
-        <div className="relative mx-auto" style={{ width: '260px' }}>
+        <div className="relative mx-auto" style={{ width: '260px', transform: 'scale(0.82)', transformOrigin: 'center center', margin: '-28px 0' }}>
             {/* Phone body */}
             <div className="relative rounded-[40px] overflow-hidden" style={{
                 background: '#1a1a1a',
@@ -324,70 +324,18 @@ function PhoneMockup({ children }) {
 /* ═══════════════════════════════════════════ */
 function Services() {
     const ser_content = [
-        { title: "Business & Landing Websites", desc: "Clean websites that explain your business clearly and help customers reach you easily.", icon: Globe, gradient: 'linear-gradient(135deg, #1e3a5f 0%, #0f2027 100%)', glow: 'rgba(59,130,246,0.3)', iconColor: '#60a5fa' },
-        { title: "E-Commerce Websites", desc: "Online stores to sell products, manage orders, and accept payments smoothly.", icon: ShoppingCart, gradient: 'linear-gradient(135deg, #3b2f1e 0%, #1a1207 100%)', glow: 'rgba(245,158,11,0.3)', iconColor: '#fbbf24' },
-        { title: "Mobile App Development", desc: "Simple and user-friendly mobile apps for customers or internal business use.", icon: Smartphone, gradient: 'linear-gradient(135deg, #1e3a2f 0%, #0a1f15 100%)', glow: 'rgba(16,185,129,0.3)', iconColor: '#34d399' },
-        { title: "Custom Business Systems", desc: "Smart systems built for your work to reduce manual effort and save time.", icon: Settings, gradient: 'linear-gradient(135deg, #2d1e4f 0%, #160e29 100%)', glow: 'rgba(139,92,246,0.3)', iconColor: '#a78bfa' },
-        { title: "Automation & Process Simplification", desc: "We automate repetitive tasks to improve speed, accuracy, and productivity.", icon: Zap, gradient: 'linear-gradient(135deg, #4a1e2e 0%, #27101a 100%)', glow: 'rgba(244,63,94,0.3)', iconColor: '#fb7185' },
-        { title: "System Maintenance & Growth Support", desc: "Ongoing support to keep your systems secure, updated, and ready to grow.", icon: ShieldCheck, gradient: 'linear-gradient(135deg, #1e3a4f 0%, #0c1e2e 100%)', glow: 'rgba(6,182,212,0.3)', iconColor: '#22d3ee' },
+        { title: "Business & Landing Websites", desc: "Clean websites that explain your business clearly and help customers reach you easily.", icon: Globe },
+        { title: "E-Commerce Websites", desc: "Online stores to sell products, manage orders, and accept payments smoothly.", icon: ShoppingCart },
+        { title: "Mobile App Development", desc: "Simple and user-friendly mobile apps for customers or internal business use.", icon: Smartphone },
+        { title: "Custom Business Systems", desc: "Smart systems built for your work to reduce manual effort and save time.", icon: Settings },
+        { title: "Automation & Process Simplification", desc: "We automate repetitive tasks to improve speed, accuracy, and productivity.", icon: Zap },
+        { title: "System Maintenance & Growth Support", desc: "Ongoing support to keep your systems secure, updated, and ready to grow.", icon: ShieldCheck },
     ]
-
-    /* Light-mode overrides for gradient tiles */
-    const ser_content_light = [
-        { gradient: 'linear-gradient(135deg, #dbeafe 0%, #eff6ff 100%)', glow: 'rgba(59,130,246,0.15)', iconColor: '#2563eb' },
-        { gradient: 'linear-gradient(135deg, #fef3c7 0%, #fffbeb 100%)', glow: 'rgba(245,158,11,0.15)', iconColor: '#d97706' },
-        { gradient: 'linear-gradient(135deg, #d1fae5 0%, #ecfdf5 100%)', glow: 'rgba(16,185,129,0.15)', iconColor: '#059669' },
-        { gradient: 'linear-gradient(135deg, #ede9fe 0%, #f5f3ff 100%)', glow: 'rgba(139,92,246,0.15)', iconColor: '#7c3aed' },
-        { gradient: 'linear-gradient(135deg, #fce7f3 0%, #fdf2f8 100%)', glow: 'rgba(244,63,94,0.15)', iconColor: '#e11d48' },
-        { gradient: 'linear-gradient(135deg, #cffafe 0%, #ecfeff 100%)', glow: 'rgba(6,182,212,0.15)', iconColor: '#0891b2' },
-    ]
-
-    const scrollContainerRef = useRef(null);
-    const [canScrollLeft, setCanScrollLeft] = useState(false);
-    const [canScrollRight, setCanScrollRight] = useState(true);
-    const [isDark, setIsDark] = useState(false);
-
-    /* Detect theme */
-    useEffect(() => {
-        const check = () => setIsDark(document.documentElement.getAttribute('data-theme') === 'dark');
-        check();
-        const obs = new MutationObserver(check);
-        obs.observe(document.documentElement, { attributes: true, attributeFilter: ['data-theme'] });
-        return () => obs.disconnect();
-    }, []);
-
-    /* Check scroll position */
-    const updateScrollButtons = () => {
-        const el = scrollContainerRef.current;
-        if (!el) return;
-        setCanScrollLeft(el.scrollLeft > 10);
-        setCanScrollRight(el.scrollLeft < el.scrollWidth - el.clientWidth - 10);
-    };
-
-    useEffect(() => {
-        const el = scrollContainerRef.current;
-        if (!el) return;
-        updateScrollButtons();
-        el.addEventListener('scroll', updateScrollButtons, { passive: true });
-        window.addEventListener('resize', updateScrollButtons);
-        return () => {
-            el.removeEventListener('scroll', updateScrollButtons);
-            window.removeEventListener('resize', updateScrollButtons);
-        };
-    }, []);
-
-    const scroll = (dir) => {
-        const el = scrollContainerRef.current;
-        if (!el) return;
-        const cardWidth = el.querySelector('.srv-carousel-tile')?.offsetWidth || 300;
-        el.scrollBy({ left: dir * (cardWidth + 20), behavior: 'smooth' });
-    };
 
     const [headerRef, headerVisible] = useScrollReveal(0.2);
-
-    const [carouselRef, carouselVisible] = useScrollReveal(0.1);
     const [card1Ref, card1Visible] = useScrollReveal(0.1);
     const [card2Ref, card2Visible] = useScrollReveal(0.1);
+    const [gridRef, gridVisible] = useScrollReveal(0.1);
 
     return (
         <>
@@ -407,11 +355,6 @@ function Services() {
                 @keyframes fadeIn {
                     from { opacity: 0; }
                     to { opacity: 1; }
-                }
-                @keyframes ringShake {
-                    0%, 100% { transform: rotate(0deg); }
-                    25% { transform: rotate(-12deg); }
-                    75% { transform: rotate(12deg); }
                 }
                 @keyframes ringPulse {
                     0% { transform: scale(1); opacity: 0.6; }
@@ -433,122 +376,46 @@ function Services() {
                     animation: shimmer 3s infinite;
                 }
 
-                /* ── Horizontal Scroll Carousel ── */
-                .srv-carousel-wrap {
-                    position: relative;
-                    width: 100%;
-                }
-                .srv-carousel {
-                    display: flex;
-                    gap: 20px;
-                    overflow-x: auto;
-                    scroll-snap-type: x mandatory;
-                    scroll-behavior: smooth;
-                    -webkit-overflow-scrolling: touch;
-                    scrollbar-width: none;
-                    padding: 12px 0 24px;
-                }
-                .srv-carousel::-webkit-scrollbar { display: none; }
-
-                .srv-carousel-tile {
-                    flex: 0 0 300px;
-                    min-height: 320px;
-                    scroll-snap-align: start;
-                    border-radius: 24px;
-                    padding: 32px 28px;
+                /* ── Service Grid Cards ── */
+                .srv-grid-card {
+                    border-radius: 20px;
+                    padding: 28px 24px;
+                    background: var(--bg-card);
+                    border: 1px solid var(--border-color);
                     position: relative;
                     overflow: hidden;
-                    display: flex;
-                    flex-direction: column;
+                    transition: transform 0.4s cubic-bezier(0.16,1,0.3,1), border-color 0.3s ease, box-shadow 0.3s ease;
                     cursor: default;
-                    transition: transform 0.5s cubic-bezier(0.16,1,0.3,1), box-shadow 0.5s cubic-bezier(0.16,1,0.3,1);
                 }
-                .srv-carousel-tile:hover {
-                    transform: translateY(-8px) scale(1.02);
-                }
-
-                /* Icon glow circle */
-                .srv-icon-glow {
-                    width: 60px;
-                    height: 60px;
-                    border-radius: 20px;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    position: relative;
-                    z-index: 1;
-                    transition: transform 0.4s cubic-bezier(0.16,1,0.3,1), box-shadow 0.4s ease;
-                }
-                .srv-carousel-tile:hover .srv-icon-glow {
-                    transform: scale(1.1);
-                }
-
-                /* Subtle inner glow overlay */
-                .srv-carousel-tile::before {
-                    content: '';
-                    position: absolute;
-                    top: -50%;
-                    right: -50%;
-                    width: 100%;
-                    height: 100%;
-                    border-radius: 50%;
-                    opacity: 0.12;
-                    transition: opacity 0.5s ease;
-                    pointer-events: none;
-                    z-index: 0;
-                }
-                .srv-carousel-tile:hover::before {
-                    opacity: 0.22;
-                }
-
-                /* Arrow hover hint */
-                .srv-tile-arrow {
-                    opacity: 0;
-                    transform: translateX(-8px);
-                    transition: all 0.4s cubic-bezier(0.16,1,0.3,1);
-                }
-                .srv-carousel-tile:hover .srv-tile-arrow {
-                    opacity: 1;
-                    transform: translateX(0);
-                }
-
-                /* Nav arrows */
-                .srv-nav-btn {
-                    width: 44px;
-                    height: 44px;
-                    border-radius: 50%;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    border: 1px solid var(--border-color);
-                    background: var(--bg-card);
-                    color: var(--text-secondary);
-                    cursor: pointer;
-                    transition: all 0.3s ease;
-                    flex-shrink: 0;
-                }
-                .srv-nav-btn:hover {
+                .srv-grid-card:hover {
+                    transform: translateY(-4px);
                     border-color: var(--border-hover);
-                    color: var(--text-primary);
-                    box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+                    box-shadow: var(--shadow-soft);
                 }
-                .srv-nav-btn:disabled {
-                    opacity: 0.3;
-                    cursor: default;
-                    pointer-events: none;
+                .srv-grid-card .srv-card-icon {
+                    width: 48px;
+                    height: 48px;
+                    border-radius: 14px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    background: var(--card-icon-bg);
+                    color: var(--card-icon-color);
+                    transition: transform 0.3s cubic-bezier(0.16,1,0.3,1);
+                }
+                .srv-grid-card:hover .srv-card-icon {
+                    transform: scale(1.08);
                 }
 
                 @media (max-width: 640px) {
-                    .srv-carousel-tile {
-                        flex: 0 0 260px;
-                        min-height: 280px;
-                        padding: 24px 22px;
-                        border-radius: 20px;
-                    }
-                    .srv-icon-glow {
-                        width: 50px;
-                        height: 50px;
+                    .srv-grid-card {
+                        padding: 22px 20px;
                         border-radius: 16px;
+                    }
+                    .srv-grid-card .srv-card-icon {
+                        width: 42px;
+                        height: 42px;
+                        border-radius: 12px;
                     }
                 }
             `}</style>
@@ -568,40 +435,25 @@ function Services() {
                         </p>
                     </div>
 
-                    {/* ═══ WHATSAPP BUSINESS SECTION ═══ */}
+                    {/* ═══ WHATSAPP BUSINESS SECTION — Trimmed ═══ */}
                     <div
                         ref={card2Ref}
-                        className={`mt-14 md:mt-20 w-full max-w-7xl mx-auto px-4 sm:px-8 md:px-12 lg:px-20 xl:px-28`}
+                        className={`mt-10 md:mt-14 w-full max-w-7xl mx-auto px-4 sm:px-8 md:px-12 lg:px-20 xl:px-28`}
                     >
-                        <div className={`flex flex-col lg:flex-row items-center gap-10 lg:gap-16 reveal-up ${card2Visible ? 'visible' : ''}`}>
-                            {/* Left — Text */}
+                        <div className={`flex flex-col lg:flex-row items-center gap-8 lg:gap-14 reveal-up ${card2Visible ? 'visible' : ''}`}>
+                            {/* Left — Text (trimmed) */}
                             <div className="flex-1 w-full lg:w-auto">
-                                <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full mb-5" style={{ background: 'rgba(37,211,102,0.08)', border: '1px solid rgba(37,211,102,0.2)' }}>
+                                <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full mb-4" style={{ background: 'rgba(37,211,102,0.08)', border: '1px solid rgba(37,211,102,0.2)' }}>
                                     <MessageCircle className="w-3.5 h-3.5" style={{ color: '#25D366' }} />
                                     <span className="text-[11px] font-semibold tracking-wide uppercase" style={{ color: '#25D366' }}>WhatsApp Business</span>
                                 </div>
                                 <h3 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-[var(--text-primary)] leading-tight">
                                     Automate Customer<br />Conversations on <span style={{ color: '#25D366' }}>WhatsApp</span>
                                 </h3>
-                                <p className="text-[var(--text-secondary)] text-sm sm:text-[15px] font-light leading-relaxed mt-4 max-w-md">
+                                <p className="text-[var(--text-secondary)] text-sm sm:text-[15px] font-light leading-relaxed mt-3 max-w-md">
                                     Let an AI-powered WhatsApp agent handle enquiries, qualify leads, and send instant replies — so you never miss a customer, even after business hours.
                                 </p>
-                                <div className="mt-6 space-y-3">
-                                    {[
-                                        { icon: Bot, text: 'Smart auto-replies to customer queries' },
-                                        { icon: Users, text: 'Automatic lead capture & qualification' },
-                                        { icon: Send, text: 'Broadcast offers to thousands instantly' },
-                                        { icon: BarChart3, text: 'Real-time analytics & conversation insights' },
-                                    ].map((item, i) => (
-                                        <div key={i} className="flex items-center gap-3 group">
-                                            <div className="w-7 h-7 rounded-lg flex items-center justify-center flex-shrink-0 transition-colors" style={{ background: 'rgba(37,211,102,0.08)' }}>
-                                                <item.icon className="w-3.5 h-3.5" style={{ color: '#25D366' }} />
-                                            </div>
-                                            <span className="text-[13px] text-[var(--text-secondary)] font-light">{item.text}</span>
-                                        </div>
-                                    ))}
-                                </div>
-                                <a href="/whatsapp-automation" className="shimmer-btn inline-flex items-center gap-2 px-6 py-3 rounded-lg text-sm font-semibold mt-8 transition-all duration-300 hover:gap-3" style={{ background: '#25D366', color: '#fff' }}>
+                                <a href="/whatsapp-automation" className="shimmer-btn inline-flex items-center gap-2 px-6 py-3 rounded-lg text-sm font-semibold mt-6 transition-all duration-300 hover:gap-3" style={{ background: '#25D366', color: '#fff' }}>
                                     Learn More <ArrowRight className="w-4 h-4" />
                                 </a>
                             </div>
@@ -615,12 +467,12 @@ function Services() {
                         </div>
                     </div>
 
-                    {/* ═══ AI CALLING AGENT SECTION ═══ */}
+                    {/* ═══ AI CALLING AGENT SECTION — Trimmed ═══ */}
                     <div
                         ref={card1Ref}
-                        className={`mt-16 md:mt-24 w-full max-w-7xl mx-auto px-4 sm:px-8 md:px-12 lg:px-20 xl:px-28`}
+                        className={`mt-12 md:mt-16 w-full max-w-7xl mx-auto px-4 sm:px-8 md:px-12 lg:px-20 xl:px-28`}
                     >
-                        <div className={`flex flex-col-reverse lg:flex-row items-center gap-10 lg:gap-16 reveal-up ${card1Visible ? 'visible' : ''}`}>
+                        <div className={`flex flex-col-reverse lg:flex-row items-center gap-8 lg:gap-14 reveal-up ${card1Visible ? 'visible' : ''}`}>
                             {/* Left — Phone Mockup with Calling Animation */}
                             <div className="flex-1 w-full lg:w-auto flex justify-center">
                                 <PhoneMockup>
@@ -628,126 +480,58 @@ function Services() {
                                 </PhoneMockup>
                             </div>
 
-                            {/* Right — Text */}
+                            {/* Right — Text (trimmed) */}
                             <div className="flex-1 w-full lg:w-auto">
-                                <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full mb-5" style={{ background: 'rgba(79,70,229,0.08)', border: '1px solid rgba(79,70,229,0.2)' }}>
+                                <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full mb-4" style={{ background: 'rgba(79,70,229,0.08)', border: '1px solid rgba(79,70,229,0.2)' }}>
                                     <Phone className="w-3.5 h-3.5" style={{ color: '#4F46E5' }} />
                                     <span className="text-[11px] font-semibold tracking-wide uppercase" style={{ color: '#4F46E5' }}>AI Calling Agent</span>
                                 </div>
                                 <h3 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-[var(--text-primary)] leading-tight">
                                     AI-Powered Calling<br />Agent That Never Sleeps
                                 </h3>
-                                <p className="text-[var(--text-secondary)] text-sm sm:text-[15px] font-light leading-relaxed mt-4 max-w-md">
+                                <p className="text-[var(--text-secondary)] text-sm sm:text-[15px] font-light leading-relaxed mt-3 max-w-md">
                                     An intelligent voice agent that answers every call, understands customer intent, books appointments, and follows up — all without human intervention.
                                 </p>
-                                <div className="mt-6 space-y-3">
-                                    {[
-                                        { icon: Clock, text: '24/7 availability — never miss a call' },
-                                        { icon: Bot, text: 'Live transcription & smart responses' },
-                                        { icon: Bell, text: 'Automatic appointment scheduling' },
-                                        { icon: CheckCircle2, text: 'Instant follow-ups & confirmations' },
-                                    ].map((item, i) => (
-                                        <div key={i} className="flex items-center gap-3 group">
-                                            <div className="w-7 h-7 rounded-lg flex items-center justify-center flex-shrink-0 transition-colors" style={{ background: 'rgba(79,70,229,0.08)' }}>
-                                                <item.icon className="w-3.5 h-3.5" style={{ color: '#4F46E5' }} />
-                                            </div>
-                                            <span className="text-[13px] text-[var(--text-secondary)] font-light">{item.text}</span>
-                                        </div>
-                                    ))}
-                                </div>
-                                <a href="/ai-calling-agent" className="shimmer-btn inline-flex items-center gap-2 px-6 py-3 rounded-lg text-sm font-semibold mt-8 transition-all duration-300 hover:gap-3" style={{ background: '#4F46E5', color: '#fff' }}>
+                                <a href="/ai-calling-agent" className="shimmer-btn inline-flex items-center gap-2 px-6 py-3 rounded-lg text-sm font-semibold mt-6 transition-all duration-300 hover:gap-3" style={{ background: '#4F46E5', color: '#fff' }}>
                                     Learn More <ArrowRight className="w-4 h-4" />
                                 </a>
                             </div>
                         </div>
                     </div>
 
-                    {/* ═══ HORIZONTAL SCROLL CAROUSEL — Bento-style gradient tiles ═══ */}
+                    {/* ═══ SERVICES GRID — Monochrome themed 3×2 ═══ */}
                     <div
-                        ref={carouselRef}
-                        className={`mt-12 md:mt-16 w-full max-w-7xl mx-auto reveal-up ${carouselVisible ? 'visible' : ''}`}
+                        ref={gridRef}
+                        className={`mt-12 md:mt-16 w-full max-w-7xl mx-auto px-4 sm:px-8 md:px-12 lg:px-20 xl:px-28 reveal-up ${gridVisible ? 'visible' : ''}`}
                     >
-                        {/* Header row with nav arrows */}
-                        <div className="flex items-center justify-between px-4 sm:px-8 md:px-12 lg:px-20 xl:px-28 mb-2">
-                            <h3 className="text-lg sm:text-xl font-semibold text-[var(--text-primary)]">
-                                All Services
-                            </h3>
-                            <div className="flex items-center gap-2">
-                                <button className="srv-nav-btn" onClick={() => scroll(-1)} disabled={!canScrollLeft} aria-label="Scroll left">
-                                    <ArrowRight className="w-4 h-4 rotate-180" />
-                                </button>
-                                <button className="srv-nav-btn" onClick={() => scroll(1)} disabled={!canScrollRight} aria-label="Scroll right">
-                                    <ArrowRight className="w-4 h-4" />
-                                </button>
-                            </div>
-                        </div>
-
-                        {/* Scrollable track */}
-                        <div
-                            ref={scrollContainerRef}
-                            className="srv-carousel pl-4 sm:pl-8 md:pl-12 lg:pl-20 xl:pl-28 pr-4"
-                        >
+                        <h3 className="text-lg sm:text-xl font-semibold text-[var(--text-primary)] mb-6">
+                            All Services
+                        </h3>
+                        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5">
                             {ser_content.map((service, index) => {
                                 const Icon = service.icon;
-                                const lightOverride = ser_content_light[index];
-                                const tileGradient = isDark ? service.gradient : lightOverride.gradient;
-                                const tileGlow = isDark ? service.glow : lightOverride.glow;
-                                const tileIconColor = isDark ? service.iconColor : lightOverride.iconColor;
-
                                 return (
                                     <div
                                         key={index}
-                                        className="srv-carousel-tile"
+                                        className="srv-grid-card"
                                         style={{
-                                            background: tileGradient,
-                                            boxShadow: `0 8px 32px -8px ${tileGlow}, inset 0 1px 0 rgba(255,255,255,0.06)`,
-                                            opacity: carouselVisible ? 1 : 0,
-                                            transform: carouselVisible ? 'translateY(0) scale(1)' : 'translateY(30px) scale(0.95)',
-                                            transition: `opacity 0.6s cubic-bezier(0.16,1,0.3,1) ${index * 0.1}s, transform 0.6s cubic-bezier(0.16,1,0.3,1) ${index * 0.1}s`,
+                                            opacity: gridVisible ? 1 : 0,
+                                            transform: gridVisible ? 'translateY(0)' : 'translateY(24px)',
+                                            transition: `opacity 0.5s cubic-bezier(0.16,1,0.3,1) ${index * 0.08}s, transform 0.5s cubic-bezier(0.16,1,0.3,1) ${index * 0.08}s`,
                                         }}
                                     >
-                                        {/* Glow pseudo-bg */}
-                                        <div style={{
-                                            position: 'absolute', top: '-30%', right: '-30%',
-                                            width: '70%', height: '70%', borderRadius: '50%',
-                                            background: `radial-gradient(circle, ${tileGlow} 0%, transparent 70%)`,
-                                            pointerEvents: 'none', zIndex: 0,
-                                        }} />
-
-                                        {/* Icon */}
-                                        <div
-                                            className="srv-icon-glow"
-                                            style={{
-                                                background: `rgba(255,255,255,${isDark ? '0.08' : '0.6'})`,
-                                                boxShadow: `0 0 24px ${tileGlow}`,
-                                            }}
-                                        >
-                                            <Icon className="w-7 h-7" style={{ color: tileIconColor }} />
+                                        <div className="srv-card-icon">
+                                            <Icon className="w-5 h-5" />
                                         </div>
-
-                                        {/* Title */}
-                                        <h4
-                                            className="text-lg font-bold mt-6 relative z-[1]"
-                                            style={{ color: isDark ? '#fff' : '#1a1a1a' }}
-                                        >
+                                        <h4 className="text-[15px] sm:text-base font-semibold text-[var(--text-primary)] mt-4">
                                             {service.title}
                                         </h4>
-
-                                        {/* Description */}
-                                        <p
-                                            className="text-sm font-light leading-relaxed mt-2.5 relative z-[1]"
-                                            style={{ color: isDark ? 'rgba(255,255,255,0.6)' : 'rgba(0,0,0,0.55)' }}
-                                        >
+                                        <p className="text-[13px] font-light leading-relaxed text-[var(--text-secondary)] mt-1.5">
                                             {service.desc}
                                         </p>
-
-
-
                                     </div>
                                 );
                             })}
-                            {/* Spacer for last-item padding */}
-                            <div style={{ flex: '0 0 20px' }} />
                         </div>
                     </div>
                 </div>

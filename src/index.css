@@ -283,10 +283,7 @@ body {
 
 /* Gradient text for dark mode title */
 [data-theme="dark"] .hero-title-gradient {
-  background: linear-gradient(135deg, #ffffff 0%, rgba(255,255,255,0.70) 50%, #ffffff 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: #ffffff;
 }
 
 /* CTA button hover */
