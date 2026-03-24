@@ -281,8 +281,16 @@ export default function AICallingService() {
             <div className="bg-[var(--bg-primary)] min-h-screen jakarta">
                 <Navbar />
 
+                {/* Back button */}
+                <div className="max-w-7xl mx-auto px-4 sm:px-8 md:px-12 lg:px-20 xl:px-28 pt-24 md:pt-28">
+                    <a href="/#services" className="inline-flex items-center gap-2 text-[var(--text-muted)] hover:text-[var(--text-primary)] text-sm font-light transition-colors duration-200">
+                        <ArrowRight className="w-3.5 h-3.5 rotate-180" />
+                        Back to Home
+                    </a>
+                </div>
+
                 {/* Hero Section */}
-                <div ref={heroRef} className={`pt-28 md:pt-36 pb-16 md:pb-24 ai-reveal ${heroVisible ? 'visible' : ''}`}>
+                <div ref={heroRef} className={`pt-8 md:pt-12 pb-16 md:pb-24 ai-reveal ${heroVisible ? 'visible' : ''}`}>
                     <div className="max-w-7xl mx-auto px-4 sm:px-8 md:px-12 lg:px-20 xl:px-28">
                         <div className="flex flex-col-reverse lg:flex-row items-center gap-12 lg:gap-20">
                             {/* Left — Phone Mockup */}
@@ -320,10 +328,10 @@ export default function AICallingService() {
                                     ))}
                                 </div>
                                 <div className="flex flex-col sm:flex-row gap-3 mt-9">
-                                    <a href="/#contact" className="ai-shimmer inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-lg text-sm font-semibold transition-all duration-300 hover:gap-3" style={{ background: '#4F46E5', color: '#fff' }}>
+                                    <a href="#contact" className="ai-shimmer inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-lg text-sm font-semibold transition-all duration-300 hover:gap-3" style={{ background: '#4F46E5', color: '#fff' }}>
                                         Get Started <ArrowRight className="w-4 h-4" />
                                     </a>
-                                    <a href="/#contact" className="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-lg text-sm font-medium transition-all duration-300 border border-[var(--border-color)] text-[var(--text-primary)] hover:border-[var(--border-hover)]">
+                                    <a href="#contact" className="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-lg text-sm font-medium transition-all duration-300 border border-[var(--border-color)] text-[var(--text-primary)] hover:border-[var(--border-hover)]">
                                         Book a Demo
                                     </a>
                                 </div>
@@ -370,7 +378,7 @@ export default function AICallingService() {
                     <div className="max-w-2xl mx-auto text-center px-4">
                         <h2 className="text-2xl sm:text-3xl font-bold text-[var(--text-primary)]">Ready to Let AI Handle Your Calls?</h2>
                         <p className="text-[var(--text-secondary)] text-sm sm:text-base font-light mt-3 max-w-md mx-auto">Get started in minutes. Our team will help you configure and deploy your AI calling agent.</p>
-                        <a href="/#contact" className="ai-shimmer inline-flex items-center gap-2 px-8 py-3.5 rounded-lg text-sm font-semibold mt-7 transition-all duration-300 hover:gap-3" style={{ background: '#4F46E5', color: '#fff' }}>
+                        <a href="#contact" className="ai-shimmer inline-flex items-center gap-2 px-8 py-3.5 rounded-lg text-sm font-semibold mt-7 transition-all duration-300 hover:gap-3" style={{ background: '#4F46E5', color: '#fff' }}>
                             Contact Us <ArrowRight className="w-4 h-4" />
                         </a>
                     </div>
