@@ -117,8 +117,8 @@ function Hero() {
         >
           <div className="hero-marquee-track">
             {tickerItems.map((kw, i) => (
-              <span key={i} className="flex items-center gap-4 px-4 text-[var(--text-muted)] text-xs md:text-sm inter font-light whitespace-nowrap">
-                <span className="opacity-70">✦</span>
+              <span key={i} className="flex items-center gap-3 px-3 text-[var(--text-muted)] text-xs md:text-sm inter font-light whitespace-nowrap">
+                <span className="hero-marquee-dot" />
                 {kw}
               </span>
             ))}
@@ -140,25 +140,7 @@ function Hero() {
           </a>
         </motion.div>
 
-        {/* Trust metrics */}
-        <motion.div
-          variants={fadeUp}
-          className="flex items-center gap-3 md:gap-5 mt-8 md:mt-10"
-        >
-          {[
-            { value: '10+', label: 'Projects Delivered' },
-            { value: '3+', label: 'Years Experience' },
-            { value: '3', label: 'Happy Clients' },
-          ].map((stat, i) => (
-            <React.Fragment key={i}>
-              {i > 0 && <div className="hero-trust-dot" />}
-              <div className="flex flex-col items-center">
-                <span className="text-[var(--text-primary)] text-base md:text-lg font-bold inter">{stat.value}</span>
-                <span className="text-[var(--text-muted)] text-[9px] md:text-[11px] inter font-light mt-0.5">{stat.label}</span>
-              </div>
-            </React.Fragment>
-          ))}
-        </motion.div>
+
 
       </motion.div>
 

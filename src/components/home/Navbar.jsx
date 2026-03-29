@@ -50,6 +50,7 @@ export default function Navbar() {
           <div className="hidden md:flex flex-row items-center outfit">
             <div className="flex flex-row justify-evenly items-center text-[var(--nav-link)] font-light text-sm gap-8 mr-8">
               <a href="/#home" className="hover:text-[var(--nav-link-hover)] transition-colors">Home</a>
+              <a href="/#products" className="hover:text-[var(--nav-link-hover)] transition-colors">Products</a>
               <a href="/#services" className="hover:text-[var(--nav-link-hover)] transition-colors">Services</a>
               <a href="/#work" className="hover:text-[var(--nav-link-hover)] transition-colors">Our Work</a>
             </div>
@@ -82,6 +83,13 @@ export default function Navbar() {
                 onClick={() => setIsMenuOpen(false)}
               >
                 Home
+              </a>
+              <a
+                href="/#products"
+                className="text-[var(--nav-link)] hover:text-[var(--text-primary)] text-lg transition-colors"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Products
               </a>
               <a
                 href="/#services"
