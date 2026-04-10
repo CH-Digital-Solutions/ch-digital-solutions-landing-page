@@ -84,28 +84,28 @@ function Hero() {
         variants={container}
         initial="hidden"
         animate="show"
-        className="relative z-10 text-[var(--text-primary)] w-full min-h-screen md:min-h-0 md:py-28 lg:min-h-screen lg:py-0 flex flex-col justify-center items-center jakarta md:pt-50 lg:pt-0 lg:mt-7"
+        className="relative z-10 text-[var(--text-primary)] w-full min-h-screen md:min-h-0 md:py-28 lg:min-h-screen lg:py-0 flex flex-col justify-center items-center jakarta md:pt-50 lg:pt-14"
       >
 
         {/* Title */}
-        <div className="text-center">
+        <div className="text-center overflow-visible">
           <motion.div
             variants={fadeUp}
-            className='hero-title-gradient text-5xl sm:text-5xl md:text-7xl lg:text-[90px] font-bold tracking-[-0.03em]'
+            className='hero-title-gradient text-5xl sm:text-5xl md:text-7xl lg:text-[90px] font-bold tracking-[-0.03em] leading-[1.1]'
           >
             Simplifying
           </motion.div>
           <motion.div
             variants={fadeUp}
-            className='hero-title-gradient text-5xl mb-5 md:mb-0 sm:text-5xl md:text-7xl lg:text-[90px] font-bold mt-2 tracking-[-0.03em]'
+            className='hero-title-gradient text-5xl mb-5 md:mb-0 sm:text-5xl md:text-7xl lg:text-[90px] font-bold mt-2 tracking-[-0.03em] leading-[1.1] pb-1'
           >
             Operations
           </motion.div>
         </div>
 
         {/* Description */}
-        <motion.div variants={fadeUp} className="max-w-70 mb-3 md:mb-0 sm:max-w-md md:max-w-2xl mt-6 md:mt-10">
-          <div className="text-[var(--text-secondary)] text-sm md:w-[600px] sm:text-base md:text-[16px] font-light text-center leading-6 md:leading-9">
+        <motion.div variants={fadeUp} className="max-w-70 mb-3 md:mb-0 sm:max-w-md md:max-w-2xl mt-5 md:mt-7">
+          <div className="text-[var(--text-secondary)] text-[13px] md:w-[560px] sm:text-sm md:text-[15px] font-light text-center leading-5 md:leading-7">
             From complex problems to clear solutions, We build software that reduces effort and removes manual work.
           </div>
         </motion.div>
@@ -113,12 +113,12 @@ function Hero() {
         {/* Keyword ticker */}
         <motion.div
           variants={fadeUp}
-          className="w-full max-w-2xl overflow-hidden mt-6 md:mt-8"
+          className="w-full max-w-2xl overflow-hidden mt-5 md:mt-6"
         >
           <div className="hero-marquee-track">
             {tickerItems.map((kw, i) => (
-              <span key={i} className="flex items-center gap-4 px-4 text-[var(--text-muted)] text-xs md:text-sm inter font-light whitespace-nowrap">
-                <span className="opacity-70">✦</span>
+              <span key={i} className="flex items-center gap-3 px-3 text-[var(--text-muted)] text-xs md:text-sm inter font-light whitespace-nowrap">
+                <span className="hero-marquee-dot" />
                 {kw}
               </span>
             ))}
@@ -126,39 +126,21 @@ function Hero() {
         </motion.div>
 
         {/* Buttons */}
-        <motion.div variants={fadeUp} className="flex flex-col sm:flex-row items-center gap-4 mt-8 md:mt-10 w-full sm:w-auto px-4 sm:px-0">
+        <motion.div variants={fadeUp} className="flex flex-col sm:flex-row items-center gap-3 mt-6 md:mt-8 w-full sm:w-auto px-4 sm:px-0">
           <a href='/#contact' className="w-full sm:w-auto">
-            <div className="hero-cta-primary bg-[var(--cta-bg)] h-12 sm:h-13 group sm:w-56 rounded-lg text-sm md:text-[14.5px] sm:text-base font-semibold text-[var(--cta-text)] inter flex items-center justify-center sm:justify-start sm:pl-4 cursor-pointer">
+            <div className="hero-cta-primary bg-[var(--cta-bg)] h-11 sm:h-12 group sm:w-52 rounded-lg text-[13px] md:text-sm sm:text-sm font-semibold text-[var(--cta-text)] inter flex items-center justify-center sm:justify-start sm:pl-4 cursor-pointer">
               Discuss your Use Case
               <ArrowRight className="ml-2 group-hover:ml-3 transition-all text-[var(--cta-text)] size-4 sm:size-5" />
             </div>
           </a>
           <a href='/#work' className="w-full sm:w-auto">
-            <div className="hero-cta-secondary bg-[var(--cta2-bg)] h-12 sm:h-13 border border-[var(--cta2-border)] font-medium w-full sm:w-44 rounded-lg text-sm md:text-[14.5px] sm:text-base text-[var(--cta2-text)] inter flex items-center justify-center cursor-pointer">
+            <div className="hero-cta-secondary bg-[var(--cta2-bg)] h-11 sm:h-12 border border-[var(--cta2-border)] font-medium w-full sm:w-42 rounded-lg text-[13px] md:text-sm sm:text-sm text-[var(--cta2-text)] inter flex items-center justify-center cursor-pointer">
               Explore Our Work
             </div>
           </a>
         </motion.div>
 
-        {/* Trust metrics */}
-        <motion.div
-          variants={fadeUp}
-          className="flex items-center gap-3 md:gap-5 mt-10 md:mt-14"
-        >
-          {[
-            { value: '10+', label: 'Projects Delivered' },
-            { value: '3+', label: 'Years Experience' },
-            { value: '3', label: 'Happy Clients' },
-          ].map((stat, i) => (
-            <React.Fragment key={i}>
-              {i > 0 && <div className="hero-trust-dot" />}
-              <div className="flex flex-col items-center">
-                <span className="text-[var(--text-primary)] text-lg md:text-xl font-bold inter">{stat.value}</span>
-                <span className="text-[var(--text-muted)] text-[10px] md:text-xs inter font-light mt-0.5">{stat.label}</span>
-              </div>
-            </React.Fragment>
-          ))}
-        </motion.div>
+
 
       </motion.div>
 

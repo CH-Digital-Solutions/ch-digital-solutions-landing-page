@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react'
-import { MessageCircle, Bot, Users, Send, BarChart3, CheckCircle2, ArrowRight, Zap, Shield, Clock } from 'lucide-react'
+import { MessageCircle, Bot, Users, Send, BarChart3, CheckCircle2, ArrowRight, Zap, Shield, Clock, MessageSquare, Building2 } from 'lucide-react'
 import Navbar from '../components/home/Navbar'
 import Contact from '../components/home/Contact'
 
@@ -163,34 +163,34 @@ export default function WhatsAppService() {
 
     const features = [
         {
-            icon: Bot,
-            title: 'Smart Auto-Replies',
-            desc: 'AI understands customer queries and responds instantly with relevant answers, 24/7.',
+            icon: Zap,
+            title: 'AI-Powered Auto-Replies',
+            desc: 'AI understands queries and responds in ~200ms — in Hindi, English, or Hinglish. If unsure, it hands off to a human agent automatically.',
         },
         {
-            icon: Users,
-            title: 'Lead Capture & Qualification',
-            desc: 'Automatically collect customer details, qualify leads, and route hot prospects to your sales team.',
+            icon: MessageSquare,
+            title: 'No-Code Chatbot Flows',
+            desc: 'Build multi-step conversations with tappable buttons. Customer taps → next step auto-runs. Like a phone tree, but on WhatsApp. No coding needed.',
         },
         {
             icon: Send,
-            title: 'Broadcast Messaging',
-            desc: 'Send promotional offers, updates, and announcements to thousands of customers at once.',
+            title: 'Broadcast & Drip Campaigns',
+            desc: 'Send personalized messages to thousands at once with names, order IDs, and timings auto-filled. Schedule drip sequences that run on autopilot.',
+        },
+        {
+            icon: Users,
+            title: 'Team Inbox & Agent Routing',
+            desc: 'Multiple agents handle chats from one dashboard. Smart round-robin assignment, skill-based routing, and agent transfer — no customer falls through.',
         },
         {
             icon: BarChart3,
-            title: 'Analytics & Insights',
-            desc: 'Track message delivery, response rates, and customer engagement with real-time dashboards.',
+            title: 'Real-Time Analytics',
+            desc: 'Track delivery rates, read rates (blue ticks), contact growth, and campaign performance — all in real-time, not next-day.',
         },
         {
-            icon: Zap,
-            title: 'Quick Integration',
-            desc: 'Seamlessly connect with your existing CRM, e-commerce platform, or booking system.',
-        },
-        {
-            icon: Shield,
-            title: 'Secure & Compliant',
-            desc: 'End-to-end encrypted messaging through the official WhatsApp Business API.',
+            icon: Building2,
+            title: 'Multi-Business Management',
+            desc: 'Manage multiple WhatsApp numbers from one login. Each business gets its own contacts, templates, and AI personality.',
         },
     ];
 
@@ -229,8 +229,16 @@ export default function WhatsAppService() {
             <div className="bg-[var(--bg-primary)] min-h-screen jakarta">
                 <Navbar />
 
+                {/* Back button */}
+                <div className="max-w-7xl mx-auto px-4 sm:px-8 md:px-12 lg:px-20 xl:px-28 pt-24 md:pt-28">
+                    <a href="/#services" className="inline-flex items-center gap-2 text-[var(--text-muted)] hover:text-[var(--text-primary)] text-sm font-light transition-colors duration-200">
+                        <ArrowRight className="w-3.5 h-3.5 rotate-180" />
+                        Back to Home
+                    </a>
+                </div>
+
                 {/* Hero Section */}
-                <div ref={heroRef} className={`pt-28 md:pt-36 pb-16 md:pb-24 wa-reveal ${heroVisible ? 'visible' : ''}`}>
+                <div ref={heroRef} className={`pt-8 md:pt-12 pb-16 md:pb-24 wa-reveal ${heroVisible ? 'visible' : ''}`}>
                     <div className="max-w-7xl mx-auto px-4 sm:px-8 md:px-12 lg:px-20 xl:px-28">
                         <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
                             {/* Left — Text */}
@@ -243,14 +251,14 @@ export default function WhatsAppService() {
                                     Automate Customer<br />Conversations on<br /><span style={{ color: '#25D366' }}>WhatsApp</span>
                                 </h1>
                                 <p className="text-[var(--text-secondary)] text-sm sm:text-base font-light leading-relaxed mt-5 max-w-lg">
-                                    Let an AI-powered WhatsApp agent handle enquiries, qualify leads, and send instant replies — so you never miss a customer, even after business hours.
+                                    The all-in-one WhatsApp Business platform — AI auto-replies, chatbot flows, bulk campaigns, and a team inbox. Set up in minutes, runs 24/7.
                                 </p>
                                 <div className="mt-7 space-y-3.5">
                                     {[
-                                        { icon: Bot, text: 'Smart auto-replies to customer queries' },
-                                        { icon: Users, text: 'Automatic lead capture & qualification' },
-                                        { icon: Send, text: 'Broadcast offers to thousands instantly' },
-                                        { icon: BarChart3, text: 'Real-time analytics & conversation insights' },
+                                        { icon: Zap, text: 'AI replies in under 200ms — instant, natural responses' },
+                                        { icon: MessageSquare, text: 'No-code chatbot flows with interactive buttons & menus' },
+                                        { icon: Send, text: 'Broadcast personalized campaigns to thousands at once' },
+                                        { icon: Users, text: 'Team inbox — multiple agents, smart assignment, one dashboard' },
                                     ].map((item, i) => (
                                         <div key={i} className="flex items-center gap-3">
                                             <div className="w-8 h-8 rounded-lg flex items-center justify-center flex-shrink-0" style={{ background: 'rgba(37,211,102,0.08)' }}>
@@ -261,10 +269,10 @@ export default function WhatsAppService() {
                                     ))}
                                 </div>
                                 <div className="flex flex-col sm:flex-row gap-3 mt-9">
-                                    <a href="/#contact" className="wa-shimmer inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-lg text-sm font-semibold transition-all duration-300 hover:gap-3" style={{ background: '#25D366', color: '#fff' }}>
+                                    <a href="#contact" className="wa-shimmer inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-lg text-sm font-semibold transition-all duration-300 hover:gap-3" style={{ background: '#25D366', color: '#fff' }}>
                                         Get Started <ArrowRight className="w-4 h-4" />
                                     </a>
-                                    <a href="/#contact" className="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-lg text-sm font-medium transition-all duration-300 border border-[var(--border-color)] text-[var(--text-primary)] hover:border-[var(--border-hover)]">
+                                    <a href="#contact" className="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-lg text-sm font-medium transition-all duration-300 border border-[var(--border-color)] text-[var(--text-primary)] hover:border-[var(--border-hover)]">
                                         Book a Demo
                                     </a>
                                 </div>
@@ -284,8 +292,8 @@ export default function WhatsAppService() {
                 <div className="bg-[var(--bg-secondary)] py-16 md:py-24">
                     <div ref={featuresRef} className={`max-w-7xl mx-auto px-4 sm:px-8 md:px-12 lg:px-20 xl:px-28 wa-reveal ${featuresVisible ? 'visible' : ''}`}>
                         <div className="text-center mb-12">
-                            <h2 className="text-2xl sm:text-3xl font-bold text-[var(--text-primary)]">Everything You Need for WhatsApp Automation</h2>
-                            <p className="text-[var(--text-secondary)] text-sm sm:text-base font-light mt-3 max-w-xl mx-auto">Powerful features designed to help your business grow through intelligent WhatsApp communication.</p>
+                            <h2 className="text-2xl sm:text-3xl font-bold text-[var(--text-primary)]">What We Build for You</h2>
+                            <p className="text-[var(--text-secondary)] text-sm sm:text-base font-light mt-3 max-w-xl mx-auto">A complete WhatsApp automation system tailored to your business — from AI conversations to campaign management.</p>
                         </div>
                         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
                             {features.map((feature, i) => {
@@ -318,7 +326,7 @@ export default function WhatsAppService() {
                     <div className="max-w-2xl mx-auto text-center px-4">
                         <h2 className="text-2xl sm:text-3xl font-bold text-[var(--text-primary)]">Ready to Automate Your WhatsApp?</h2>
                         <p className="text-[var(--text-secondary)] text-sm sm:text-base font-light mt-3 max-w-md mx-auto">Get started in minutes. Our team will help you set up and customise the AI agent for your business.</p>
-                        <a href="/#contact" className="wa-shimmer inline-flex items-center gap-2 px-8 py-3.5 rounded-lg text-sm font-semibold mt-7 transition-all duration-300 hover:gap-3" style={{ background: '#25D366', color: '#fff' }}>
+                        <a href="#contact" className="wa-shimmer inline-flex items-center gap-2 px-8 py-3.5 rounded-lg text-sm font-semibold mt-7 transition-all duration-300 hover:gap-3" style={{ background: '#25D366', color: '#fff' }}>
                             Contact Us <ArrowRight className="w-4 h-4" />
                         </a>
                     </div>

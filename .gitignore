@@ -22,3 +22,7 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Image optimization
+public/_backup_png
+optimize-images.mjs
