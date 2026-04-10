@@ -10,6 +10,8 @@ import EcommerceWebsiteDevelopmentMumbai from "./pages/EcommerceWebsiteDevelopme
 import ERPSoftwareDevelopmentMumbai from "./pages/ERPSoftwareDevelopmentMumbai"
 import WhatsAppService from "./pages/WhatsAppService"
 import AICallingService from "./pages/AICallingService"
+import Terms from "./pages/Terms"
+import PrivacyPolicy from "./pages/PrivacyPolicy"
 import WebsiteDevelopmentCostMumbai from "./pages/blog/WebsiteDevelopmentCostMumbai"
 import HowToBuildEcommerceWebsite from "./pages/blog/HowToBuildEcommerceWebsite"
 import ERPSoftwareForSmallBusiness from "./pages/blog/ERPSoftwareForSmallBusiness"
@@ -59,6 +61,8 @@ function App() {
         <Route path="/how-to-build-ecommerce-website" element={<HowToBuildEcommerceWebsite />} />
 
         <Route path="/erp-software-for-small-business" element={<ERPSoftwareForSmallBusiness />} />
+        <Route path="/terms" element={<Terms />} />
+        <Route path="/privacy-policy" element={<PrivacyPolicy />} />
       </Routes>
     </BrowserRouter>
   )
