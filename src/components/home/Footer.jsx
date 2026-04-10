@@ -138,7 +138,7 @@ export default function Footer() {
             to="/terms"
             className="text-xs font-light text-[var(--text-muted)] hover:text-[var(--text-primary)] transition-colors px-3 py-1 rounded-md hover:bg-[var(--accent-light)]"
           >
-            Terms and Conditions
+            Terms & Conditions
           </Link>
           <span className="text-[var(--footer-border)] text-xs select-none">|</span>
           <Link
