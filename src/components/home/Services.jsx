@@ -337,6 +337,15 @@ function Services() {
     const [card2Ref, card2Visible] = useScrollReveal(0.55);
     const [gridRef, gridVisible] = useScrollReveal(0.1);
     const [activeTab, setActiveTab] = useState('whatsapp');
+    const [isAutoPlayPaused, setIsAutoPlayPaused] = useState(false);
+
+    useEffect(() => {
+        if (isAutoPlayPaused) return;
+        const interval = setInterval(() => {
+            setActiveTab(prev => prev === 'whatsapp' ? 'calling' : 'whatsapp');
+        }, 4000);
+        return () => clearInterval(interval);
+    }, [isAutoPlayPaused]);
 
     return (
         <>
@@ -344,6 +353,10 @@ function Services() {
                 @keyframes shimmer {
                     0% { background-position: -200% 0; }
                     100% { background-position: 200% 0; }
+                }
+                @keyframes progressFill {
+                    from { width: 0%; }
+                    to { width: 100%; }
                 }
                 @keyframes typingDot {
                     0%, 60%, 100% { opacity: 0.3; transform: translateY(0); }
@@ -513,31 +526,37 @@ function Services() {
                     {/* ═══ MOBILE / TABLET ONLY VIEW — PREMIUM SWITCHER ═══ */}
                     <div className="block lg:hidden mt-8 w-full max-w-7xl mx-auto px-4 sm:px-8 md:px-12">
                         {/* Segmented Switcher */}
-                        <div className="flex p-1 bg-[var(--bg-secondary)] border border-[var(--border-color)] rounded-xl mb-6 max-w-md mx-auto">
+                        <div className="flex p-1 bg-[var(--bg-secondary)] border border-[var(--border-color)] rounded-full mb-6 max-w-md mx-auto relative overflow-hidden">
                             <button
-                                onClick={() => setActiveTab('whatsapp')}
-                                className={`flex-1 py-2.5 px-3 rounded-lg text-xs font-semibold inter transition-all duration-300 cursor-pointer ${
+                                onClick={() => { setActiveTab('whatsapp'); setIsAutoPlayPaused(true); }}
+                                className={`flex-1 py-2.5 px-3 rounded-full text-xs font-semibold inter transition-all duration-300 cursor-pointer border relative overflow-hidden ${
                                     activeTab === 'whatsapp'
-                                        ? 'bg-[var(--bg-card)] text-[#25D366] shadow-sm border border-[var(--border-color)]'
-                                        : 'text-[var(--text-secondary)] hover:text-[var(--text-primary)]'
+                                        ? 'bg-[var(--bg-card)] text-[#25D366] border-[var(--border-color)]'
+                                        : 'border-transparent text-[var(--text-secondary)] hover:text-[var(--text-primary)]'
                                 }`}
                             >
-                                WhatsApp Automation
+                                <span className="relative z-10">WhatsApp Automation</span>
+                                {activeTab === 'whatsapp' && !isAutoPlayPaused && (
+                                    <div className="absolute bottom-0 left-0 h-[2px] bg-[#25D366] opacity-30 w-full" style={{ animation: 'progressFill 4s linear' }}></div>
+                                )}
                             </button>
                             <button
-                                onClick={() => setActiveTab('calling')}
-                                className={`flex-1 py-2.5 px-3 rounded-lg text-xs font-semibold inter transition-all duration-300 cursor-pointer ${
+                                onClick={() => { setActiveTab('calling'); setIsAutoPlayPaused(true); }}
+                                className={`flex-1 py-2.5 px-3 rounded-full text-xs font-semibold inter transition-all duration-300 cursor-pointer border relative overflow-hidden ${
                                     activeTab === 'calling'
-                                        ? 'bg-[var(--bg-card)] text-[#4F46E5] shadow-sm border border-[var(--border-color)]'
-                                        : 'text-[var(--text-secondary)] hover:text-[var(--text-primary)]'
+                                        ? 'bg-[var(--bg-card)] text-[#4F46E5] border-[var(--border-color)]'
+                                        : 'border-transparent text-[var(--text-secondary)] hover:text-[var(--text-primary)]'
                                 }`}
                             >
-                                AI Voice Calling
+                                <span className="relative z-10">AI Voice Calling</span>
+                                {activeTab === 'calling' && !isAutoPlayPaused && (
+                                    <div className="absolute bottom-0 left-0 h-[2px] bg-[#4F46E5] opacity-30 w-full" style={{ animation: 'progressFill 4s linear' }}></div>
+                                )}
                             </button>
                         </div>
 
                         {/* Content Card */}
-                        <div className="p-6 rounded-2xl bg-[var(--bg-card)] border border-[var(--border-color)] shadow-sm min-h-[250px] flex flex-col justify-between">
+                        <div className="p-6 rounded-2xl bg-[var(--bg-card)] border border-[var(--border-color)] min-h-[250px] flex flex-col justify-between">
                             {activeTab === 'whatsapp' ? (
                                 <div key="whatsapp" className="tab-content-active">
                                     <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full mb-4" style={{ background: 'rgba(37,211,102,0.08)', border: '1px solid rgba(37,211,102,0.2)' }}>
