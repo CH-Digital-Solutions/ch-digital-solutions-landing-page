@@ -293,8 +293,8 @@ export default function AICallingService() {
                 <div ref={heroRef} className={`pt-8 md:pt-12 pb-16 md:pb-24 ai-reveal ${heroVisible ? 'visible' : ''}`}>
                     <div className="max-w-7xl mx-auto px-4 sm:px-8 md:px-12 lg:px-20 xl:px-28">
                         <div className="flex flex-col-reverse lg:flex-row items-center gap-12 lg:gap-20">
-                            {/* Left — Phone Mockup */}
-                            <div className="flex-1 w-full lg:w-auto flex justify-center">
+                             {/* Left — Phone Mockup (Hidden on mobile, visible on desktop) */}
+                            <div className="hidden lg:flex flex-1 w-full lg:w-auto justify-center">
                                 <PhoneMockup>
                                     <CallingAgentPreview />
                                 </PhoneMockup>

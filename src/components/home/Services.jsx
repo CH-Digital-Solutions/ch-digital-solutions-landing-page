@@ -333,9 +333,10 @@ function Services() {
     ]
 
     const [headerRef, headerVisible] = useScrollReveal(0.2);
-    const [card1Ref, card1Visible] = useScrollReveal(0.1);
-    const [card2Ref, card2Visible] = useScrollReveal(0.1);
+    const [card1Ref, card1Visible] = useScrollReveal(0.55);
+    const [card2Ref, card2Visible] = useScrollReveal(0.55);
     const [gridRef, gridVisible] = useScrollReveal(0.1);
+    const [activeTab, setActiveTab] = useState('whatsapp');
 
     return (
         <>
@@ -363,6 +364,13 @@ function Services() {
                 @keyframes pulse {
                     0%, 100% { opacity: 1; }
                     50% { opacity: 0.4; }
+                }
+                @keyframes tabFadeIn {
+                    from { opacity: 0; transform: translateY(8px); }
+                    to { opacity: 1; transform: translateY(0); }
+                }
+                .tab-content-active {
+                    animation: tabFadeIn 0.35s cubic-bezier(0.16, 1, 0.3, 1) both;
                 }
                 .reveal-up {
                     opacity: 0; transform: translateY(40px);
@@ -435,67 +443,134 @@ function Services() {
                         </p>
                     </div>
 
-                    {/* ═══ WHATSAPP BUSINESS SECTION — Trimmed ═══ */}
-                    <div
-                        ref={card2Ref}
-                        className={`mt-10 md:mt-14 w-full max-w-7xl mx-auto px-4 sm:px-8 md:px-12 lg:px-20 xl:px-28`}
-                    >
-                        <div className={`flex flex-col lg:flex-row items-center gap-8 lg:gap-14 reveal-up ${card2Visible ? 'visible' : ''}`}>
-                            {/* Left — Text (trimmed) */}
-                            <div className="flex-1 w-full lg:w-auto">
-                                <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full mb-4" style={{ background: 'rgba(37,211,102,0.08)', border: '1px solid rgba(37,211,102,0.2)' }}>
-                                    <MessageCircle className="w-3.5 h-3.5" style={{ color: '#25D366' }} />
-                                    <span className="text-[11px] font-semibold tracking-wide uppercase" style={{ color: '#25D366' }}>WhatsApp Business</span>
+                    {/* ═══ DESKTOP ONLY VIEW — BOTH SECTIONS SEPARATE ═══ */}
+                    <div className="hidden lg:block">
+                        {/* WhatsApp Business Section */}
+                        <div
+                            ref={card2Ref}
+                            className={`mt-10 md:mt-14 w-full max-w-7xl mx-auto px-4 sm:px-8 md:px-12 lg:px-20 xl:px-28`}
+                        >
+                            <div className={`flex flex-col lg:flex-row items-center gap-8 lg:gap-14 reveal-up ${card2Visible ? 'visible' : ''}`}>
+                                {/* Left — Text */}
+                                <div className="flex-1 w-full lg:w-auto">
+                                    <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full mb-4" style={{ background: 'rgba(37,211,102,0.08)', border: '1px solid rgba(37,211,102,0.2)' }}>
+                                        <MessageCircle className="w-3.5 h-3.5" style={{ color: '#25D366' }} />
+                                        <span className="text-[11px] font-semibold tracking-wide uppercase" style={{ color: '#25D366' }}>WhatsApp Business</span>
+                                    </div>
+                                    <h3 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-[var(--text-primary)] leading-tight">
+                                        Automate Customer<br />Conversations on <span style={{ color: '#25D366' }}>WhatsApp</span>
+                                    </h3>
+                                    <p className="text-[var(--text-secondary)] text-sm sm:text-[15px] font-light leading-relaxed mt-3 max-w-md">
+                                        Let an AI-powered WhatsApp agent handle enquiries, qualify leads, and send instant replies — so you never miss a customer, even after business hours.
+                                    </p>
+                                    <a href="/whatsapp-automation" className="shimmer-btn inline-flex items-center gap-2 px-6 py-3 rounded-lg text-sm font-semibold mt-6 transition-all duration-300 hover:gap-3" style={{ background: '#25D366', color: '#fff' }}>
+                                        See More <ArrowRight className="w-4 h-4" />
+                                    </a>
                                 </div>
-                                <h3 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-[var(--text-primary)] leading-tight">
-                                    Automate Customer<br />Conversations on <span style={{ color: '#25D366' }}>WhatsApp</span>
-                                </h3>
-                                <p className="text-[var(--text-secondary)] text-sm sm:text-[15px] font-light leading-relaxed mt-3 max-w-md">
-                                    Let an AI-powered WhatsApp agent handle enquiries, qualify leads, and send instant replies — so you never miss a customer, even after business hours.
-                                </p>
-                                <a href="/whatsapp-automation" className="shimmer-btn inline-flex items-center gap-2 px-6 py-3 rounded-lg text-sm font-semibold mt-6 transition-all duration-300 hover:gap-3" style={{ background: '#25D366', color: '#fff' }}>
-                                    Learn More <ArrowRight className="w-4 h-4" />
-                                </a>
-                            </div>
 
-                            {/* Right — Phone Mockup with Chat Animation */}
-                            <div className="flex-1 w-full lg:w-auto flex justify-center">
-                                <PhoneMockup>
-                                    <WhatsAppChatPreview isVisible={card2Visible} />
-                                </PhoneMockup>
+                                {/* Right — Phone Mockup */}
+                                <div className="hidden lg:flex flex-1 w-full lg:w-auto justify-center">
+                                    <PhoneMockup>
+                                        <WhatsAppChatPreview isVisible={card2Visible} />
+                                    </PhoneMockup>
+                                </div>
+                            </div>
+                        </div>
+
+                        {/* AI Calling Agent Section */}
+                        <div
+                            ref={card1Ref}
+                            className={`mt-12 md:mt-16 w-full max-w-7xl mx-auto px-4 sm:px-8 md:px-12 lg:px-20 xl:px-28`}
+                        >
+                            <div className={`flex flex-col-reverse lg:flex-row items-center gap-8 lg:gap-14 reveal-up ${card1Visible ? 'visible' : ''}`}>
+                                {/* Left — Phone Mockup */}
+                                <div className="hidden lg:flex flex-1 w-full lg:w-auto justify-center">
+                                    <PhoneMockup>
+                                        <CallingAgentPreview isVisible={card1Visible} />
+                                    </PhoneMockup>
+                                </div>
+
+                                {/* Right — Text */}
+                                <div className="flex-1 w-full lg:w-auto">
+                                    <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full mb-4" style={{ background: 'rgba(79,70,229,0.08)', border: '1px solid rgba(79,70,229,0.2)' }}>
+                                        <Phone className="w-3.5 h-3.5" style={{ color: '#4F46E5' }} />
+                                        <span className="text-[11px] font-semibold tracking-wide uppercase" style={{ color: '#4F46E5' }}>AI Calling Agent</span>
+                                    </div>
+                                    <h3 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-[var(--text-primary)] leading-tight">
+                                        AI-Powered Calling<br />Agent That Never Sleeps
+                                    </h3>
+                                    <p className="text-[var(--text-secondary)] text-sm sm:text-[15px] font-light leading-relaxed mt-3 max-w-md">
+                                        An intelligent voice agent that answers every call, understands customer intent, books appointments, and follows up — all without human intervention.
+                                    </p>
+                                    <a href="/ai-calling-agent" className="shimmer-btn inline-flex items-center gap-2 px-6 py-3 rounded-lg text-sm font-semibold mt-6 transition-all duration-300 hover:gap-3" style={{ background: '#4F46E5', color: '#fff' }}>
+                                        Learn More <ArrowRight className="w-4 h-4" />
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </div>
 
-                    {/* ═══ AI CALLING AGENT SECTION — Trimmed ═══ */}
-                    <div
-                        ref={card1Ref}
-                        className={`mt-12 md:mt-16 w-full max-w-7xl mx-auto px-4 sm:px-8 md:px-12 lg:px-20 xl:px-28`}
-                    >
-                        <div className={`flex flex-col-reverse lg:flex-row items-center gap-8 lg:gap-14 reveal-up ${card1Visible ? 'visible' : ''}`}>
-                            {/* Left — Phone Mockup with Calling Animation */}
-                            <div className="flex-1 w-full lg:w-auto flex justify-center">
-                                <PhoneMockup>
-                                    <CallingAgentPreview isVisible={card1Visible} />
-                                </PhoneMockup>
-                            </div>
+                    {/* ═══ MOBILE / TABLET ONLY VIEW — PREMIUM SWITCHER ═══ */}
+                    <div className="block lg:hidden mt-8 w-full max-w-7xl mx-auto px-4 sm:px-8 md:px-12">
+                        {/* Segmented Switcher */}
+                        <div className="flex p-1 bg-[var(--bg-secondary)] border border-[var(--border-color)] rounded-xl mb-6 max-w-md mx-auto">
+                            <button
+                                onClick={() => setActiveTab('whatsapp')}
+                                className={`flex-1 py-2.5 px-3 rounded-lg text-xs font-semibold inter transition-all duration-300 cursor-pointer ${
+                                    activeTab === 'whatsapp'
+                                        ? 'bg-[var(--bg-card)] text-[#25D366] shadow-sm border border-[var(--border-color)]'
+                                        : 'text-[var(--text-secondary)] hover:text-[var(--text-primary)]'
+                                }`}
+                            >
+                                WhatsApp Automation
+                            </button>
+                            <button
+                                onClick={() => setActiveTab('calling')}
+                                className={`flex-1 py-2.5 px-3 rounded-lg text-xs font-semibold inter transition-all duration-300 cursor-pointer ${
+                                    activeTab === 'calling'
+                                        ? 'bg-[var(--bg-card)] text-[#4F46E5] shadow-sm border border-[var(--border-color)]'
+                                        : 'text-[var(--text-secondary)] hover:text-[var(--text-primary)]'
+                                }`}
+                            >
+                                AI Voice Calling
+                            </button>
+                        </div>
 
-                            {/* Right — Text (trimmed) */}
-                            <div className="flex-1 w-full lg:w-auto">
-                                <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full mb-4" style={{ background: 'rgba(79,70,229,0.08)', border: '1px solid rgba(79,70,229,0.2)' }}>
-                                    <Phone className="w-3.5 h-3.5" style={{ color: '#4F46E5' }} />
-                                    <span className="text-[11px] font-semibold tracking-wide uppercase" style={{ color: '#4F46E5' }}>AI Calling Agent</span>
+                        {/* Content Card */}
+                        <div className="p-6 rounded-2xl bg-[var(--bg-card)] border border-[var(--border-color)] shadow-sm min-h-[250px] flex flex-col justify-between">
+                            {activeTab === 'whatsapp' ? (
+                                <div key="whatsapp" className="tab-content-active">
+                                    <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full mb-4" style={{ background: 'rgba(37,211,102,0.08)', border: '1px solid rgba(37,211,102,0.2)' }}>
+                                        <MessageCircle className="w-3.5 h-3.5" style={{ color: '#25D366' }} />
+                                        <span className="text-[10px] font-semibold tracking-wide uppercase" style={{ color: '#25D366' }}>WhatsApp Business</span>
+                                    </div>
+                                    <h3 className="text-xl font-bold text-[var(--text-primary)] leading-tight">
+                                        Automate Customer Conversations on WhatsApp
+                                    </h3>
+                                    <p className="text-[var(--text-secondary)] text-sm font-light leading-relaxed mt-3">
+                                        Let an AI-powered WhatsApp agent handle enquiries, qualify leads, and send instant replies — so you never miss a customer, even after business hours.
+                                    </p>
+                                    <a href="/whatsapp-automation" className="shimmer-btn inline-flex items-center gap-2 px-6 py-3 rounded-lg text-xs font-semibold mt-6 transition-all duration-300 hover:gap-3 w-full justify-center sm:w-auto" style={{ background: '#25D366', color: '#fff' }}>
+                                        See More <ArrowRight className="w-4 h-4" />
+                                    </a>
                                 </div>
-                                <h3 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-[var(--text-primary)] leading-tight">
-                                    AI-Powered Calling<br />Agent That Never Sleeps
-                                </h3>
-                                <p className="text-[var(--text-secondary)] text-sm sm:text-[15px] font-light leading-relaxed mt-3 max-w-md">
-                                    An intelligent voice agent that answers every call, understands customer intent, books appointments, and follows up — all without human intervention.
-                                </p>
-                                <a href="/ai-calling-agent" className="shimmer-btn inline-flex items-center gap-2 px-6 py-3 rounded-lg text-sm font-semibold mt-6 transition-all duration-300 hover:gap-3" style={{ background: '#4F46E5', color: '#fff' }}>
-                                    Learn More <ArrowRight className="w-4 h-4" />
-                                </a>
-                            </div>
+                            ) : (
+                                <div key="calling" className="tab-content-active">
+                                    <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full mb-4" style={{ background: 'rgba(79,70,229,0.08)', border: '1px solid rgba(79,70,229,0.2)' }}>
+                                        <Phone className="w-3.5 h-3.5" style={{ color: '#4F46E5' }} />
+                                        <span className="text-[10px] font-semibold tracking-wide uppercase" style={{ color: '#4F46E5' }}>AI Calling Agent</span>
+                                    </div>
+                                    <h3 className="text-xl font-bold text-[var(--text-primary)] leading-tight">
+                                        AI-Powered Calling Agent That Never Sleeps
+                                    </h3>
+                                    <p className="text-[var(--text-secondary)] text-sm font-light leading-relaxed mt-3">
+                                        An intelligent voice agent that answers every call, understands customer intent, books appointments, and follows up — all without human intervention.
+                                    </p>
+                                    <a href="/ai-calling-agent" className="shimmer-btn inline-flex items-center gap-2 px-6 py-3 rounded-lg text-xs font-semibold mt-6 transition-all duration-300 hover:gap-3 w-full justify-center sm:w-auto" style={{ background: '#4F46E5', color: '#fff' }}>
+                                        See More <ArrowRight className="w-4 h-4" />
+                                    </a>
+                                </div>
+                            )}
                         </div>
                     </div>
 

@@ -68,5 +68,35 @@ export const projects = [
             role: 'Founder, STMS',
             logo: '/workCover/STMS/STMS.webp'
         }
+    },
+    {
+        id: 3,
+        slug: 'mindseeds-tutorials',
+        name: 'MindSeeds Tutorials',
+        category: 'Coaching Automation',
+        shortDesc: 'A comprehensive educational ERP system built for coaching institutes to manage student attendance, staff, fee payments, and inquiry pipelines.',
+        coverImage: '/workCover/Mindseed.svg',
+        projectDetailImage: '/Coverpage/Mindseeds Mockup.png',
+        link: 'https://mindsys.cloud/',
+        hideLink: true,
+        techStack: ['React.js', 'Tailwind CSS', 'Node.js', 'MongoDB', 'Express.js'],
+        clientName: 'MindSeeds Tutorials',
+        duration: '8 weeks',
+        teamSize: '4 developers',
+        screenshots: [
+            '/workCover/MindSeeds/dashboard.png',
+            '/workCover/MindSeeds/attendance.png',
+            '/workCover/MindSeeds/batch.png',
+            '/workCover/MindSeeds/details.png',
+        ],
+        intro: 'MindSeeds Tutorials is an all-in-one custom ERP system designed for MindSeeds Tutorials, a premier tuition and coaching institute with branches across Byculla, Nagpada, and other central locations. The platform centralizes critical operations including student records, attendance, staff ledgers, and inquiry pipelines.',
+        problem: 'The institute was managing multiple branches using paper logs and manual spreadsheets. Tracking student attendance, handling staff payroll, managing split-fee installment payments, and tracking incoming admissions inquiries across different locations was fragmented and error-prone.',
+        solution: 'We built a secure, centralized multi-branch ERP system. It features real-time digital attendance tracking, an automated fee management module that tracks payments and installments, staff ledger records, and a structured inquiry pipeline that helps branch staff follow up with prospective student leads.',
+        testimonial: {
+            quote: 'Having this system really made a huge difference for us. Managing our classes used to be a lot of work, but now keeping track of attendance, fees, and new admissions is just easy and saves us so much time.',
+            author: 'Saif sir',
+            role: 'Founder, MindSeeds Tutorials',
+            logo: '/workCover/Mindseed.svg'
+        }
     }
 ]

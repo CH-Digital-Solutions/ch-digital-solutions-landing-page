@@ -278,8 +278,8 @@ export default function WhatsAppService() {
                                 </div>
                             </div>
 
-                            {/* Right — Phone Mockup */}
-                            <div className="flex-1 w-full lg:w-auto flex justify-center">
+                             {/* Right — Phone Mockup (Hidden on mobile, visible on desktop) */}
+                            <div className="hidden lg:flex flex-1 w-full lg:w-auto justify-center">
                                 <PhoneMockup accentColor="#25D366">
                                     <WhatsAppChatPreview />
                                 </PhoneMockup>

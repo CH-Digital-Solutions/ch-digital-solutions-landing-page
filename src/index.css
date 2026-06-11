@@ -361,77 +361,163 @@ body {
 
 /* ===== Products Section ===== */
 
-.product-list {
-  border-top: 1px solid var(--border-color);
+.scrollbar-none::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-none {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 
-.product-row {
+.product-card {
+  --accent: var(--accent-light);
+  --accent-bg: var(--bg-light);
+  
   display: flex;
-  align-items: center;
-  gap: 20px;
-  padding: 24px 0;
-  border-bottom: 1px solid var(--border-color);
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 0 0 85%;
+  max-width: 320px;
+  min-height: 280px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 20px;
+  padding: 24px;
   text-decoration: none;
   cursor: pointer;
-  transition: background 0.2s ease;
-}
-.product-row:hover {
-  background: var(--accent-light);
-  padding-left: 16px;
-  padding-right: 16px;
-  margin-left: -16px;
-  margin-right: -16px;
-  border-radius: 12px;
+  scroll-snap-align: start;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.product-row-logo {
-  width: 56px;
-  height: 56px;
-  border-radius: 14px;
-  overflow: hidden;
-  flex-shrink: 0;
-  border: 1px solid var(--border-color);
-}
 @media (min-width: 768px) {
-  .product-row-logo {
-    width: 64px;
-    height: 64px;
-    border-radius: 16px;
+  .product-card {
+    flex: 1 1 0%;
+    max-width: none;
+    min-height: 320px;
+    padding: 32px;
+  }
+  
+  .product-card.is-carousel {
+    flex: 0 0 340px;
+    max-width: 340px;
   }
 }
 
-.product-row-info {
-  flex: 1;
-  min-width: 0;
+[data-theme="dark"] .product-card {
+  --accent: var(--accent-dark);
+  --accent-bg: var(--bg-dark);
+  box-shadow: none;
 }
 
-.product-row-badge {
+.product-card:hover {
+  border-color: var(--accent);
+}
+
+[data-theme="dark"] .product-card:hover {
+  border-color: var(--accent);
+}
+
+.product-card-logo-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.product-card-logo {
+  width: 52px;
+  height: 52px;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.product-card:hover .product-card-logo {
+  transform: scale(1.05);
+}
+
+.product-card-badge {
   font-size: 10px;
   font-weight: 600;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  color: var(--text-muted);
-  background: var(--accent-light);
-  border: 1px solid var(--border-color);
-  padding: 2px 8px;
+  color: var(--accent);
+  background: var(--accent-bg);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  padding: 4px 10px;
   border-radius: 100px;
+  transition: all 0.3s ease;
 }
 
-.product-row-arrow {
-  flex-shrink: 0;
-  width: 36px;
-  height: 36px;
+[data-theme="dark"] .product-card-badge {
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+.product-card-info {
+  margin-bottom: 20px;
+}
+
+.product-card-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 8px;
+}
+
+@media (min-width: 640px) {
+  .product-card-title {
+    font-size: 20px;
+  }
+}
+
+.product-card-desc {
+  font-size: 13px;
+  font-weight: 300;
+  line-height: 1.6;
+  color: var(--text-secondary);
+}
+
+@media (min-width: 640px) {
+  .product-card-desc {
+    font-size: 13.5px;
+  }
+}
+
+.product-card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px dashed var(--border-color);
+  padding-top: 16px;
+  margin-top: auto;
+}
+
+.product-card-link-text {
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--text-muted);
+  transition: color 0.3s ease;
+}
+
+.product-card:hover .product-card-link-text {
+  color: var(--accent);
+}
+
+.product-card-arrow {
+  width: 28px;
+  height: 28px;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--text-muted);
-  transition: color 0.2s ease, background 0.2s ease;
+  background: var(--accent-bg);
+  color: var(--accent);
+  transition: all 0.3s ease;
 }
-.product-row:hover .product-row-arrow {
-  color: var(--text-primary);
-  background: var(--accent-light);
-}
-[data-theme="dark"] .product-row:hover .product-row-arrow {
-  background: rgba(255, 255, 255, 0.08);
-}
+
+.product-card:hover .product-card-arrow {
+  transform: translate(2px, -2px);
+  background: var(--accent);
+  color: var(--bg-card);
+}
