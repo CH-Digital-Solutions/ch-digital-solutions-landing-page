@@ -85,8 +85,8 @@ function Products() {
           }}
         >
           {/* Section Header */}
-          <div className="flex flex-col md:flex-row md:items-end justify-between mb-10 md:mb-14">
-            <div className="text-left max-w-2xl">
+          <div className="flex flex-col items-center justify-center mb-10 md:mb-14">
+            <div className="text-center max-w-2xl mx-auto">
               <p className="text-[var(--text-muted)] text-[11px] font-semibold tracking-[0.2em] uppercase inter mb-3">
                 Our Products
               </p>

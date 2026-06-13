@@ -89,13 +89,13 @@ function Hero() {
         <div className="text-center overflow-visible">
           <motion.div
             variants={fadeUp}
-            className='text-[var(--text-primary)] text-5xl sm:text-5xl md:text-7xl lg:text-[90px] font-bold tracking-[-0.03em] leading-[1.1]'
+            className='hero-title-gradient text-5xl sm:text-5xl md:text-7xl lg:text-[90px] font-bold tracking-[-0.03em] leading-[1.1]'
           >
             Simplifying
           </motion.div>
           <motion.div
             variants={fadeUp}
-            className='text-[var(--text-primary)] text-5xl mb-5 md:mb-0 sm:text-5xl md:text-7xl lg:text-[90px] font-bold mt-2 tracking-[-0.03em] leading-[1.1] pb-1'
+            className='hero-title-gradient text-5xl mb-5 md:mb-0 sm:text-5xl md:text-7xl lg:text-[90px] font-bold mt-2 tracking-[-0.03em] leading-[1.1] pb-1'
           >
             Operations
           </motion.div>
