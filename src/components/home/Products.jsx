@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react'
 import { ArrowUpRight, ChevronLeft, ChevronRight } from 'lucide-react'
+import { Link } from 'react-router-dom'
 
 /* ── Scroll reveal hook ── */
 function useScrollReveal(threshold = 0.15) {
@@ -126,12 +127,17 @@ function Products() {
                 : "flex md:grid md:grid-cols-3 gap-6 overflow-x-auto md:overflow-x-visible snap-x snap-mandatory scrollbar-none pb-6 px-1 -mx-1 md:px-0 md:mx-0"
             }
           >
-            {products.map((product, index) => (
-              <a
+            {products.map((product, index) => {
+              const isExternal = product.url.startsWith('http')
+              const CardWrapper = isExternal ? 'a' : Link
+              const linkProps = isExternal 
+                ? { href: product.url, target: '_blank', rel: 'noopener noreferrer' }
+                : { to: product.url }
+                
+              return (
+              <CardWrapper
                 key={index}
-                href={product.url}
-                target="_blank"
-                rel="noopener noreferrer"
+                {...linkProps}
                 className={`product-card group ${isCarousel ? 'is-carousel' : ''}`}
                 style={{
                   opacity: sectionVisible ? 1 : 0,
@@ -173,8 +179,9 @@ function Products() {
                     <ArrowUpRight className="w-4 h-4" />
                   </div>
                 </div>
-              </a>
-            ))}
+              </CardWrapper>
+              )
+            })}
           </div>
         </div>
       </div>
