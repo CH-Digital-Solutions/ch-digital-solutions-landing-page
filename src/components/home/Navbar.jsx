@@ -37,6 +37,8 @@ export default function Navbar() {
           <Link to="/" className="flex items-center gap-3">
             <img loading="lazy"
               src={logoSrc}
+              width="48"
+              height="48"
               className="w-10 md:w-12 transition-opacity duration-200"
               alt="CH Labs Logo"
             />
@@ -65,6 +67,7 @@ export default function Navbar() {
           <div className="flex items-center gap-1 md:hidden">
             <ThemeToggle inline />
             <button
+              aria-label="Toggle mobile menu"
               className="text-[var(--text-primary)] p-2"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
             >

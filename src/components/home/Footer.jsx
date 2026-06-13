@@ -67,7 +67,7 @@ export default function Footer() {
           {/* ── Brand column ── */}
           <div className="sm:col-span-2 lg:col-span-1">
             <Link to="/" className="inline-flex items-center gap-3 mb-5 group">
-              <img loading="lazy" src={logoSrc} className="w-10 transition-opacity duration-200" alt="CH Digital Solutions Logo" />
+              <img loading="lazy" src={logoSrc} width="48" height="48" className="w-10 transition-opacity duration-200" alt="CH Digital Solutions Logo" />
               <div className="flex flex-col leading-none">
                 <span className="text-[18px] font-semibold outfit text-[var(--text-primary)]">CH Digital</span>
                 <span className="text-xs font-light pl-0.5 text-[var(--text-primary)]">Solutions</span>

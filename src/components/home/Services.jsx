@@ -476,7 +476,7 @@ function Services() {
                                     <p className="text-[var(--text-secondary)] text-sm sm:text-[15px] font-light leading-relaxed mt-3 max-w-md">
                                         Let an AI-powered WhatsApp agent handle enquiries, qualify leads, and send instant replies — so you never miss a customer, even after business hours.
                                     </p>
-                                    <a href="/whatsapp-automation" className="shimmer-btn inline-flex items-center gap-2 px-6 py-3 rounded-lg text-sm font-semibold mt-6 transition-all duration-300 hover:gap-3" style={{ background: '#25D366', color: '#fff' }}>
+                                    <a href="/whatsapp-automation" aria-label="See more about WhatsApp Automation" className="shimmer-btn inline-flex items-center gap-2 px-6 py-3 rounded-lg text-sm font-semibold mt-6 transition-all duration-300 hover:gap-3" style={{ background: '#25D366', color: '#fff' }}>
                                         See More <ArrowRight className="w-4 h-4" />
                                     </a>
                                 </div>
@@ -515,7 +515,7 @@ function Services() {
                                     <p className="text-[var(--text-secondary)] text-sm sm:text-[15px] font-light leading-relaxed mt-3 max-w-md">
                                         An intelligent voice agent that answers every call, understands customer intent, books appointments, and follows up — all without human intervention.
                                     </p>
-                                    <a href="/ai-calling-agent" className="shimmer-btn inline-flex items-center gap-2 px-6 py-3 rounded-lg text-sm font-semibold mt-6 transition-all duration-300 hover:gap-3" style={{ background: '#4F46E5', color: '#fff' }}>
+                                    <a href="/ai-calling-agent" aria-label="Learn more about AI Calling Agent" className="shimmer-btn inline-flex items-center gap-2 px-6 py-3 rounded-lg text-sm font-semibold mt-6 transition-all duration-300 hover:gap-3" style={{ background: '#4F46E5', color: '#fff' }}>
                                         Learn More <ArrowRight className="w-4 h-4" />
                                     </a>
                                 </div>
@@ -569,7 +569,7 @@ function Services() {
                                     <p className="text-[var(--text-secondary)] text-sm font-light leading-relaxed mt-3">
                                         Let an AI-powered WhatsApp agent handle enquiries, qualify leads, and send instant replies — so you never miss a customer, even after business hours.
                                     </p>
-                                    <a href="/whatsapp-automation" className="shimmer-btn inline-flex items-center gap-2 px-6 py-3 rounded-lg text-xs font-semibold mt-6 transition-all duration-300 hover:gap-3 w-full justify-center sm:w-auto" style={{ background: '#25D366', color: '#fff' }}>
+                                    <a href="/whatsapp-automation" aria-label="See more about WhatsApp Automation" className="shimmer-btn inline-flex items-center gap-2 px-6 py-3 rounded-lg text-xs font-semibold mt-6 transition-all duration-300 hover:gap-3 w-full justify-center sm:w-auto" style={{ background: '#25D366', color: '#fff' }}>
                                         See More <ArrowRight className="w-4 h-4" />
                                     </a>
                                 </div>
@@ -585,7 +585,7 @@ function Services() {
                                     <p className="text-[var(--text-secondary)] text-sm font-light leading-relaxed mt-3">
                                         An intelligent voice agent that answers every call, understands customer intent, books appointments, and follows up — all without human intervention.
                                     </p>
-                                    <a href="/ai-calling-agent" className="shimmer-btn inline-flex items-center gap-2 px-6 py-3 rounded-lg text-xs font-semibold mt-6 transition-all duration-300 hover:gap-3 w-full justify-center sm:w-auto" style={{ background: '#4F46E5', color: '#fff' }}>
+                                    <a href="/ai-calling-agent" aria-label="Learn more about AI Calling Agent" className="shimmer-btn inline-flex items-center gap-2 px-6 py-3 rounded-lg text-xs font-semibold mt-6 transition-all duration-300 hover:gap-3 w-full justify-center sm:w-auto" style={{ background: '#4F46E5', color: '#fff' }}>
                                         See More <ArrowRight className="w-4 h-4" />
                                     </a>
                                 </div>
