@@ -41,6 +41,7 @@ export default function Footer() {
   ]
 
   const resources = [
+    { label: 'Ultimate Software Guide', href: '/blog/ultimate-guide-to-custom-software' },
     { label: 'Website Cost in Mumbai', href: '/website-development-cost-mumbai' },
     { label: 'Cost of Custom Software', href: '/cost-of-custom-software-development-india' },
     { label: 'React vs WordPress', href: '/react-vs-wordpress-for-startups' },

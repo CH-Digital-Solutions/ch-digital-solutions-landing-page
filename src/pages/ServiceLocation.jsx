@@ -11,58 +11,107 @@ function formatLocationName(slug) {
   return slug.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ');
 }
 
-const WebsiteDevelopmentLocation = () => {
+const SERVICE_DATA = {
+  'website-development': {
+    title: 'Website Development',
+    serviceType: 'Website Development',
+    desc: 'modern web design and high-performance custom website development services',
+    price: '₹15,000 to ₹50,000',
+    time: '2 to 6 weeks',
+    features: ['Responsive Design', 'Fast Loading', 'SEO Optimized', 'Secure Hosting']
+  },
+  'custom-software-development': {
+    title: 'Custom Software Development',
+    serviceType: 'Software Development',
+    desc: 'bespoke software systems, automation tools, and scalable business applications',
+    price: '₹1,00,000 to ₹5,00,000+',
+    time: '3 to 6 months',
+    features: ['Cloud Architecture', 'API Integrations', 'High Security', 'Scalable Database']
+  },
+  'mobile-app-development': {
+    title: 'Mobile App Development',
+    serviceType: 'Mobile Application Development',
+    desc: 'native and cross-platform mobile applications for iOS and Android',
+    price: '₹80,000 to ₹3,00,000',
+    time: '8 to 12 weeks',
+    features: ['React Native', 'UI/UX Design', 'App Store Setup', 'Push Notifications']
+  },
+  'ecommerce-website-development': {
+    title: 'Ecommerce Website Development',
+    serviceType: 'Ecommerce Development',
+    desc: 'fully-featured online stores with secure payment gateways and inventory management',
+    price: '₹50,000 to ₹2,00,000+',
+    time: '4 to 8 weeks',
+    features: ['Payment Gateways', 'Inventory Sync', 'Admin Dashboard', 'Mobile Optimized']
+  },
+  'erp-software-development': {
+    title: 'ERP Software Development',
+    serviceType: 'ERP Development',
+    desc: 'custom Enterprise Resource Planning software to manage operations, HR, and billing',
+    price: '₹2,00,000 to ₹10,00,000+',
+    time: '4 to 8 months',
+    features: ['Custom Modules', 'Role-Based Access', 'Data Analytics', 'Automated Workflows']
+  }
+};
+
+const ServiceLocation = ({ service = 'website-development' }) => {
   const { location } = useParams();
   
   if (!ALLOWED_LOCATIONS.includes(location?.toLowerCase())) {
-    return <Navigate to="/website-development-company-mumbai" replace />;
+    return <Navigate to="/" replace />;
   }
 
   const locationName = useMemo(() => formatLocationName(location), [location]);
+  const data = SERVICE_DATA[service];
 
   const websiteDevSchema = {
     "@context": "https://schema.org",
     "@graph": [
       {
         "@type": "Service",
-        "name": `Website Development Services in ${locationName}, Mumbai`,
-        "serviceType": "Website Development",
+        "name": `${data.title} Services in ${locationName}, Mumbai`,
+        "serviceType": data.serviceType,
         "provider": {
           "@type": "LocalBusiness",
           "name": "CH Digital Solutions",
-          "url": "https://chdigitalsolutions.in"
+          "url": "https://chdigitalsolutions.in",
+          "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.9",
+            "reviewCount": "48"
+          }
         },
         "areaServed": {
           "@type": "AdministrativeArea",
           "name": locationName
         },
-        "description": `CH Digital Solutions provides modern web design and high-performance custom website development services in ${locationName}, Mumbai.`
+        "description": `CH Digital Solutions provides ${data.desc} in ${locationName}, Mumbai.`
       },
       {
         "@type": "FAQPage",
         "mainEntity": [
           {
             "@type": "Question",
-            "name": `How much does website development cost in ${locationName}?`,
+            "name": `How much does ${data.title.toLowerCase()} cost in ${locationName}?`,
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": `Website development cost in ${locationName} varies based on the type of website, number of pages, features, and integrations required. A simple business website typically costs between ₹15,000 to ₹50,000, while complex web applications and ecommerce stores can range from ₹50,000 to ₹3,00,000 or more.`
+              "text": `The cost for ${data.title.toLowerCase()} in ${locationName} varies based on features and integrations required. Typically, it costs between ${data.price}.`
             }
           },
           {
             "@type": "Question",
-            "name": "How long does it take to build a website?",
+            "name": `How long does it take for ${data.title.toLowerCase()}?`,
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Most business websites take between 2 to 6 weeks to complete. A simple landing page can be delivered in 1 to 2 weeks. Complex web applications and ecommerce stores may take 6 to 12 weeks."
+              "text": `Most projects take between ${data.time} to complete depending on complexity.`
             }
           },
           {
             "@type": "Question",
-            "name": "Will my website be mobile responsive?",
+            "name": "Do you provide ongoing support?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Every website we build is fully responsive and optimized for all screen sizes — mobile phones, tablets, laptops, and desktop monitors."
+              "text": "Yes, we provide 30-day post-launch warranties and affordable ongoing maintenance packages for all our software and websites."
             }
           }
         ]
@@ -73,14 +122,14 @@ const WebsiteDevelopmentLocation = () => {
   return (
     <>
       <SEO
-        title={`Website Development Company in ${locationName} | Web Design Services`}
-        description={`Professional website development company in ${locationName}, Mumbai. We design responsive, high-performance custom websites using React and Node.js.`}
-        keywords={`website development company ${locationName}, web development services ${locationName}, web design ${locationName}`}
-        canonicalPath={`/website-development-in-${location.toLowerCase()}`}
+        title={`${data.title} Company in ${locationName} | CH Digital Solutions`}
+        description={`Professional ${data.title.toLowerCase()} company in ${locationName}, Mumbai. We provide ${data.desc}.`}
+        keywords={`${data.title.toLowerCase()} company ${locationName}, ${data.serviceType.toLowerCase()} services ${locationName}, IT company ${locationName}`}
+        canonicalPath={`/${service}-in-${location.toLowerCase()}`}
         schema={websiteDevSchema}
         breadcrumbs={[
           { name: "Home", path: "/" },
-          { name: `Website Development ${locationName}`, path: `/website-development-in-${location.toLowerCase()}` }
+          { name: `${data.title} ${locationName}`, path: `/${service}-in-${location.toLowerCase()}` }
         ]}
       />
       <div className="bg-[var(--bg-primary)] text-[var(--text-primary)] min-h-screen">
@@ -88,25 +137,23 @@ const WebsiteDevelopmentLocation = () => {
 
         <div className="max-w-6xl mx-auto px-6 pt-40 pb-20">
           <h1 className="text-4xl md:text-5xl font-semibold mb-6 leading-tight">
-            Website Development Company in <span className="text-[var(--text-primary)] opacity-80">{locationName}</span>
+            {data.title} Company in <span className="text-[var(--text-primary)] opacity-80">{locationName}</span>
           </h1>
 
           <p className="text-[var(--text-muted)] text-lg max-w-3xl mt-6">
-            Looking for a reliable web developer in {locationName}? CH Digital Solutions specializes in
-            custom website development, business automation systems, and scalable digital
-            platforms for local businesses and startups.
+            Looking for reliable tech partners in {locationName}? CH Digital Solutions specializes in
+            {data.desc} for local businesses and startups.
           </p>
 
           <div className="grid md:grid-cols-4 gap-6 mt-16">
-            <GlassCard>Responsive Design</GlassCard>
-            <GlassCard>Fast Loading</GlassCard>
-            <GlassCard>SEO Optimized</GlassCard>
-            <GlassCard>Secure Hosting</GlassCard>
+            {data.features.map(feat => (
+              <GlassCard key={feat}>{feat}</GlassCard>
+            ))}
           </div>
 
           <div className="mt-24">
             <h2 className="text-3xl font-semibold mb-6">
-              Our Web Design Process for {locationName} Businesses
+              Our Process for {locationName} Businesses
             </h2>
             <div className="grid md:grid-cols-4 gap-6">
               <div className="bg-[var(--bg-card)] border border-[var(--border-color)] rounded-2xl p-6">
@@ -114,16 +161,16 @@ const WebsiteDevelopmentLocation = () => {
                 <p className="text-[var(--text-muted)] text-sm">Understanding your local target audience and business goals.</p>
               </div>
               <div className="bg-[var(--bg-card)] border border-[var(--border-color)] rounded-2xl p-6">
-                <h3 className="font-semibold mb-2">2. Design</h3>
-                <p className="text-[var(--text-muted)] text-sm">Creating modern UI/UX layouts optimized for conversions.</p>
+                <h3 className="font-semibold mb-2">2. Design & Architecture</h3>
+                <p className="text-[var(--text-muted)] text-sm">Creating modern UI/UX layouts and scalable technical architectures.</p>
               </div>
               <div className="bg-[var(--bg-card)] border border-[var(--border-color)] rounded-2xl p-6">
                 <h3 className="font-semibold mb-2">3. Development</h3>
-                <p className="text-[var(--text-muted)] text-sm">Building scalable web applications using React and modern frameworks.</p>
+                <p className="text-[var(--text-muted)] text-sm">Building scalable applications using robust modern frameworks.</p>
               </div>
               <div className="bg-[var(--bg-card)] border border-[var(--border-color)] rounded-2xl p-6">
-                <h3 className="font-semibold mb-2">4. Launch</h3>
-                <p className="text-[var(--text-muted)] text-sm">Deploying the site and ensuring it ranks well in local searches.</p>
+                <h3 className="font-semibold mb-2">4. Deployment</h3>
+                <p className="text-[var(--text-muted)] text-sm">Launching the product and ensuring high performance.</p>
               </div>
             </div>
           </div>
@@ -168,4 +215,4 @@ const WebsiteDevelopmentLocation = () => {
   );
 };
 
-export default WebsiteDevelopmentLocation;
+export default ServiceLocation;

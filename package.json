@@ -14,10 +14,13 @@
     "@emailjs/browser": "^4.4.1",
     "@tailwindcss/vite": "^4.1.18",
     "framer-motion": "^12.29.2",
+    "front-matter": "^4.0.2",
+    "gray-matter": "^4.0.3",
     "lucide-react": "^0.563.0",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
     "react-helmet-async": "^3.0.0",
+    "react-markdown": "^10.1.0",
     "react-router-dom": "^7.13.1",
     "tailwindcss": "^4.1.18"
   },

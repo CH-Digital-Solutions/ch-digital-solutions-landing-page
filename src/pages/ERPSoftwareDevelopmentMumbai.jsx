@@ -11,7 +11,12 @@ const erpSchema = {
       "provider": {
         "@type": "LocalBusiness",
         "name": "CH Digital Solutions",
-        "url": "https://chdigitalsolutions.in"
+        "url": "https://chdigitalsolutions.in",
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "4.9",
+          "reviewCount": "48"
+        }
       },
       "areaServed": {
         "@type": "AdministrativeArea",

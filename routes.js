@@ -1,8 +1,63 @@
+import { readdirSync } from 'fs';
+import { join, dirname } from 'path';
+import { fileURLToPath } from 'url';
+
+const __dirname = dirname(fileURLToPath(import.meta.url));
+
+const services = [
+  'website-development',
+  'custom-software-development',
+  'mobile-app-development',
+  'ecommerce-website-development',
+  'erp-software-development'
+];
+
+const locations = [
+  'andheri',
+  'bandra',
+  'thane',
+  'navi-mumbai',
+  'borivali',
+  'malad',
+  'powai',
+  'south-mumbai'
+];
+
+const programmaticRoutes = [];
+for (const service of services) {
+  for (const location of locations) {
+    programmaticRoutes.push({
+      path: `/${service}-in-${location}`,
+      priority: 0.9,
+      changefreq: 'monthly'
+    });
+  }
+}
+
+// Automatically discover markdown blogs
+const blogRoutes = [];
+try {
+  const blogDir = join(__dirname, 'src/content/blogs');
+  const files = readdirSync(blogDir);
+  for (const file of files) {
+    if (file.endsWith('.md')) {
+      const slug = file.replace('.md', '');
+      blogRoutes.push({
+        path: `/blog/${slug}`,
+        priority: 0.8,
+        changefreq: 'monthly'
+      });
+    }
+  }
+} catch (err) {
+  console.warn("No markdown blogs found or folder missing.");
+}
+
 export const siteRoutes = [
   // Homepage
   { path: '/', priority: 1.0, changefreq: 'weekly' },
   
-  // Service Pages
+  // Core Service Pages
   { path: '/website-development-company-mumbai', priority: 0.9, changefreq: 'monthly' },
   { path: '/custom-software-development-mumbai', priority: 0.9, changefreq: 'monthly' },
   { path: '/mobile-app-development-mumbai', priority: 0.9, changefreq: 'monthly' },
@@ -11,22 +66,18 @@ export const siteRoutes = [
   { path: '/whatsapp-automation', priority: 0.9, changefreq: 'monthly' },
   { path: '/ai-calling-agent', priority: 0.9, changefreq: 'monthly' },
   
-  // Local SEO Pages
-  { path: '/website-development-in-andheri', priority: 0.9, changefreq: 'monthly' },
-  { path: '/website-development-in-bandra', priority: 0.9, changefreq: 'monthly' },
-  { path: '/website-development-in-thane', priority: 0.9, changefreq: 'monthly' },
-  { path: '/website-development-in-navi-mumbai', priority: 0.9, changefreq: 'monthly' },
-  { path: '/website-development-in-borivali', priority: 0.9, changefreq: 'monthly' },
-  { path: '/website-development-in-malad', priority: 0.9, changefreq: 'monthly' },
-  { path: '/website-development-in-powai', priority: 0.9, changefreq: 'monthly' },
-  { path: '/website-development-in-south-mumbai', priority: 0.9, changefreq: 'monthly' },
+  // 40+ Local SEO Landing Pages (Service x Location Matrix)
+  ...programmaticRoutes,
 
-  // Blog Posts
+  // Legacy JSX Blog Posts
   { path: '/website-development-cost-mumbai', priority: 0.8, changefreq: 'monthly' },
   { path: '/how-to-build-ecommerce-website', priority: 0.8, changefreq: 'monthly' },
   { path: '/erp-software-for-small-business', priority: 0.8, changefreq: 'monthly' },
   { path: '/cost-of-custom-software-development-india', priority: 0.8, changefreq: 'monthly' },
   { path: '/react-vs-wordpress-for-startups', priority: 0.8, changefreq: 'monthly' },
+
+  // Dynamic Markdown Blogs
+  ...blogRoutes,
 
   // Project Case Studies
   { path: '/project/bloomtale', priority: 0.7, changefreq: 'yearly' },

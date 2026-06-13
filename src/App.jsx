@@ -7,7 +7,7 @@ import ThemeToggle from './components/ThemeToggle'
 // Lazy-loaded routes — each page loads only when visited
 const ProjectDetail = lazy(() => import('./pages/ProjectDetail'))
 const WebsiteDevelopmentMumbai = lazy(() => import('./pages/WebsiteDevelopmentMumbai'))
-const WebsiteDevelopmentLocation = lazy(() => import('./pages/WebsiteDevelopmentLocation'))
+const ServiceLocation = lazy(() => import('./pages/ServiceLocation'))
 const CustomSoftwareDevelopmentMumbai = lazy(() => import('./pages/CustomSoftwareDevelopmentMumbai'))
 const MobileAppDevelopmentMumbai = lazy(() => import('./pages/MobileAppDevelopmentMumbai'))
 const EcommerceWebsiteDevelopmentMumbai = lazy(() => import('./pages/EcommerceWebsiteDevelopmentMumbai'))
@@ -21,6 +21,7 @@ const Terms = lazy(() => import('./pages/Terms'))
 const PrivacyPolicy = lazy(() => import('./pages/PrivacyPolicy'))
 const CostOfCustomSoftwareDevelopmentIndia = lazy(() => import('./pages/blog/CostOfCustomSoftwareDevelopmentIndia'))
 const ReactVsWordpressForStartups = lazy(() => import('./pages/blog/ReactVsWordpressForStartups'))
+const DynamicBlog = lazy(() => import('./pages/DynamicBlog'))
 
 function ScrollToTop() {
   const { pathname, hash } = useLocation()
@@ -50,15 +51,19 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/project/:slug" element={<ProjectDetail />} />
+          <Route path="/blog/:slug" element={<DynamicBlog />} />
           <Route
             path="/website-development-company-mumbai"
             element={<WebsiteDevelopmentMumbai />
             }
           />
-          <Route
-            path="/website-development-in-:location"
-            element={<WebsiteDevelopmentLocation />}
-          />
+          {['website-development', 'custom-software-development', 'mobile-app-development', 'ecommerce-website-development', 'erp-software-development'].map(service => (
+            <Route
+              key={service}
+              path={`/${service}-in-:location`}
+              element={<ServiceLocation service={service} />}
+            />
+          ))}
           <Route
             path="/custom-software-development-mumbai"
             element={<CustomSoftwareDevelopmentMumbai />}
