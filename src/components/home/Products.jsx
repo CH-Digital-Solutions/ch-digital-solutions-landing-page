@@ -58,7 +58,7 @@ const products = [
 function Products() {
   const [sectionRef, sectionVisible] = useScrollReveal(0.1)
   const carouselRef = useRef(null)
-  
+
   const isCarousel = products.length > 3
 
   const scrollLeft = () => {
