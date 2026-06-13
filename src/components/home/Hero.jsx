@@ -75,7 +75,8 @@ function Hero() {
       ref={heroRef}
       className='relative w-full min-h-screen md:min-h-0 lg:min-h-screen bg-[var(--bg-primary)] px-4 md:px-0 overflow-hidden'
     >
-      {/* Mouse spotlight removed for Notion aesthetic */}
+      {/* Mouse spotlight */}
+      <div ref={spotlightRef} className="hero-spotlight" style={{ opacity: 0 }} aria-hidden="true" />
 
       {/* ── Main content ── */}
       <motion.div
