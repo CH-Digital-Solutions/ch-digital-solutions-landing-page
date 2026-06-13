@@ -139,7 +139,12 @@ function Contact() {
                     >
                       <option value="" className='bg-[var(--select-option-bg)]'>Select Service</option>
                       <option className='bg-[var(--select-option-bg)]' value="Website Development">Website Development</option>
-                      <option className='bg-[var(--select-option-bg)]' value="System Development">System Development</option>
+                      <option className='bg-[var(--select-option-bg)]' value="Custom Software Development">Custom Software Development</option>
+                      <option className='bg-[var(--select-option-bg)]' value="Mobile App Development">Mobile App Development</option>
+                      <option className='bg-[var(--select-option-bg)]' value="Ecommerce Website Development">Ecommerce Website Development</option>
+                      <option className='bg-[var(--select-option-bg)]' value="ERP Software Development">ERP Software Development</option>
+                      <option className='bg-[var(--select-option-bg)]' value="WhatsApp Automation">WhatsApp Automation</option>
+                      <option className='bg-[var(--select-option-bg)]' value="AI Calling Agent">AI Calling Agent</option>
                       <option className='bg-[var(--select-option-bg)]' value="Others">Others</option>
                     </select>
                   </div>

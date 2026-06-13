@@ -1,25 +1,50 @@
 import Navbar from "../../components/home/Navbar";
-import { Helmet } from "react-helmet-async";
+import SEO from "../../components/SEO";
+
+const blogSchema = {
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Website Development Cost in Mumbai (Complete Guide)",
+  "description": "Learn the website development cost in Mumbai. Complete guide explaining pricing, features, and factors that affect website development cost.",
+  "image": "https://chdigitalsolutions.in/ch_logo_d.png",
+  "author": {
+    "@type": "Organization",
+    "name": "CH Digital Solutions"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "CH Digital Solutions",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://chdigitalsolutions.in/ch_logo_d.png"
+    }
+  },
+  "datePublished": "2025-01-10T08:00:00+05:30",
+  "dateModified": "2025-01-10T08:00:00+05:30",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://chdigitalsolutions.in/website-development-cost-mumbai"
+  }
+};
 
 const WebsiteDevelopmentCostMumbai = () => {
   return (
-    <div className="bg-[var(--bg-primary)] text-[var(--text-primary)] min-h-screen">
+    <>
+      <SEO
+        title="Website Development Cost in Mumbai | Complete Guide"
+        description="Learn the website development cost in Mumbai. Complete guide explaining pricing, features, and factors that affect website development cost."
+        keywords="website development cost mumbai, web design cost mumbai, ecommerce website cost mumbai, website development price"
+        canonicalPath="/website-development-cost-mumbai"
+        schema={blogSchema}
+        breadcrumbs={[
+          { name: "Home", path: "/" },
+          { name: "Blog", path: "/" },
+          { name: "Website Development Cost Mumbai", path: "/website-development-cost-mumbai" }
+        ]}
+      />
+      <div className="bg-[var(--bg-primary)] text-[var(--text-primary)] min-h-screen">
+        <Navbar />
 
-      <Helmet>
-        <title>Website Development Cost in Mumbai | Complete Guide 2025</title>
-
-        <meta
-          name="description"
-          content="Learn the website development cost in Mumbai. Complete guide explaining pricing, features, and factors that affect website development cost."
-        />
-
-        <link
-          rel="canonical"
-          href="https://chdigitalsolutions.in/website-development-cost-mumbai"
-        />
-      </Helmet>
-
-      <Navbar />
 
       <div className="max-w-5xl mx-auto px-6 pt-40 pb-24">
 
@@ -136,11 +161,10 @@ const WebsiteDevelopmentCostMumbai = () => {
             Contact Us
           </a>
 
-        </div>
-
-      </div>
-
     </div>
+    </div>
+    </div>
+    </>
   );
 };
 

@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import Navbar from '../components/home/Navbar'
 import Footer from '../components/home/Footer'
+import SEO from '../components/SEO'
+
 
 /* ── Scroll-reveal hook ── */
 function useScrollReveal(threshold = 0.12) {
@@ -101,6 +103,13 @@ export default function Terms() {
 
   return (
     <>
+      <SEO
+        title="Terms & Conditions | CH Digital Solutions"
+        description="Review the terms and conditions for engaging CH Digital Solutions (CH Labs) for website, mobile app, and custom software development services."
+        keywords="terms and conditions, client agreement, CH Digital Solutions terms, legal services agreement"
+        canonicalPath="/terms"
+        noindex={true}
+      />
       <style>{`
         .legal-toc-link {
           display: block;

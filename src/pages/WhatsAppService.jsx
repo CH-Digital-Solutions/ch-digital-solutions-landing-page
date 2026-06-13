@@ -2,6 +2,41 @@ import React, { useEffect, useRef, useState } from 'react'
 import { MessageCircle, Bot, Users, Send, BarChart3, CheckCircle2, ArrowRight, Zap, Shield, Clock, MessageSquare, Building2 } from 'lucide-react'
 import Navbar from '../components/home/Navbar'
 import Contact from '../components/home/Contact'
+import SEO from '../components/SEO'
+
+const whatsappSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Service",
+      "name": "WhatsApp Automation & Chatbot Development Services",
+      "serviceType": "WhatsApp Business Automation",
+      "provider": {
+        "@type": "LocalBusiness",
+        "name": "CH Digital Solutions",
+        "url": "https://chdigitalsolutions.in"
+      },
+      "areaServed": {
+        "@type": "AdministrativeArea",
+        "name": "Mumbai"
+      },
+      "description": "Smart WhatsApp marketing campaigns, automated drip sequences, AI-powered customer support chatbots, and multi-agent shared inboxes."
+    },
+    {
+      "@type": "SoftwareApplication",
+      "name": "Outvia",
+      "operatingSystem": "Web-based",
+      "applicationCategory": "CommunicationApplication",
+      "offers": {
+        "@type": "Offer",
+        "price": "0.00",
+        "priceCurrency": "INR"
+      },
+      "description": "WhatsApp automation tool for businesses to send bulk broadcasts, manage support teams via a shared inbox, and build interactive chat trees."
+    }
+  ]
+};
+
 
 /* ───── Scroll reveal hook ───── */
 function useScrollReveal(threshold = 0.15) {
@@ -196,6 +231,17 @@ export default function WhatsAppService() {
 
     return (
         <>
+            <SEO
+                title="WhatsApp Business Automation Services | Outvia Chatbots"
+                description="Automate customer support, send bulk broadcasts, and set up smart chatbot replies with our professional WhatsApp automation solutions. Powered by Outvia."
+                keywords="whatsapp automation mumbai, whatsapp business API, whatsapp marketing automation, whatsapp chatbot, whatsapp broadcasting tool, Outvia"
+                canonicalPath="/whatsapp-automation"
+                schema={whatsappSchema}
+                breadcrumbs={[
+                  { name: "Home", path: "/" },
+                  { name: "WhatsApp Automation", path: "/whatsapp-automation" }
+                ]}
+            />
             <style>{`
                 @keyframes waSlideIn {
                     from { opacity: 0; transform: translateY(10px) scale(0.97); }

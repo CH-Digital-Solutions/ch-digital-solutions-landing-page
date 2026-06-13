@@ -3,6 +3,8 @@ import { useParams, Link } from 'react-router-dom'
 import { ArrowLeft, ExternalLink, Quote, Clock, Users, Building2, X, ChevronDown, Phone, Mail } from 'lucide-react'
 import { projects } from '../data/projectData'
 import Navbar from '../components/home/Navbar'
+import SEO from '../components/SEO'
+
 
 function ProjectDetail() {
     const { slug } = useParams()
@@ -25,8 +27,39 @@ function ProjectDetail() {
         ? project.screenshots
         : project.screenshots.slice(0, 3)
 
+    const projectSchema = {
+        "@context": "https://schema.org",
+        "@type": "CreativeWork",
+        "name": project.name,
+        "alternativeHeadline": project.shortDesc,
+        "creator": {
+            "@type": "LocalBusiness",
+            "name": "CH Digital Solutions",
+            "url": "https://chdigitalsolutions.in"
+        },
+        "description": project.intro,
+        "image": `https://chdigitalsolutions.in${project.coverImage}`,
+        "genre": project.category,
+        "publisher": {
+            "@type": "Organization",
+            "name": "CH Digital Solutions",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://chdigitalsolutions.in/ch_logo_d.webp"
+            }
+        }
+    };
+
     return (
         <div className="bg-[var(--bg-primary)] min-h-screen">
+            <SEO
+                title={`${project.name} Case Study | CH Digital Solutions`}
+                description={project.shortDesc}
+                keywords={`${project.name}, ${project.category}, portfolio project, custom system development, CH Digital Solutions`}
+                canonicalPath={`/project/${project.slug}`}
+                ogImage={project.coverImage}
+                schema={projectSchema}
+            />
             <Navbar />
 
             {/* Zoom Overlay */}
@@ -41,7 +74,7 @@ function ProjectDetail() {
                     >
                         <X className="w-8 h-8" />
                     </button>
-                    <img
+                    <img loading="lazy"
                         src={zoomedImage}
                         className="max-w-full max-h-[90vh] object-contain rounded-xl"
                         alt="Screenshot preview"
@@ -62,7 +95,7 @@ function ProjectDetail() {
                 {/* Mobile Project Image */}
                 <div className="lg:hidden mb-6">
                     <div className="w-full h-48 sm:h-56 rounded-2xl bg-[var(--bg-card)] border border-[var(--border-color)] overflow-hidden">
-                        <img
+                        <img loading="lazy"
                             src={project.projectDetailImage}
                             className="w-full h-full object-cover"
                             alt={`${project.name}`}
@@ -75,7 +108,7 @@ function ProjectDetail() {
                     {/* Left: Project Image (Desktop Only) */}
                     <div className="hidden lg:flex shrink-0 self-stretch">
                         <div className="w-56 xl:w-100 xl:h-81 rounded-3xl bg-[var(--bg-card)] border border-[var(--border-color)] overflow-hidden flex items-center justify-center">
-                            <img
+                            <img loading="lazy"
                                 src={project.projectDetailImage}
                                 className="w-full h-full object-cover rounded-2xl"
                                 alt={`${project.name} logo`}
@@ -282,7 +315,7 @@ function ProjectDetail() {
                                     {/* Author Row with Logo */}
                                     <div className="flex items-center gap-3 sm:gap-4">
                                         <div className="w-9 h-9 sm:w-11 sm:h-11 rounded-full border border-[var(--testi-author-border)] overflow-hidden flex items-center justify-center shrink-0 author-avatar-bg">
-                                            <img
+                                            <img loading="lazy"
                                                 src={project.testimonial.logo}
                                                 className="w-full h-full object-cover"
                                                 alt={project.testimonial.author}

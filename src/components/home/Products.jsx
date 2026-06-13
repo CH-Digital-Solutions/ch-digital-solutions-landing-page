@@ -145,7 +145,7 @@ function Products() {
                 {/* Header Logo & Badge */}
                 <div className="product-card-logo-wrapper">
                   <div className="product-card-logo">
-                    <img
+                    <img loading="lazy"
                       src={product.logo}
                       alt={product.name}
                       className="w-full h-full object-contain"

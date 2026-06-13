@@ -2,6 +2,29 @@ import React, { useEffect, useRef, useState } from 'react'
 import { Phone, PhoneIncoming, PhoneOff, Bot, Clock, Bell, CheckCircle2, ArrowRight, Zap, BarChart3, Shield, MicOff, Grid3X3, Volume2 } from 'lucide-react'
 import Navbar from '../components/home/Navbar'
 import Contact from '../components/home/Contact'
+import SEO from '../components/SEO'
+
+const aiCallingSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Service",
+      "name": "AI Calling Agent & Voice Bot Integration Services",
+      "serviceType": "AI Voice Automation",
+      "provider": {
+        "@type": "LocalBusiness",
+        "name": "CH Digital Solutions",
+        "url": "https://chdigitalsolutions.in"
+      },
+      "areaServed": {
+        "@type": "AdministrativeArea",
+        "name": "Mumbai"
+      },
+      "description": "Deploy human-like, multi-lingual AI voice agents and smart voice bots that handle outbound lead calls, qualify leads, and manage inbound customer support 24/7."
+    }
+  ]
+};
+
 
 /* ───── Scroll reveal hook ───── */
 function useScrollReveal(threshold = 0.15) {
@@ -235,6 +258,17 @@ export default function AICallingService() {
 
     return (
         <>
+            <SEO
+                title="AI Calling Agent & AI Voice Bot Services | CH Digital"
+                description="Deploy human-like AI calling agents to automate customer support, lead generation, and outbound/inbound calls. Advanced natural language processing."
+                keywords="ai calling agent, voice ai bot, customer support automation, outbound calling ai, ai calling service mumbai, voice bot development"
+                canonicalPath="/ai-calling-agent"
+                schema={aiCallingSchema}
+                breadcrumbs={[
+                  { name: "Home", path: "/" },
+                  { name: "AI Calling Agent", path: "/ai-calling-agent" }
+                ]}
+            />
             <style>{`
                 @keyframes aiSlideIn {
                     from { opacity: 0; transform: translateY(10px) scale(0.97); }

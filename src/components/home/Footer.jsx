@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { Mail, Phone, ArrowRight } from 'lucide-react'
 
-const DARK_LOGO  = '/ch_logo_d.png'
+const DARK_LOGO  = '/ch_logo_d.webp'
 const LIGHT_LOGO = '/CH black color logo with transparent background.svg'
 
 function getTheme() {
@@ -40,6 +40,14 @@ export default function Footer() {
     { label: 'Contact Us', href: '/#contact' },
   ]
 
+  const resources = [
+    { label: 'Website Cost in Mumbai', href: '/website-development-cost-mumbai' },
+    { label: 'Cost of Custom Software', href: '/cost-of-custom-software-development-india' },
+    { label: 'React vs WordPress', href: '/react-vs-wordpress-for-startups' },
+    { label: 'E-Commerce Guide', href: '/how-to-build-ecommerce-website' },
+    { label: 'ERP for Small Business', href: '/erp-software-for-small-business' },
+  ]
+
   return (
     <footer
       className="w-full jakarta"
@@ -55,7 +63,7 @@ export default function Footer() {
           {/* ── Brand column ── */}
           <div className="sm:col-span-2 lg:col-span-1">
             <Link to="/" className="inline-flex items-center gap-3 mb-5 group">
-              <img src={logoSrc} className="w-10 transition-opacity duration-200" alt="CH Digital Solutions Logo" />
+              <img loading="lazy" src={logoSrc} className="w-10 transition-opacity duration-200" alt="CH Digital Solutions Logo" />
               <div className="flex flex-col leading-none">
                 <span className="text-[18px] font-semibold outfit text-[var(--text-primary)]">CH Digital</span>
                 <span className="text-xs font-light pl-0.5 text-[var(--text-primary)]">Solutions</span>
@@ -101,11 +109,11 @@ export default function Footer() {
           </div>
 
           {/* ── Services ── */}
-          <div className="sm:col-span-2 lg:col-span-2">
+          <div className="sm:col-span-1 lg:col-span-1">
             <h3 className="text-xs font-semibold uppercase tracking-widest text-[var(--text-muted)] inter mb-5">
               Services
             </h3>
-            <ul className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-3">
+            <ul className="flex flex-col gap-3">
               {services.map((service) => (
                 <li key={service.label}>
                   <Link
@@ -114,6 +122,26 @@ export default function Footer() {
                   >
                     <ArrowRight className="w-3 h-3 opacity-0 -translate-x-1.5 group-hover:opacity-60 group-hover:translate-x-0 transition-all duration-200 shrink-0" />
                     {service.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* ── Resources (Blog) ── */}
+          <div className="sm:col-span-1 lg:col-span-1">
+            <h3 className="text-xs font-semibold uppercase tracking-widest text-[var(--text-muted)] inter mb-5">
+              Resources
+            </h3>
+            <ul className="flex flex-col gap-3">
+              {resources.map((link) => (
+                <li key={link.label}>
+                  <Link
+                    to={link.href}
+                    className="text-sm font-light text-[var(--text-secondary)] hover:text-[var(--text-primary)] transition-colors inter flex items-center gap-1.5 group"
+                  >
+                    <ArrowRight className="w-3 h-3 opacity-0 -translate-x-1.5 group-hover:opacity-60 group-hover:translate-x-0 transition-all duration-200 shrink-0" />
+                    {link.label}
                   </Link>
                 </li>
               ))}

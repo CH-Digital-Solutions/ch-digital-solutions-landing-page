@@ -1,25 +1,50 @@
 import Navbar from "../../components/home/Navbar";
-import { Helmet } from "react-helmet-async";
+import SEO from "../../components/SEO";
+
+const blogSchema = {
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "How to Build an Ecommerce Website (Step by Step Guide)",
+  "description": "Learn how to build an ecommerce website from scratch. Complete step-by-step guide for building an online store.",
+  "image": "https://chdigitalsolutions.in/ch_logo_d.png",
+  "author": {
+    "@type": "Organization",
+    "name": "CH Digital Solutions"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "CH Digital Solutions",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://chdigitalsolutions.in/ch_logo_d.png"
+    }
+  },
+  "datePublished": "2025-01-15T08:00:00+05:30",
+  "dateModified": "2025-01-15T08:00:00+05:30",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://chdigitalsolutions.in/how-to-build-ecommerce-website"
+  }
+};
 
 const HowToBuildEcommerceWebsite = () => {
     return (
-        <div className="bg-[var(--bg-primary)] text-[var(--text-primary)] min-h-screen">
+        <>
+            <SEO
+                title="How to Build an Ecommerce Website | Step-by-Step Guide"
+                description="Learn how to build an ecommerce website from scratch. Discover platforms, designs, payment gateway integrations, and launch optimization."
+                keywords="build ecommerce website, online store setup, ecommerce website development guide, shopify vs woocommerce, custom ecommerce"
+                canonicalPath="/how-to-build-ecommerce-website"
+                schema={blogSchema}
+                breadcrumbs={[
+                  { name: "Home", path: "/" },
+                  { name: "Blog", path: "/" },
+                  { name: "How to Build Ecommerce Website", path: "/how-to-build-ecommerce-website" }
+                ]}
+            />
+            <div className="bg-[var(--bg-primary)] text-[var(--text-primary)] min-h-screen">
+                <Navbar />
 
-            <Helmet>
-                <title>How to Build an Ecommerce Website (Step by Step Guide)</title>
-
-                <meta
-                    name="description"
-                    content="Learn how to build an ecommerce website from scratch. Complete step-by-step guide for building an online store."
-                />
-
-                <link
-                    rel="canonical"
-                    href="https://chdigitalsolutions.in/how-to-build-ecommerce-website"
-                />
-            </Helmet>
-
-            <Navbar />
 
             <div className="max-w-5xl mx-auto px-6 pt-40 pb-24">
 
@@ -109,11 +134,10 @@ const HowToBuildEcommerceWebsite = () => {
                         Contact Us
                     </a>
 
-                </div>
-
-            </div>
-
         </div>
+        </div>
+        </div>
+      </>
     );
 };
 

@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import Navbar from '../components/home/Navbar'
 import Footer from '../components/home/Footer'
+import SEO from '../components/SEO'
+
 
 /* ── Scroll-reveal hook ── */
 function useScrollReveal(threshold = 0.12) {
@@ -114,6 +116,13 @@ export default function PrivacyPolicy() {
 
   return (
     <>
+      <SEO
+        title="Privacy Policy | CH Digital Solutions"
+        description="Learn how CH Digital Solutions collects, uses, and safeguards your personal data. Compliance with Digital Personal Data Protection (DPDP) Act, 2023."
+        keywords="privacy policy, data protection, dpdp compliance, CH Digital Solutions privacy"
+        canonicalPath="/privacy-policy"
+        noindex={true}
+      />
       <style>{`
         .legal-toc-link {
           display: block;

@@ -1,4 +1,21 @@
 User-agent: *
 Allow: /
 
+# Block non-content static assets from being crawled
+Disallow: /assets/
+
+# Sitemap location
 Sitemap: https://chdigitalsolutions.in/sitemap.xml
+
+# AI Crawler access (allow visibility in AI search engines)
+User-agent: GPTBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Applebot
+Allow: /

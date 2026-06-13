@@ -35,7 +35,7 @@ export default function Navbar() {
 
           {/* Logo */}
           <Link to="/" className="flex items-center gap-3">
-            <img
+            <img loading="lazy"
               src={logoSrc}
               className="w-10 md:w-12 transition-opacity duration-200"
               alt="CH Labs Logo"

@@ -1,25 +1,50 @@
 import Navbar from "../../components/home/Navbar";
-import { Helmet } from "react-helmet-async";
+import SEO from "../../components/SEO";
+
+const blogSchema = {
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "ERP Software for Small Business | Complete Guide",
+  "description": "Learn how ERP software helps small businesses manage operations, automate processes and improve productivity.",
+  "image": "https://chdigitalsolutions.in/ch_logo_d.png",
+  "author": {
+    "@type": "Organization",
+    "name": "CH Digital Solutions"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "CH Digital Solutions",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://chdigitalsolutions.in/ch_logo_d.png"
+    }
+  },
+  "datePublished": "2025-01-20T08:00:00+05:30",
+  "dateModified": "2025-01-20T08:00:00+05:30",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://chdigitalsolutions.in/erp-software-for-small-business"
+  }
+};
 
 const ERPSoftwareForSmallBusiness = () => {
     return (
-        <div className="bg-[var(--bg-primary)] text-[var(--text-primary)] min-h-screen">
+        <>
+            <SEO
+                title="ERP Software for Small Businesses | Management Systems Guide"
+                description="Explore the benefits of integrating an ERP system into your small business. Unify inventory, invoicing, CRM, and task automation under one platform."
+                keywords="erp for small business, cloud erp solution, erp system benefits, erp implementation, small business automation"
+                canonicalPath="/erp-software-for-small-business"
+                schema={blogSchema}
+                breadcrumbs={[
+                  { name: "Home", path: "/" },
+                  { name: "Blog", path: "/" },
+                  { name: "ERP Software for Small Business", path: "/erp-software-for-small-business" }
+                ]}
+            />
+            <div className="bg-[var(--bg-primary)] text-[var(--text-primary)] min-h-screen">
+                <Navbar />
 
-            <Helmet>
-                <title>ERP Software for Small Business | Complete Guide</title>
-
-                <meta
-                    name="description"
-                    content="Learn how ERP software helps small businesses manage operations, automate processes and improve productivity."
-                />
-
-                <link
-                    rel="canonical"
-                    href="https://chdigitalsolutions.in/erp-software-for-small-business"
-                />
-            </Helmet>
-
-            <Navbar />
 
             <div className="max-w-5xl mx-auto px-6 pt-40 pb-24">
 
@@ -104,11 +129,10 @@ const ERPSoftwareForSmallBusiness = () => {
                         Contact Us
                     </a>
 
-                </div>
-
-            </div>
-
         </div>
+        </div>
+        </div>
+      </>
     );
 };
 
