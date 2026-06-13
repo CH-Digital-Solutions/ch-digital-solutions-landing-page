@@ -36,7 +36,7 @@ const products = [
     category: 'Hospitality',
     description: 'Digital menu and QR-based ordering for restaurants. Customers scan, browse, and order — no app download needed.',
     logo: '/products/CafeQr logo square.svg',
-    url: '#',
+    url: '/coming-soon',
     accentLight: '#0F9D58',
     bgLight: 'rgba(15, 157, 88, 0.05)',
     accentDark: '#4ADE80',

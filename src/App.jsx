@@ -19,6 +19,7 @@ const HowToBuildEcommerceWebsite = lazy(() => import('./pages/blog/HowToBuildEco
 const ERPSoftwareForSmallBusiness = lazy(() => import('./pages/blog/ERPSoftwareForSmallBusiness'))
 const Terms = lazy(() => import('./pages/Terms'))
 const PrivacyPolicy = lazy(() => import('./pages/PrivacyPolicy'))
+const ComingSoon = lazy(() => import('./pages/ComingSoon'))
 const CostOfCustomSoftwareDevelopmentIndia = lazy(() => import('./pages/blog/CostOfCustomSoftwareDevelopmentIndia'))
 const ReactVsWordpressForStartups = lazy(() => import('./pages/blog/ReactVsWordpressForStartups'))
 const DynamicBlog = lazy(() => import('./pages/DynamicBlog'))
@@ -87,6 +88,7 @@ function App() {
           <Route path="/react-vs-wordpress-for-startups" element={<ReactVsWordpressForStartups />} />
           <Route path="/terms" element={<Terms />} />
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+          <Route path="/coming-soon" element={<ComingSoon />} />
         </Routes>
       </Suspense>
     </BrowserRouter>
