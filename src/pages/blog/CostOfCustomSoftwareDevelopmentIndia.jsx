@@ -55,7 +55,7 @@ const CostOfCustomSoftwareDevelopmentIndia = () => {
           </p>
 
           <p className="text-[var(--text-muted)] text-lg mb-8">
-            The short answer is that costs can range anywhere from <strong>$5,000 for a simple MVP</strong> to <strong>$150,000+ for an enterprise-grade ERP system</strong>. Let's break down the actual costs, hourly rates, and factors that influence software pricing.
+            The short answer is that costs can range anywhere from <strong>₹3,00,000 for a simple MVP</strong> to <strong>₹50,00,000+ for an enterprise-grade ERP system</strong>. Let's break down the actual costs, hourly rates, and factors that influence software pricing.
           </p>
 
           <h2 className="text-3xl font-semibold mt-16 mb-6">Average Hourly Rates in 2026</h2>
@@ -67,21 +67,21 @@ const CostOfCustomSoftwareDevelopmentIndia = () => {
               <thead>
                 <tr className="border-b border-[var(--border-color)] text-[var(--text-primary)]">
                   <th className="py-3 px-4">Developer Level</th>
-                  <th className="py-3 px-4">Hourly Rate (USD)</th>
+                  <th className="py-3 px-4">Hourly Rate (INR)</th>
                 </tr>
               </thead>
               <tbody className="text-[var(--text-muted)]">
                 <tr className="border-b border-[var(--border-color)]">
                   <td className="py-3 px-4">Junior Developer (1-3 yrs)</td>
-                  <td className="py-3 px-4">$15 - $25 / hr</td>
+                  <td className="py-3 px-4">₹500 - ₹1,200 / hr</td>
                 </tr>
                 <tr className="border-b border-[var(--border-color)]">
                   <td className="py-3 px-4">Mid-Level Developer (3-6 yrs)</td>
-                  <td className="py-3 px-4">$25 - $45 / hr</td>
+                  <td className="py-3 px-4">₹1,200 - ₹2,500 / hr</td>
                 </tr>
                 <tr>
                   <td className="py-3 px-4">Senior Developer / Architect (7+ yrs)</td>
-                  <td className="py-3 px-4">$45 - $80+ / hr</td>
+                  <td className="py-3 px-4">₹2,500 - ₹5,000+ / hr</td>
                 </tr>
               </tbody>
             </table>
@@ -94,19 +94,19 @@ const CostOfCustomSoftwareDevelopmentIndia = () => {
           <ul className="space-y-6 text-[var(--text-muted)]">
             <li>
               <strong className="text-[var(--text-primary)] text-lg block mb-1">1. Minimum Viable Product (MVP) / Prototype</strong>
-              Cost: $5,000 - $15,000<br/>
+              Cost: ₹3,00,000 - ₹8,00,000<br/>
               Timeline: 1 - 2 Months<br/>
               Ideal for startups looking to test an idea in the market with basic core functionalities.
             </li>
             <li>
               <strong className="text-[var(--text-primary)] text-lg block mb-1">2. Medium Complexity Software (SaaS, Internal Tools)</strong>
-              Cost: $15,000 - $50,000<br/>
+              Cost: ₹8,00,000 - ₹25,00,000<br/>
               Timeline: 3 - 6 Months<br/>
               Includes custom UI/UX, third-party API integrations, payment gateways, and scalable database architecture.
             </li>
             <li>
               <strong className="text-[var(--text-primary)] text-lg block mb-1">3. Enterprise-Grade Software (ERP, CRM)</strong>
-              Cost: $50,000 - $150,000+<br/>
+              Cost: ₹25,00,000 - ₹50,00,000+<br/>
               Timeline: 6+ Months<br/>
               Complex architecture, massive data processing, high-security standards, and multiple user roles.
             </li>
