@@ -15,39 +15,14 @@ import { readFileSync, writeFileSync, mkdirSync, existsSync } from 'fs';
 import { join, dirname } from 'path';
 import { fileURLToPath } from 'url';
 
+import { siteRoutes } from './routes.js';
+
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const DIST_DIR = join(__dirname, 'dist');
 const PORT = 4173;
 
-// All routes that need to be pre-rendered
-const ROUTES = [
-  '/',
-  '/website-development-company-mumbai',
-  '/custom-software-development-mumbai',
-  '/mobile-app-development-mumbai',
-  '/ecommerce-website-development-mumbai',
-  '/erp-software-development-mumbai',
-  '/whatsapp-automation',
-  '/ai-calling-agent',
-  '/website-development-cost-mumbai',
-  '/how-to-build-ecommerce-website',
-  '/erp-software-for-small-business',
-  '/cost-of-custom-software-development-india',
-  '/react-vs-wordpress-for-startups',
-  '/project/bloomtale',
-  '/project/stms',
-  '/project/mindseeds-tutorials',
-  '/terms',
-  '/privacy-policy',
-  '/website-development-in-andheri',
-  '/website-development-in-bandra',
-  '/website-development-in-thane',
-  '/website-development-in-navi-mumbai',
-  '/website-development-in-borivali',
-  '/website-development-in-malad',
-  '/website-development-in-powai',
-  '/website-development-in-south-mumbai',
-];
+// Map the detailed route objects into an array of simple string paths
+const ROUTES = siteRoutes.map(route => route.path);
 
 /**
  * Simple static file server for the dist folder.
