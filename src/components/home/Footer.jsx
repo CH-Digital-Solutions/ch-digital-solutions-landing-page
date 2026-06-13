@@ -41,6 +41,9 @@ export default function Footer() {
   ]
 
   const resources = [
+    { label: 'E-Commerce App Costs', href: '/blog/cost-of-ecommerce-app-development-mumbai' },
+    { label: 'Why Startups Need ERPs', href: '/blog/why-startups-need-custom-erp-software' },
+    { label: 'WhatsApp Automation Guide', href: '/blog/whatsapp-automation-for-small-business-india' },
     { label: 'Ultimate Software Guide', href: '/blog/ultimate-guide-to-custom-software' },
     { label: 'Website Cost in Mumbai', href: '/website-development-cost-mumbai' },
     { label: 'Cost of Custom Software', href: '/cost-of-custom-software-development-india' },
