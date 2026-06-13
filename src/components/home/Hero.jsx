@@ -75,8 +75,7 @@ function Hero() {
       ref={heroRef}
       className='relative w-full min-h-screen md:min-h-0 lg:min-h-screen bg-[var(--bg-primary)] px-4 md:px-0 overflow-hidden'
     >
-      {/* Mouse spotlight */}
-      <div ref={spotlightRef} className="hero-spotlight" style={{ opacity: 0 }} aria-hidden="true" />
+      {/* Mouse spotlight removed for Notion aesthetic */}
 
       {/* ── Main content ── */}
       <motion.div
@@ -90,13 +89,13 @@ function Hero() {
         <div className="text-center overflow-visible">
           <motion.div
             variants={fadeUp}
-            className='hero-title-gradient text-5xl sm:text-5xl md:text-7xl lg:text-[90px] font-bold tracking-[-0.03em] leading-[1.1]'
+            className='text-[var(--text-primary)] text-5xl sm:text-5xl md:text-7xl lg:text-[90px] font-bold tracking-[-0.03em] leading-[1.1]'
           >
             Simplifying
           </motion.div>
           <motion.div
             variants={fadeUp}
-            className='hero-title-gradient text-5xl mb-5 md:mb-0 sm:text-5xl md:text-7xl lg:text-[90px] font-bold mt-2 tracking-[-0.03em] leading-[1.1] pb-1'
+            className='text-[var(--text-primary)] text-5xl mb-5 md:mb-0 sm:text-5xl md:text-7xl lg:text-[90px] font-bold mt-2 tracking-[-0.03em] leading-[1.1] pb-1'
           >
             Operations
           </motion.div>

@@ -114,14 +114,14 @@ const DynamicBlog = () => {
             </div>
           </header>
 
-          <article className="prose prose-lg prose-invert max-w-none text-[var(--text-secondary)]
-            prose-headings:text-[var(--text-primary)] 
-            prose-a:text-indigo-400 prose-a:no-underline hover:prose-a:underline
-            prose-strong:text-[var(--text-primary)]
-            prose-blockquote:border-l-indigo-500 prose-blockquote:bg-[var(--bg-card)] prose-blockquote:px-6 prose-blockquote:py-2 prose-blockquote:rounded-r-lg prose-blockquote:not-italic
-            prose-code:text-pink-400 prose-code:bg-[var(--bg-card)] prose-code:px-1 prose-code:rounded
-            prose-pre:bg-[#0d1117] prose-pre:border prose-pre:border-[var(--border-color)]
-            prose-img:rounded-xl prose-img:shadow-lg"
+          <article className="prose prose-lg max-w-none text-[var(--text-secondary)] leading-relaxed tracking-tight
+            prose-headings:text-[var(--text-primary)] prose-headings:font-bold
+            prose-a:text-[var(--text-primary)] prose-a:underline hover:prose-a:text-[var(--text-muted)] prose-a:transition-colors
+            prose-strong:text-[var(--text-primary)] prose-strong:font-semibold
+            prose-blockquote:border-l-4 prose-blockquote:border-l-[var(--text-primary)] prose-blockquote:bg-transparent prose-blockquote:pl-6 prose-blockquote:py-1 prose-blockquote:my-6 prose-blockquote:not-italic prose-blockquote:text-[var(--text-primary)] prose-blockquote:font-medium
+            prose-code:text-[var(--text-primary)] prose-code:bg-[var(--bg-card)] prose-code:border prose-code:border-[var(--border-color)] prose-code:px-1.5 prose-code:py-0.5 prose-code:rounded-md prose-code:font-mono prose-code:text-sm
+            prose-pre:bg-[var(--bg-card)] prose-pre:border prose-pre:border-[var(--border-color)] prose-pre:text-[var(--text-primary)]
+            prose-img:rounded-lg prose-img:border prose-img:border-[var(--border-color)] prose-hr:border-[var(--border-color)]"
           >
             <ReactMarkdown>{content}</ReactMarkdown>
           </article>

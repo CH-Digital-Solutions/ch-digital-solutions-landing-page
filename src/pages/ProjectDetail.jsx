@@ -283,8 +283,7 @@ function ProjectDetail() {
                 <p className="text-[var(--text-muted)] text-xs sm:text-sm inter font-light text-center mb-7 md:mb-10">The results speak for themselves</p>
 
                 <div className="relative w-full">
-                    {/* Soft glow behind card */}
-                    <div className="absolute -inset-1 testimonial-glow-bg rounded-2xl md:rounded-[2rem] blur-xl"></div>
+                    {/* Soft glow removed for Notion aesthetic */}
 
                     {/* Card */}
                     <div className="relative overflow-hidden rounded-2xl md:rounded-3xl border border-[var(--testi-card-border)] testimonial-card-bg">

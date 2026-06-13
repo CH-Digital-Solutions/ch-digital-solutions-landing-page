@@ -399,19 +399,18 @@ function Services() {
 
                 /* ── Service Grid Cards ── */
                 .srv-grid-card {
-                    border-radius: 20px;
+                    border-radius: 12px;
                     padding: 28px 24px;
                     background: var(--bg-card);
                     border: 1px solid var(--border-color);
                     position: relative;
                     overflow: hidden;
-                    transition: transform 0.4s cubic-bezier(0.16,1,0.3,1), border-color 0.3s ease, box-shadow 0.3s ease;
+                    transition: background-color 0.2s ease, border-color 0.2s ease;
                     cursor: default;
                 }
                 .srv-grid-card:hover {
-                    transform: translateY(-4px);
+                    background-color: var(--bg-secondary);
                     border-color: var(--border-hover);
-                    box-shadow: var(--shadow-soft);
                 }
                 .srv-grid-card .srv-card-icon {
                     width: 48px;
@@ -526,10 +525,10 @@ function Services() {
                     {/* ═══ MOBILE / TABLET ONLY VIEW — PREMIUM SWITCHER ═══ */}
                     <div className="block lg:hidden mt-8 w-full max-w-7xl mx-auto px-4 sm:px-8 md:px-12">
                         {/* Segmented Switcher */}
-                        <div className="flex p-1 bg-[var(--bg-secondary)] border border-[var(--border-color)] rounded-full mb-6 max-w-md mx-auto relative overflow-hidden">
+                        <div className="flex p-1 bg-[var(--bg-secondary)] border border-[var(--border-color)] rounded-lg mb-6 max-w-md mx-auto relative overflow-hidden">
                             <button
                                 onClick={() => { setActiveTab('whatsapp'); setIsAutoPlayPaused(true); }}
-                                className={`flex-1 py-2.5 px-3 rounded-full text-xs font-semibold inter transition-all duration-300 cursor-pointer border relative overflow-hidden ${
+                                className={`flex-1 py-2.5 px-3 rounded-md text-xs font-semibold inter transition-all duration-300 cursor-pointer border relative overflow-hidden ${
                                     activeTab === 'whatsapp'
                                         ? 'bg-[var(--bg-card)] text-[#25D366] border-[var(--border-color)]'
                                         : 'border-transparent text-[var(--text-secondary)] hover:text-[var(--text-primary)]'
@@ -542,7 +541,7 @@ function Services() {
                             </button>
                             <button
                                 onClick={() => { setActiveTab('calling'); setIsAutoPlayPaused(true); }}
-                                className={`flex-1 py-2.5 px-3 rounded-full text-xs font-semibold inter transition-all duration-300 cursor-pointer border relative overflow-hidden ${
+                                className={`flex-1 py-2.5 px-3 rounded-md text-xs font-semibold inter transition-all duration-300 cursor-pointer border relative overflow-hidden ${
                                     activeTab === 'calling'
                                         ? 'bg-[var(--bg-card)] text-[#4F46E5] border-[var(--border-color)]'
                                         : 'border-transparent text-[var(--text-secondary)] hover:text-[var(--text-primary)]'
