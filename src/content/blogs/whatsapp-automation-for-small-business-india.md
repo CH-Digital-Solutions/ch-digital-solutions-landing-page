@@ -4,6 +4,8 @@ description: "Learn how integrating the WhatsApp Business API can automate custo
 author: "CH Digital Solutions"
 date: "2026-06-16"
 image: "/ch_logo_d.png"
+keywords: "whatsapp automation india, whatsapp business API, whatsapp chatbot for business, automated customer support, abandoned cart recovery whatsapp"
+category: "Automation"
 ---
 
 # The Power of WhatsApp Automation for Small Businesses in India

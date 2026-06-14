@@ -1,4 +1,5 @@
 import Navbar from "../../components/home/Navbar";
+import Footer from "../../components/home/Footer";
 import SEO from "../../components/SEO";
 
 const blogSchema = {
@@ -38,7 +39,7 @@ const ReactVsWordpressForStartups = () => {
         schema={blogSchema}
         breadcrumbs={[
           { name: "Home", path: "/" },
-          { name: "Blog", path: "/" },
+          { name: "Blog", path: "/blog" },
           { name: "React vs WordPress", path: "/react-vs-wordpress-for-startups" }
         ]}
       />
@@ -118,6 +119,7 @@ const ReactVsWordpressForStartups = () => {
             </a>
           </div>
         </div>
+      <Footer />
       </div>
     </>
   );

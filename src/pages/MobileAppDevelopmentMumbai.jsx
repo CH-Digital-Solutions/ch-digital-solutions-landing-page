@@ -1,4 +1,5 @@
 import Navbar from "../components/home/Navbar";
+import Footer from "../components/home/Footer";
 import SEO from "../components/SEO";
 
 const mobileAppSchema = {
@@ -254,6 +255,7 @@ const MobileAppDevelopmentMumbai = () => {
           </a>
         </div>
       </div>
+      <Footer />
     </div>
   </>
   );

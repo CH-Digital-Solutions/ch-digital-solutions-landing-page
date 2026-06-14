@@ -1,4 +1,5 @@
 import Navbar from "../../components/home/Navbar";
+import Footer from "../../components/home/Footer";
 import SEO from "../../components/SEO";
 
 const blogSchema = {
@@ -38,7 +39,7 @@ const WebsiteDevelopmentCostMumbai = () => {
         schema={blogSchema}
         breadcrumbs={[
           { name: "Home", path: "/" },
-          { name: "Blog", path: "/" },
+          { name: "Blog", path: "/blog" },
           { name: "Website Development Cost Mumbai", path: "/website-development-cost-mumbai" }
         ]}
       />
@@ -163,6 +164,7 @@ const WebsiteDevelopmentCostMumbai = () => {
 
     </div>
     </div>
+    <Footer />
     </div>
     </>
   );

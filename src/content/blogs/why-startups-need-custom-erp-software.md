@@ -4,6 +4,8 @@ description: "Discover why standard accounting tools like Tally are no longer en
 author: "CH Digital Solutions"
 date: "2026-06-15"
 image: "/ch_logo_d.png"
+keywords: "custom ERP software india, tally alternative for business, ERP for startups, enterprise resource planning mumbai, custom ERP vs SAP"
+category: "ERP"
 ---
 
 # Why Growing Indian Startups Are Ditching Tally for Custom ERP Software

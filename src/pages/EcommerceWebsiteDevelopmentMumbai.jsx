@@ -1,4 +1,5 @@
 import Navbar from "../components/home/Navbar";
+import Footer from "../components/home/Footer";
 import SEO from "../components/SEO";
 
 const ecommerceSchema = {
@@ -206,6 +207,7 @@ const EcommerceWebsiteDevelopmentMumbai = () => {
           </a>
         </div>
       </div>
+      <Footer />
     </div>
   </>
   );

@@ -1,4 +1,5 @@
 import Navbar from "../components/home/Navbar";
+import Footer from "../components/home/Footer";
 import GlassCard from "../components/ui/GlassCard";
 import SEO from "../components/SEO";
 
@@ -362,6 +363,7 @@ const WebsiteDevelopmentMumbai = () => {
           </a>
         </div>
       </div>
+      <Footer />
     </div>
   </>
   );

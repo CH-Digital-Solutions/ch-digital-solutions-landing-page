@@ -1,4 +1,5 @@
 import Navbar from "../../components/home/Navbar";
+import Footer from "../../components/home/Footer";
 import SEO from "../../components/SEO";
 
 const blogSchema = {
@@ -38,7 +39,7 @@ const ERPSoftwareForSmallBusiness = () => {
                 schema={blogSchema}
                 breadcrumbs={[
                   { name: "Home", path: "/" },
-                  { name: "Blog", path: "/" },
+                  { name: "Blog", path: "/blog" },
                   { name: "ERP Software for Small Business", path: "/erp-software-for-small-business" }
                 ]}
             />
@@ -131,6 +132,7 @@ const ERPSoftwareForSmallBusiness = () => {
 
         </div>
         </div>
+        <Footer />
         </div>
       </>
     );

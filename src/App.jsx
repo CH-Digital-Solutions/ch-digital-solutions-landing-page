@@ -23,6 +23,8 @@ const ComingSoon = lazy(() => import('./pages/ComingSoon'))
 const CostOfCustomSoftwareDevelopmentIndia = lazy(() => import('./pages/blog/CostOfCustomSoftwareDevelopmentIndia'))
 const ReactVsWordpressForStartups = lazy(() => import('./pages/blog/ReactVsWordpressForStartups'))
 const DynamicBlog = lazy(() => import('./pages/DynamicBlog'))
+const BlogIndex = lazy(() => import('./pages/BlogIndex'))
+const NotFound = lazy(() => import('./pages/NotFound'))
 
 function ScrollToTop() {
   const { pathname, hash } = useLocation()
@@ -51,6 +53,7 @@ function App() {
       <Suspense fallback={<PageLoader />}>
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/blog" element={<BlogIndex />} />
           <Route path="/project/:slug" element={<ProjectDetail />} />
           <Route path="/blog/:slug" element={<DynamicBlog />} />
           <Route
@@ -89,6 +92,7 @@ function App() {
           <Route path="/terms" element={<Terms />} />
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
           <Route path="/coming-soon" element={<ComingSoon />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </Suspense>
     </BrowserRouter>

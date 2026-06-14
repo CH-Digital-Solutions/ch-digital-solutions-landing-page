@@ -4,6 +4,8 @@ description: "A comprehensive breakdown of how much it costs to build an e-comme
 author: "CH Digital Solutions"
 date: "2026-06-14"
 image: "/ch_logo_d.png"
+keywords: "ecommerce app development cost mumbai, online store development cost, custom ecommerce app mumbai, shopify vs custom ecommerce, mobile app development cost india"
+category: "Pricing"
 ---
 
 # The True Cost of E-Commerce App Development in Mumbai (2026)

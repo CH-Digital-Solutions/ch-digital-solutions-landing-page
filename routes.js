@@ -57,6 +57,9 @@ export const siteRoutes = [
   // Homepage
   { path: '/', priority: 1.0, changefreq: 'weekly' },
   
+  // Blog Index (Content Hub)
+  { path: '/blog', priority: 0.9, changefreq: 'weekly' },
+  
   // Core Service Pages
   { path: '/website-development-company-mumbai', priority: 0.9, changefreq: 'monthly' },
   { path: '/custom-software-development-mumbai', priority: 0.9, changefreq: 'monthly' },

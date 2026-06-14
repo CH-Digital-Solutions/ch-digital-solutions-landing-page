@@ -1,4 +1,5 @@
 import Navbar from "../../components/home/Navbar";
+import Footer from "../../components/home/Footer";
 import SEO from "../../components/SEO";
 
 const blogSchema = {
@@ -38,7 +39,7 @@ const HowToBuildEcommerceWebsite = () => {
                 schema={blogSchema}
                 breadcrumbs={[
                   { name: "Home", path: "/" },
-                  { name: "Blog", path: "/" },
+                  { name: "Blog", path: "/blog" },
                   { name: "How to Build Ecommerce Website", path: "/how-to-build-ecommerce-website" }
                 ]}
             />
@@ -136,6 +137,7 @@ const HowToBuildEcommerceWebsite = () => {
 
         </div>
         </div>
+        <Footer />
         </div>
       </>
     );

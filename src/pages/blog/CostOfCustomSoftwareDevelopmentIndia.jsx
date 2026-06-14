@@ -1,4 +1,5 @@
 import Navbar from "../../components/home/Navbar";
+import Footer from "../../components/home/Footer";
 import SEO from "../../components/SEO";
 
 const blogSchema = {
@@ -38,7 +39,7 @@ const CostOfCustomSoftwareDevelopmentIndia = () => {
         schema={blogSchema}
         breadcrumbs={[
           { name: "Home", path: "/" },
-          { name: "Blog", path: "/" },
+          { name: "Blog", path: "/blog" },
           { name: "Cost of Custom Software Development", path: "/cost-of-custom-software-development-india" }
         ]}
       />
@@ -130,7 +131,8 @@ const CostOfCustomSoftwareDevelopmentIndia = () => {
               Get a Free Project Estimate
             </a>
           </div>
-        </div>
+      </div>
+      <Footer />
       </div>
     </>
   );
