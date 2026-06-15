@@ -5,7 +5,7 @@ const DEFAULT_TITLE = 'CH Digital Solutions | Website & Software Development Com
 const DEFAULT_DESC = 'CH Digital Solutions is a startup building custom websites, business software systems, ERP platforms and digital automation tools for startups and businesses in Mumbai.'
 const DEFAULT_KEYWORDS = 'website development company mumbai, software development mumbai, ERP development, startup web development, MERN stack development company'
 const DEFAULT_URL = 'https://chdigitalsolutions.in'
-const DEFAULT_IMAGE = 'https://chdigitalsolutions.in/ch_logo_d.png'
+const DEFAULT_IMAGE = 'https://chdigitalsolutions.in/og-image.png'
 
 function SEO({
   title = DEFAULT_TITLE,
