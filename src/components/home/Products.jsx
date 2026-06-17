@@ -26,7 +26,7 @@ const products = [
     category: 'Education',
     description: 'A complete management system for coaching institutes — handle students, attendance, fees, and daily operations from one place.',
     logo: '/products/ClassControl logo square.svg',
-    url: 'https://classcontrol.vercel.app/',
+    url: 'https://www.classcontrol.online/',
     accentLight: '#0A0E8E',
     bgLight: 'rgba(10, 14, 142, 0.05)',
     accentDark: '#818CF8',
