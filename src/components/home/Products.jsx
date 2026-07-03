@@ -48,7 +48,7 @@ const products = [
     category: 'Communication',
     description: 'WhatsApp automation for businesses. Automate replies, send broadcasts, and manage customer conversations at scale.',
     logo: '/products/Outvia.svg',
-    url: 'https://outvia.vercel.app/',
+    url: 'https://www.outvia.tech/',
     accentLight: '#128C7E',
     bgLight: 'rgba(18, 140, 126, 0.05)',
     accentDark: '#2DD4BF',
