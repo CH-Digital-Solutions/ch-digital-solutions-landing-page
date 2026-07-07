@@ -27,3 +27,8 @@ dist-ssr
 public/_backup_png
 optimize-images.mjs
 .vercel
+
+# Debug / audit / scratch files — never commit these
+lighthouse-report*.html
+lighthouse-report*.json
+scratch_*
