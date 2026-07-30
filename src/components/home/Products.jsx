@@ -33,15 +33,15 @@ const products = [
     bgDark: 'rgba(129, 140, 248, 0.15)',
   },
   {
-    name: 'Cafe QR',
-    category: 'Hospitality',
-    description: 'Digital menu and QR-based ordering for restaurants. Customers scan, browse, and order — no app download needed.',
-    logo: '/products/CafeQr logo square.svg',
-    url: '/coming-soon',
-    accentLight: '#0F9D58',
-    bgLight: 'rgba(15, 157, 88, 0.05)',
-    accentDark: '#4ADE80',
-    bgDark: 'rgba(74, 222, 128, 0.15)',
+    name: 'Nexamify',
+    category: 'Education',
+    description: 'CBT-based exam platform for NEET, JEE & competitive exam aspirants. Practice with real exam simulations and track your performance.',
+    logo: '/products/Nexamify.svg',
+    url: 'https://nexamify.onrender.com/',
+    accentLight: '#2563EB',
+    bgLight: 'rgba(37, 99, 235, 0.05)',
+    accentDark: '#60A5FA',
+    bgDark: 'rgba(96, 165, 250, 0.15)',
   },
   {
     name: 'Outvia',
@@ -53,6 +53,17 @@ const products = [
     bgLight: 'rgba(18, 140, 126, 0.05)',
     accentDark: '#2DD4BF',
     bgDark: 'rgba(45, 212, 191, 0.15)',
+  },
+  {
+    name: 'Cafe QR',
+    category: 'Hospitality',
+    description: 'Digital menu and QR-based ordering for restaurants. Customers scan, browse, and order — no app download needed.',
+    logo: '/products/CafeQr logo square.svg',
+    url: '/coming-soon',
+    accentLight: '#0F9D58',
+    bgLight: 'rgba(15, 157, 88, 0.05)',
+    accentDark: '#4ADE80',
+    bgDark: 'rgba(74, 222, 128, 0.15)',
   },
 ]
 
@@ -98,32 +109,26 @@ function Products() {
                 Purpose-built tools that solve real problems for real businesses.
               </p>
             </div>
+          </div>
 
-            {/* Scroll Navigation Buttons (Only visible if there are more than 3 products) */}
-            <div className={`${isCarousel ? 'hidden md:flex' : 'hidden'} gap-3 mt-6 md:mt-0`}>
+          {/* Product Cards — with side nav buttons flanking the carousel */}
+          <div className="relative flex items-center gap-3">
+            {/* Left Arrow */}
+            {isCarousel && (
               <button
                 onClick={scrollLeft}
-                className="w-10 h-10 rounded-full border border-[var(--border-color)] flex items-center justify-center text-[var(--text-secondary)] hover:text-[var(--text-primary)] hover:border-[var(--border-hover)] transition-all bg-[var(--bg-card)] cursor-pointer"
+                className="hidden md:flex flex-shrink-0 w-10 h-10 rounded-full border border-[var(--border-color)] items-center justify-center text-[var(--text-secondary)] hover:text-[var(--text-primary)] hover:border-[var(--border-hover)] transition-all bg-[var(--bg-card)] cursor-pointer"
                 aria-label="Previous product"
               >
                 <ChevronLeft className="w-5 h-5" />
               </button>
-              <button
-                onClick={scrollRight}
-                className="w-10 h-10 rounded-full border border-[var(--border-color)] flex items-center justify-center text-[var(--text-secondary)] hover:text-[var(--text-primary)] hover:border-[var(--border-hover)] transition-all bg-[var(--bg-card)] cursor-pointer"
-                aria-label="Next product"
-              >
-                <ChevronRight className="w-5 h-5" />
-              </button>
-            </div>
-          </div>
+            )}
 
-          {/* Product Cards — Horizontal Carousel on mobile/if many products, 3-column Grid on desktop if <= 3 */}
           <div
             ref={carouselRef}
             className={
               isCarousel
-                ? "flex gap-6 overflow-x-auto snap-x snap-mandatory scrollbar-none pb-6 px-1 -mx-1"
+                ? "flex gap-6 overflow-x-auto snap-x snap-mandatory scrollbar-none pb-6 px-1 flex-1"
                 : "flex md:grid md:grid-cols-3 gap-6 overflow-x-auto md:overflow-x-visible snap-x snap-mandatory scrollbar-none pb-6 px-1 -mx-1 md:px-0 md:mx-0"
             }
           >
@@ -182,6 +187,18 @@ function Products() {
               </CardWrapper>
               )
             })}
+          </div>
+
+            {/* Right Arrow */}
+            {isCarousel && (
+              <button
+                onClick={scrollRight}
+                className="hidden md:flex flex-shrink-0 w-10 h-10 rounded-full border border-[var(--border-color)] items-center justify-center text-[var(--text-secondary)] hover:text-[var(--text-primary)] hover:border-[var(--border-hover)] transition-all bg-[var(--bg-card)] cursor-pointer"
+                aria-label="Next product"
+              >
+                <ChevronRight className="w-5 h-5" />
+              </button>
+            )}
           </div>
         </div>
       </div>
